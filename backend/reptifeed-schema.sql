@@ -1,19 +1,19 @@
 ﻿CREATE TABLE "users" (
-    "id" int   NOT NULL,
-    "username" string   NOT NULL,
-    "password" string   NOT NULL,
-    "email" string   NOT NULL,
+    id SERIAL PRIMARY KEY,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL,
+    email TEXT NOT NULL,
     CONSTRAINT "pk_users" PRIMARY KEY (
         "id"
      )
 );
 
 CREATE TABLE "reptiles" (
-    "id" int   NOT NULL,
-    "name" string   NOT NULL,
-    "birthday" date   NOT NULL,
-    "img_url" string   NOT NULL,
-    "owner" string   NOT NULL,
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    birthday DATE NOT NULL,
+    img_url TEXT NOT NULL,
+    owner_id TEXT NOT NULL,
     CONSTRAINT "pk_reptiles" PRIMARY KEY (
         "id"
      )

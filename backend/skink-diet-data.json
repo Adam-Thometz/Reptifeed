@@ -1,0 +1,119 @@
+{
+  "blue-tongue-skink": {
+    "protein": {
+      "often": [
+        "dog food",
+        "dubia roaches",
+        "earthworms",
+        "horn worm",
+        "silkworm",
+        "snails"
+      ],
+      "moderately": [
+        "butterworms",
+        "beef",
+        "chicken",
+        "phoenix worm",
+        "super worm",
+        "wax worm"
+      ],
+      "occasionally": [
+        "cat food",
+        "crickets",
+        "mealworm",
+        "pinky mouse"
+      ],
+      "treat": [
+        "egg",
+        "crickets"
+      ]
+    },
+    "vegetables": {
+      "often": [
+        "arugula",
+        "beet greens",
+        "borage",
+        "cactus",
+        "collard greens",
+        "dandelion greens",
+        "endive",
+        "escarole",
+        "green beans",
+        "mustard greens",
+        "squash",
+        "turnip greens",
+        "watercress"
+      ],
+      "moderately": [
+        "bok choy",
+        "chicory greens",
+        "green peas",
+        "parsnips"
+      ],
+      "occasionally": [
+        "asparagus",
+        "beets",
+        "broccoli",
+        "brussel sprouts",
+        "carrots",
+        "cauliflower",
+        "celery",
+        "cucumber",
+        "okra",
+        "pumpkin",
+        "radicchio",
+        "radish",
+        "rutabega",
+        "turnip",
+        "zucchiini"
+      ],
+      "treat": ["basil"]
+    },
+    "fruit": {
+      "moderately": [
+        "figs",
+        "mango",
+        "papaya",
+        "raspberries"
+      ],
+      "occasionally": [
+        "apple",
+        "apricot",
+        "bananas",
+        "blackberries",
+        "blueberries",
+        "cantalope",
+        "cherries",
+        "cranberries",
+        "grapes",
+        "guava",
+        "honeydew",
+        "nectarines",
+        "peaches",
+        "pears",
+        "pineapples",
+        "plums",
+        "pomegranates",
+        "strawberries",
+        "watermelon"
+      ]
+    },
+    "supplements": ["multivitamin", "calcium"],
+    "tips": [
+      "Keep skink diet at about 50% vegetables, 40% protein, and 10% fruits. Increase protein to 50% for baby skinks.",
+      "Only give out fruits as a treat",
+      "Basil is considered a treat!",
+      "If a skink is healthy and not eating or only picking out favorites, it might be overfed - a picky skink is not a hungry skink.",
+      "Choosing between cat and dog food? Give your skink cat food when they're a baby because it contains more protein. Switch to dog food when they're at least 5 months old.",
+      "Skinks have slow metabolisms and do not need as much food as a mammal. Don't worry if they don't eat the recommended amounts.",
+      "Use a cheese grater or food processor for hard veggies like squashes and parsnip.",
+      "Veggies and greens will generally not be as popular as protein or fruit, so chop finely and mix with other foods.",
+      "Fruit should be a treat (even healthy fruits!) and not more than 10% of the diet.",
+      "Insects are essential to a skink diet. Make sure they are sold specifically for reptile consumption. For the squimish, you can use canned insects.",
+      "Skinks have difficulty digesting dairy and carbs so minimize both",
+      "If feeding beef or chicken, cook it to reduce risk of contamination.",
+      "Eggs can be eaten raw or boiled. Skinks eat raw eggs in the wild, including shells. We recommend feeding quail eggs and crushing shells if serving"
+    ]
+  }
+}
+
