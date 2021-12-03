@@ -20,10 +20,10 @@
       "occasionally": [
         "cat food",
         "crickets",
-        "mealworm",
-        "pinky mouse"
+        "mealworm"
       ],
       "treat": [
+        "pinky mouse",
         "egg",
         "crickets"
       ]
