@@ -10,10 +10,10 @@ CREATE TABLE reptiles (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   species TEXT NOT NULL,
-  subspecies TEXT,
+  subspecies TEXT DEFAULT 'N/A',
   birthday DATE NOT NULL,
   img_url TEXT,
-  owner INTEGER NOT NULL REFERENCES users ON DELETE CASCADE
+  owner_id INTEGER NOT NULL REFERENCES users ON DELETE CASCADE
 );
 
 CREATE TABLE pantry (
@@ -21,6 +21,6 @@ CREATE TABLE pantry (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
-  treat BOOLEAN NOT NULL,
+  is_treat BOOLEAN NOT NULL,
   tips TEXT
 );

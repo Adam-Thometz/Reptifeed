@@ -3,11 +3,11 @@ CREATE TABLE skink_diet (
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
   image TEXT,
-  treat BOOLEAN NOT NULL,
+  is_treat BOOLEAN NOT NULL,
   tips TEXT
 );
 
-INSERT INTO skink_diet (name, type, frequency, image, treat, tips)
+INSERT INTO skink_diet (name, type, frequency, image, is_treat, tips)
 VALUES 
 -- Proteins
       -- Often
