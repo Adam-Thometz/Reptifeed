@@ -1,8 +1,10 @@
 const db = require('../db');
 const { createToken } = require('../helpers/createToken');
+const Reptile = require('../models/reptile');
 const User = require('../models/user');
 
 const testUserIds = [];
+const testReptileIds = [];
 const tokens = []
 
 async function commonBeforeAll() {
@@ -26,11 +28,26 @@ async function commonBeforeAll() {
   tokens[0] = createToken({ id: testUserIds[0], username: 'spongebob', isAdmin: false });
   tokens[1] = createToken({ id: testUserIds[1], username: 'mr-krabs', isAdmin: true });
   
-  //   await db.query(`
-  //     INSERT INTO reptiles (name, species, subspecies, birthday, owner)
-  //     VALUES ('gary', 'snail', 'sea snail', '2010-01-01', $1),
-  //            ('larry', 'snail', 'sea snail', '2021-01-01', $2)
-  //   `, [userIds[0], userIds[1]]);
+  const reptile1 = await Reptile.create({
+    name: 'gary',
+    species: 'snail',
+    subspecies: 'sea snail',
+    birthday: '2010-01-01',
+    imgUrl: 'picture of gary',
+    ownerId: user1.id
+  });
+
+  const reptile2 = await Reptile.create({
+    name: 'larry',
+    species: 'snail',
+    subspecies: 'mean sea snail',
+    birthday: '2015-01-01',
+    imgUrl: 'picture of larry',
+    ownerId: user2.id
+  });
+
+  testReptileIds[0] = reptile1.id;
+  testReptileIds[1] = reptile2.id;
 };
 
 async function commonBeforeEach() {
@@ -52,5 +69,6 @@ module.exports = {
   commonAfterEach,
   commonAfterAll,
   testUserIds,
+  testReptileIds,
   tokens
 };
