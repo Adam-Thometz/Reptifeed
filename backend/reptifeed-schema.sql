@@ -17,8 +17,8 @@ CREATE TABLE reptiles (
 );
 
 CREATE TABLE pantries (
-  owner_id INTEGER PRIMARY KEY REFERENCES users,
-  name TEXT NOT NULL,
+  owner_id INTEGER REFERENCES users ON DELETE CASCADE,
+  name TEXT NOT NULL PRIMARY KEY,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
   image TEXT NOT NULL,
