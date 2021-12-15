@@ -112,7 +112,7 @@ class User {
 
     const { setCols, values } = sqlForPartialUpdate(data, { isAdmin: "is_admin" });
 
-    const userIdSql = "$" + (values.length + 1);
+    const userIdSql = `$${values.length+1}`
 
     const querySql = `UPDATE users
                       SET ${setCols}

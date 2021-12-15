@@ -81,6 +81,8 @@ router.patch('/:id', ensureAdminOrCorrectUser, async (req, res, next) => {
 
 /** DELETE /users/:id id =>{ deleted: username }
  * 
+ * Deletes a user
+ * 
  * Admin/correct user auth required
  */
 router.delete('/:id', ensureAdminOrCorrectUser, async (req, res, next) => {
@@ -89,7 +91,7 @@ router.delete('/:id', ensureAdminOrCorrectUser, async (req, res, next) => {
     return res.json({ deleted: username })
   } catch (err) {
     return next(err);
-  }
-})
+  };
+});
 
 module.exports = router;

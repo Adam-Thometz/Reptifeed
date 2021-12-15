@@ -43,9 +43,13 @@ describe('get all users', () => {
     });
   });
 
-  // test('throws unauth for non-admin', async () => {
-
-  // })
+  test('throws unauth for non-admin', async () => {
+    const token = tokens[0];
+    const res = await request(app)
+      .get('/users')
+      .set('authorization', `Bearer ${token}`);
+    expect(res.statusCode).toEqual(401);
+  })
 });
 
 /** GET /users/:id */
@@ -147,17 +151,15 @@ describe('update user by id', () => {
     const token = tokens[0];
     const res = await request(app)
       .patch(`/users/${id+1}`)
-      .send({
-        username: 'squarepants'
-      })
+      .send({ username: 'squarepants' })
       .set('authorization', `Bearer ${token}`);
     expect(res.statusCode).toEqual(401);
   });
   
   test('throws unauth if anon', async () => {
     const res = await request(app)
-    .patch('/users/1')
-    .send({ username: 'squarepants' });
+      .patch('/users/1')
+      .send({ username: 'squarepants' });
     expect(res.statusCode).toEqual(401);
   });
   
@@ -176,7 +178,7 @@ describe('update user by id', () => {
     const token = tokens[0];
     const res = await request(app)
       .patch(`/users/${id}`)
-      .send({ never: 'gonna-give-you-up' })
+      .send({ neverGonna: 'give-you-up' })
       .set('authorization', `Bearer ${token}`);
     expect(res.statusCode).toEqual(400);
   });
