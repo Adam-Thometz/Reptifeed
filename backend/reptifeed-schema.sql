@@ -21,6 +21,7 @@ CREATE TABLE pantry (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
+  image TEXT NOT NULL,
   is_treat BOOLEAN NOT NULL,
   tips TEXT
 );
