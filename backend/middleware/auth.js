@@ -78,23 +78,25 @@ function ensureAdminOrCorrectUser(req, res, next) {
  async function ensureAdminOrCorrectOwner(req, res, next) {
   try {
     const user = res.locals.user;
+    if (!user) throw new UnauthorizedError();
 
     if (req.method === "POST") {
       if (!user.isAdmin && (user.id !== req.body.ownerId)) {
         throw new UnauthorizedError('You cannot create a reptile for someone else.');
       };
-    };
+    } else {
+      const resp = await db.query(`
+        SELECT owner_id AS "ownerId"
+        FROM reptiles
+        WHERE id = $1
+      `, [req.params.id])
+      if (!resp.rows.length) throw new NotFoundError('Nope');
+      const ownerId = resp.rows[0].ownerId
+      if (!(user.isAdmin || user.id === ownerId)) {
+        throw new UnauthorizedError();
+      };
+    }
 
-    const resp = await db.query(`
-      SELECT owner_id AS "ownerId"
-      FROM reptiles
-      WHERE id = $1
-    `, [req.params.id])
-    if (!resp.rows.length) throw new NotFoundError();
-    const ownerId = resp.rows[0].ownerId
-    if (!(user && (user.isAdmin || user.id === ownerId))) {
-      throw new UnauthorizedError();
-    };
     return next();
   } catch (err) {
     return next(err);
