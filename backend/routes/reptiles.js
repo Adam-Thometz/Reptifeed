@@ -7,10 +7,6 @@ const reptileUpdateSchema = require('../schemas/reptileUpdateSchema.json')
 const { BadRequestError, UnauthorizedError } = require('../expressError');
 const { ensureAdminOrCorrectOwner, ensureAdmin } = require('../middleware/auth');
 
-const bodyParser = require('body-parser')
-
-router.use(bodyParser.json());
-
 /** POST /reptiles
  * 
  * Creates a new reptile
