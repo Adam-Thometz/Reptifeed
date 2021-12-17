@@ -1,5 +1,6 @@
 const db = require('../db');
 const { createToken } = require('../helpers/createToken');
+const Pantry = require('../models/pantry');
 const Reptile = require('../models/reptile');
 const User = require('../models/user');
 
@@ -48,6 +49,17 @@ async function commonBeforeAll() {
 
   testReptileIds[0] = reptile1.id;
   testReptileIds[1] = reptile2.id;
+
+  const food = {
+    name: 'krabby patties',
+    type: 'protein',
+    frequency: 'moderately',
+    image: 'image',
+    isTreat: true,
+    tips: 'serve with lettuce, tomatoes, pickles, ketchup, cheese, and bun',
+  }
+
+  await Pantry.addFood(food, testUserIds[0])
 };
 
 async function commonBeforeEach() {

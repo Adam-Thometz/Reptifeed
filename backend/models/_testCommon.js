@@ -4,6 +4,7 @@ const db = require('../db');
 const { BCRYPT_WORK_FACTOR } = require('../config');
 
 const testUserIds = [];
+const testReptileIds = [];
 
 async function commonBeforeAll() {
   await db.query(`DELETE FROM users`);
@@ -19,11 +20,18 @@ async function commonBeforeAll() {
     await bcrypt.hash('moneyIzQueen123', BCRYPT_WORK_FACTOR)
   ]);
   testUserIds.splice(0, 0, ...users.rows.map(r => r.id));
+
+  const reptile = await db.query(`
+    INSERT INTO reptiles (name, species, subspecies, birthday, img_url, owner_id)
+    VALUES ('gary', 'snail', 'sea snail', '2010-01-01', 'picture of gary', $1)
+    RETURNING id
+  `, [testUserIds[0]]);
+  testReptileIds.splice(0, 0, ...reptile.rows.map(r => r.id));
+
   await db.query(`
-    INSERT INTO reptiles (name, species, subspecies, birthday, owner)
-    VALUES ('gary', 'snail', 'sea snail', '2010-01-01', $1),
-           ('larry', 'snail', 'sea snail', '2021-01-01', $2)
-  `, [testUserIds[0], testUserIds[1]]);
+    INSERT INTO pantries (owner_id, name, type, frequency, image, is_treat, tips)
+    VALUES ($1, 'krabby patties', 'protein', 'moderately', 'image', true, 'serve with lettuce, tomatoes, pickles, ketchup, cheese, and bun')
+  `, [testUserIds[0]]);
 }
 
 async function commonBeforeEach() {
@@ -43,5 +51,6 @@ module.exports = {
   commonBeforeEach,
   commonAfterEach,
   commonAfterAll,
-  testUserIds
+  testUserIds,
+  testReptileIds
 };
