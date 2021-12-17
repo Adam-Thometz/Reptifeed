@@ -18,10 +18,11 @@ CREATE TABLE reptiles (
 
 CREATE TABLE pantries (
   owner_id INTEGER REFERENCES users ON DELETE CASCADE,
-  name TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
   image TEXT NOT NULL,
   is_treat BOOLEAN NOT NULL,
-  tips TEXT
+  tips TEXT,
+  CONSTRAINT food_name PRIMARY KEY (owner_id, name)
 );

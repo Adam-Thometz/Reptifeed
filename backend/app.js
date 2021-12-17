@@ -6,8 +6,9 @@ const { authenticateJWT } = require('./middleware/auth')
 
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
-// /reptiles
-// /foods
+const reptileRoutes = require('./routes/reptiles');
+const pantryRoutes = require('./routes/pantries')
+const foodApiRoutes = require('./routes/api');
 
 const app = express();
 
@@ -17,6 +18,9 @@ app.use(authenticateJWT);
 
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
+app.use('/reptiles', reptileRoutes);
+app.use('/pantries', pantryRoutes);
+app.use('/api', foodApiRoutes);
 
 app.use((req, res, next) => {
   return next(new NotFoundError())

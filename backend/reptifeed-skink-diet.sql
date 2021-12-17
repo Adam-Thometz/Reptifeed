@@ -1,4 +1,4 @@
-CREATE TABLE skink_diet (
+CREATE TABLE blue_tongue_skink_diet (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE skink_diet (
   tips TEXT
 );
 
-INSERT INTO skink_diet (name, type, frequency, image, is_treat, tips)
+INSERT INTO blue_tongue_skink_diet (name, type, frequency, image, is_treat, tips)
 VALUES 
 -- Proteins
       -- Often
