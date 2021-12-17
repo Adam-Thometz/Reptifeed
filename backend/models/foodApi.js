@@ -19,6 +19,7 @@ class FoodApi {
     `);
 
     const foods = result.rows;
+    if (!foods) throw new NotFoundError('We do not have that reptile available');
     
     return foods;
   };
@@ -37,7 +38,7 @@ class FoodApi {
     `, [foodSql])
 
     const food = result.rows[0];
-    if (!food) throw new NotFoundError('Food not found');
+    if (!food) throw new NotFoundError('This reptile does not eat this food');
 
     return food;
   };
