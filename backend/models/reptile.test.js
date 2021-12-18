@@ -76,6 +76,33 @@ describe('get reptile by id', () => {
   });
 });
 
+/** Reptile.getByUser(id) */
+describe('get reptile by owner id', () => {
+  test('success', async () => {
+    const id = testUserIds[0];
+    const reptiles = await Reptile.getByUser(id);
+    expect(reptiles).toEqual([
+      {
+        id: expect.any(Number),
+        name: 'gary',
+        species: 'snail',
+        subspecies: 'sea snail',
+        birthday: '2010-01-01',
+        imgUrl: 'picture of gary',
+        ownerId: testUserIds[0]
+      }
+    ]);
+  });
+
+  test('throws not found if no such user', async () => {
+    try {
+      await Reptile.getByUser(-1);
+    } catch (err) {
+      expect(err instanceof NotFoundError).toBeTruthy();
+    };
+  });
+});
+
 /** Reptile.update(id) */
 describe('update a reptile by id', () => {
   test('success', async () => {

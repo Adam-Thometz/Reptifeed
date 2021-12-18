@@ -60,6 +60,26 @@ class Reptile {
     reptile.birthday = dayjs(reptile.birthday).format('YYYY-MM-DD');
     return reptile;
   };
+  
+  /** Gets all reptiles by owner
+   * 
+   * Returns [{ id, name, species, subspecies, birthday, imgUrl, ownerId }, ...]
+   * 
+   * Throws NotFoundError if user not found
+   */
+  static async getByUser(userId) {
+    const result = await db.query(`
+      SELECT ${all}
+      FROM reptiles
+      WHERE owner_id = $1
+    `, [userId]);
+
+    const reptiles = result.rows;
+    if (!reptiles.length) throw new NotFoundError('User not found');
+    
+    reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
+    return reptiles;
+  };
 
   /** Update a reptile with id
    * 

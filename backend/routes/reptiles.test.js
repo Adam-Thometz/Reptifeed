@@ -215,6 +215,71 @@ describe('get reptile by id', () => {
   });
 });
 
+/** GET /reptiles/owner/:id */
+describe('get reptile by owner', () => {
+  test('success for user', async  () => {
+    const ownerId = testUserIds[0];
+    const token = tokens[0];
+    const res = await request(app)
+      .get(`/reptiles/owner/${ownerId}`)
+      .set('authorization', `Bearer ${token}`);
+    expect(res.body).toEqual({
+      reptiles: [{
+        id: expect.any(Number),
+        name: 'gary',
+        species: 'snail',
+        subspecies: 'sea snail',
+        birthday: '2010-01-01',
+        imgUrl: 'picture of gary',
+        ownerId
+      }]
+    });
+  });
+
+  test('success for admin', async  () => {
+    const ownerId = testUserIds[0];
+    const token = tokens[1];
+    const res = await request(app)
+      .get(`/reptiles/owner/${ownerId}`)
+      .set('authorization', `Bearer ${token}`);
+    expect(res.body).toEqual({
+      reptiles: [{
+        id: expect.any(Number),
+        name: 'gary',
+        species: 'snail',
+        subspecies: 'sea snail',
+        birthday: '2010-01-01',
+        imgUrl: 'picture of gary',
+        ownerId
+      }]
+    });
+  });
+
+  test('throws unauth if neither admin nor correct user', async () => {
+    const id = testUserIds[1];
+    const token = tokens[0];
+    const res = await request(app)
+      .get(`/reptiles/owner/${id}`)
+      .set('authorization', `Bearer ${token}`);
+    expect(res.statusCode).toEqual(401);
+  });
+
+  test('throws unauth if anon', async () => {
+    const id = testUserIds[1];
+    const res = await request(app)
+      .get(`/reptiles/owner/${id}`)
+    expect(res.statusCode).toEqual(401);
+  });
+
+  test('throws not found if no such user', async () => {
+    const token = tokens[1];
+    const res = await request(app)
+      .get('/reptiles/owner/-1')
+      .set('authorization', `Bearer ${token}`);
+    expect(res.statusCode).toEqual(404);
+  });
+});
+
 
 describe('update a reptile by id', () => {
   test('success for owner', async  () => {

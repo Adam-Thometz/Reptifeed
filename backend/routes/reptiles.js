@@ -5,7 +5,7 @@ const jsonschema = require('jsonschema');
 const reptileNewSchema = require('../schemas/reptileNewSchema.json')
 const reptileUpdateSchema = require('../schemas/reptileUpdateSchema.json')
 const { BadRequestError, UnauthorizedError } = require('../expressError');
-const { ensureAdminOrCorrectOwner, ensureAdmin } = require('../middleware/auth');
+const { ensureAdminOrCorrectOwner, ensureAdmin, ensureAdminOrCorrectUser } = require('../middleware/auth');
 
 /** POST /reptiles
  * 
@@ -53,6 +53,21 @@ router.get('/:id', ensureAdminOrCorrectOwner, async (req, res, next) => {
   try {
     const reptile = await Reptile.get(+req.params.id);
     return res.json({ reptile })
+  } catch (err) {
+    return next(err);
+  };
+});
+
+/** GET /reptiles/owner/:id
+ * 
+ * Returns all reptiles owned by a user
+ * 
+ * Admin/correct user auth required
+ */
+router.get('/owner/:id', ensureAdminOrCorrectUser, async (req, res, next) => {
+  try {
+    const reptiles = await Reptile.getByUser(+req.params.id);
+    return res.json({ reptiles })
   } catch (err) {
     return next(err);
   };
