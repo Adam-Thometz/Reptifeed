@@ -75,7 +75,7 @@ class Reptile {
     `, [userId]);
 
     const reptiles = result.rows;
-    if (!reptiles.length) throw new NotFoundError('User not found');
+    if (!reptiles.length) throw new NotFoundError('User has no reptiles');
     
     reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
     return reptiles;
