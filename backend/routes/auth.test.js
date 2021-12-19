@@ -27,7 +27,7 @@ describe('POST /auth/register', () => {
         email: 'sandy@texas.com'
       });
     expect(res.statusCode).toEqual(201);
-    expect(res.body).toEqual({"token": expect.any(String)});
+    expect(res.body).toEqual({"token": expect.any(String), "id": expect.any(Number)});
   });
 
   test('throw bad request for missing fields', async () => {
@@ -58,7 +58,7 @@ describe('POST /auth/login', () => {
         username: 'spongebob',
         password: 'garyIzQueen123'
       });
-    expect(res.body).toEqual({ "token": expect.any(String) });
+    expect(res.body).toEqual({ "token": expect.any(String), "id": expect.any(Number) });
   });
 
   test('throws unauth for invalid username', async () => {
