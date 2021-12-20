@@ -42,13 +42,13 @@ class User {
    * 
    * Throws UnauthorizedError is username not found or password is incorrect.
    */
-  static async login(username, password) {
+  static async login({username, password}) {
     const result = await db.query(`
       SELECT id, username, password, email, is_admin AS "isAdmin"
       FROM users
       WHERE username = $1
     `, [username]);
-
+    
     const user = result.rows[0];
 
     if (user) {

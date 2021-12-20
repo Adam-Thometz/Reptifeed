@@ -11,7 +11,7 @@ const { ensureAdminOrCorrectOwner, ensureAdmin, ensureAdminOrCorrectUser } = req
  * 
  * Creates a new reptile
  * 
- * Admin/correct user auth required
+ * Admin/correct owner auth required
  */
 router.post('/', ensureAdminOrCorrectOwner, async (req, res, next) => {
   try {
@@ -47,7 +47,7 @@ router.get('/', ensureAdmin, async (req, res, next) => {
  * 
  * Returns a single reptile
  * 
- * Admin/correct user auth required
+ * Admin/correct owner auth required
  */
 router.get('/:id', ensureAdminOrCorrectOwner, async (req, res, next) => {
   try {
@@ -77,7 +77,7 @@ router.get('/owner/:id', ensureAdminOrCorrectUser, async (req, res, next) => {
  * 
  * Edits a single reptile. Valid fields are name, subspecies, birthday, and imgUrl
  * 
- * Admin/correct user auth required
+ * Admin/correct owner auth required
  */
 router.patch('/:id', ensureAdminOrCorrectOwner, async (req, res, next) => {
   try {
@@ -98,7 +98,7 @@ router.patch('/:id', ensureAdminOrCorrectOwner, async (req, res, next) => {
  * 
  * Deletes a single reptile
  * 
- * Admin/correct user auth required
+ * Admin/correct owner auth required
  */
 router.delete('/:id', ensureAdminOrCorrectOwner, async (req, res, next) => {
   try {

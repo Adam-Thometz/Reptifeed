@@ -90,7 +90,7 @@ function ensureAdminOrCorrectUser(req, res, next) {
         FROM reptiles
         WHERE id = $1
       `, [req.params.id])
-      if (!resp.rows.length) throw new NotFoundError('Nope');
+      if (!resp.rows.length) throw new NotFoundError('No reptile found.');
       const ownerId = resp.rows[0].ownerId
       if (!(user.isAdmin || user.id === ownerId)) {
         throw new UnauthorizedError();

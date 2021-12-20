@@ -52,16 +52,15 @@ router.post('/login', async (req, res, next) => {
     if (!validator.valid) {
       const errs = validator.errors.map(e => e.stack);
       throw new BadRequestError(errs);
-    }
+    };
 
-    const { username, password } = req.body;
-    const user = await User.login(username, password);
+    const user = await User.login({ ...req.body });
     const token = createToken(user);
     const id = user.id;
     return res.json({ id, token })
   } catch (err) {
     return next(err);
-  }
-})
+  };
+});
 
 module.exports = router;
