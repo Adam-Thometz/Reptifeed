@@ -64,8 +64,6 @@ class Reptile {
   /** Gets all reptiles by owner
    * 
    * Returns [{ id, name, species, subspecies, birthday, imgUrl, ownerId }, ...]
-   * 
-   * Throws NotFoundError if user not found
    */
   static async getByUser(userId) {
     const result = await db.query(`
@@ -75,9 +73,8 @@ class Reptile {
     `, [userId]);
 
     const reptiles = result.rows;
-    if (!reptiles.length) throw new NotFoundError('User has no reptiles');
     
-    reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
+    if (reptiles) reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
     return reptiles;
   };
 

@@ -1,16 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const FoodApi = require('../models/foodApi');
-const { BadRequestError } = require('../expressError')
 const { ensureLoggedIn } = require('../middleware/auth');
 
 /** GET /api/foods 
  * 
  * Route to get all foods for a spceific species
+ * 
+ * Can be used to search for foods as well.
 */
 router.get('/:species/foods', ensureLoggedIn, async (req, res, next) => {
+  const query = req.query[0] || null;
   try {
-    const foods = await FoodApi.getAllFoods(req.params.species);
+    const foods = await FoodApi.getAllFoods(req.params.species, query);
     return res.json({ foods });
   } catch (err) {
     return next(err);
@@ -19,7 +21,7 @@ router.get('/:species/foods', ensureLoggedIn, async (req, res, next) => {
 
 /** GET /api/foods/:food 
  * 
- * Route to get a specific food
+ * Route to get a specific food.
 */
 router.get('/:species/foods/:food', ensureLoggedIn, async (req, res, next) => {
   try {
@@ -50,19 +52,6 @@ router.get('/:species/types/:type', ensureLoggedIn, async (req, res, next) => {
 router.get('/:species/treats', ensureLoggedIn, async (req, res, next) => {
   try {
     const treats = await FoodApi.getAllTreats(req.params.species);
-    return res.json({ treats });
-  } catch (err) {
-    return next(err);
-  };
-});
-
-/** GET /api/treats/:type
- * 
- * Route to get treats by type (e.g., protein, vegetables, etc)
- */
-router.get('/:species/types/:type', ensureLoggedIn, async (req, res, next) => {
-  try {
-    const treats = await FoodApi.getTreatsByType(req.params.type, req.params.species);
     return res.json({ treats });
   } catch (err) {
     return next(err);

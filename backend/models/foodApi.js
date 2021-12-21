@@ -12,14 +12,14 @@ class FoodApi {
    * 
    * Returns [{ name, type, frequency, image, isTreat, tips }, ... ]
    */
-  static async getAllFoods(species) {
+  static async getAllFoods(species, query) {
     const speciesSql = species.replace(regex, '_');
+    const whereStatement = query ? `WHERE name ILIKE '%${query}%'` : '';
     const result = await db.query(`
-      SELECT ${all} FROM ${speciesSql}_diet
+      SELECT ${all} FROM ${speciesSql}_diet ${whereStatement}
     `);
 
     const foods = result.rows;
-    if (!foods) throw new NotFoundError('We do not have that reptile available');
     
     return foods;
   };
@@ -38,7 +38,7 @@ class FoodApi {
     `, [foodSql])
 
     const food = result.rows[0];
-    if (!food) throw new NotFoundError('This reptile does not eat this food');
+    if (!food) throw new NotFoundError('No foods found');
 
     return food;
   };
@@ -68,19 +68,6 @@ class FoodApi {
     const treats = result.rows;
 
     return treats
-  }
-
-  static async getTreatsByType(type, species) {
-    const speciesSql = species.replace(regex, '_');
-    const result = await db.query(`
-      SELECT ${all}
-      FROM ${speciesSql}_diet
-      WHERE is_treat = true AND type = $1
-    `, [type])
-
-    const treats = result.rows;
-
-    return treats;
   };
 };
 

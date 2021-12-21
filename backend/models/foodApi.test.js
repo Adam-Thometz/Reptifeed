@@ -15,7 +15,24 @@ beforeEach(commonBeforeEach);
 afterEach(commonAfterEach);
 afterAll(commonAfterAll);
 
-/** FoodApi.getFood(foodName) */
+/** FoodApi.getAllFoods */
+describe('get all foods', () => {
+  test('success, search result', async () => {
+    const food = await foodApi.getAllFoods('blue-tongue-skink', 'dog')
+    expect(food).toEqual([
+      {
+        name: 'dog food',
+        type: 'protein',
+        frequency: 'often',
+        image: '',
+        isTreat: false,
+        tips: ''
+      }
+    ]);
+  });
+})
+
+/** FoodApi.getFood(foodName, species) */
 describe('get a single food', () => {
   test('success', async () => {
     const food = await foodApi.getFood('eggs', 'blue-tongue-skink')
@@ -50,7 +67,7 @@ describe('get a single food', () => {
   });
 });
 
-/** FoodApi.getByType(type) */
+/** FoodApi.getByType(type, species) */
 describe('get all foods by food group', () => {
   test('success', async () => {
     const foods = await foodApi.getByType('supplement', 'blue-tongue-skink');
@@ -69,23 +86,6 @@ describe('get all foods by food group', () => {
         frequency: 'often',
         image: '',
         isTreat: false,
-        tips: ''
-      }
-    ]);
-  });
-});
-
-/** FoodApi.getTreatsByType(type) */
-describe('get treats by food type', () => {
-  test('success', async () => {
-    const treats = await foodApi.getTreatsByType('vegetable', 'blue-tongue-skink');
-    expect(treats).toEqual([
-      {
-        name: 'basil',
-        type: 'vegetable',
-        frequency: 'occasionally',
-        image: '',
-        isTreat: true,
         tips: ''
       }
     ]);
