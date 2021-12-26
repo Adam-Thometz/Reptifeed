@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot for logged in user 1`] = `
+<DocumentFragment>
+  <div
+    class="Profile"
+  >
+    <h1
+      class="Profile-header"
+    >
+      Hello rickSanchez!
+    </h1>
+    <div
+      class="Profile-reptile-options"
+    >
+      <a
+        href="/users/NaN/reptiles"
+      >
+        See your reptiles
+      </a>
+      <a
+        href="/users/NaN/reptiles/add"
+      >
+        Add a reptile
+      </a>
+    </div>
+    <div
+      class="Profile-pantry-options"
+    >
+      <a
+        href="/users/NaN/pantry"
+      >
+        See your pantry
+      </a>
+      <a
+        href="/foods"
+      >
+        Check out foods to add to pantry
+      </a>
+    </div>
+    <div
+      class="Profile-user-options"
+    >
+      <a
+        href="/users/NaN/edit"
+      >
+        Edit your profile
+      </a>
+      <a
+        href="/foods"
+      >
+        Delete account
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot for logged out user 1`] = `
+<DocumentFragment>
+  <div>
+    <h4>
+      You are not authorized to view this page! Here are your options:
+    </h4>
+    <a
+      href="/login"
+    >
+      Log in to your account
+    </a>
+    <a
+      href="/register"
+    >
+      Register for an account with us
+    </a>
+  </div>
+</DocumentFragment>
+`;

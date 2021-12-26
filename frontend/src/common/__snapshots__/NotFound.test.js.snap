@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h4>
+      The page you're looking for wasn't found
+    </h4>
+    <a
+      href="/"
+    >
+      Go back home
+    </a>
+  </div>
+</DocumentFragment>
+`;

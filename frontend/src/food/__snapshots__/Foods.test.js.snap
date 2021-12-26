@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Foods"
+  >
+    <h1>
+      Food for your reptiles!
+    </h1>
+    <div
+      class="FoodsOptions"
+    >
+      <div
+        class="FoodOptions-species"
+      >
+        <label
+          for="species"
+        >
+          Pick your species
+        </label>
+        <select
+          id="species"
+          name="species"
+        >
+          <option
+            value="blue-tongue-skink"
+          >
+            Blue Tongue Skink
+          </option>
+        </select>
+      </div>
+      <div
+        class="FoodOptions-search"
+      >
+        <label
+          for="search"
+        >
+          Search foods
+        </label>
+        <input
+          id="search"
+          name="search"
+          value=""
+        />
+      </div>
+      <div
+        class="FoodOptions-type"
+      >
+        <label
+          for="frequency"
+        >
+          Select a food group
+        </label>
+        <select
+          id="type"
+          name="type"
+        >
+          <option
+            value=""
+          >
+            --
+          </option>
+          <option
+            value="protein"
+          >
+            Protein
+          </option>
+          <option
+            value="vegetable"
+          >
+            Vegetables/Greens
+          </option>
+          <option
+            value="fruit"
+          >
+            Fruit
+          </option>
+          <option
+            value="supplement"
+          >
+            Supplements
+          </option>
+        </select>
+      </div>
+      <div
+        class="FoodOptions-treats"
+      >
+        <label
+          for="treats"
+        >
+          Show treats?
+        </label>
+        <input
+          id="treats"
+          name="treats"
+          type="checkbox"
+          value="false"
+        />
+      </div>
+    </div>
+    <h6>
+      Pick foods you have or can easily get.
+    </h6>
+    <h6>
+      The more foods you pick, the better the variety we can provide for you.
+    </h6>
+    <table
+      class="FoodsSearch-table"
+    >
+      <thead>
+        <tr>
+          <td>
+             
+          </td>
+          <td>
+            Name
+          </td>
+          <td>
+            Type
+          </td>
+          <td>
+            How often?
+          </td>
+          <td>
+            Treat?
+          </td>
+          <td>
+            Tips
+          </td>
+          <td>
+            Add/Remove
+          </td>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</DocumentFragment>
+`;

@@ -9,10 +9,10 @@ const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
  */
 
 class ReptifeedApi {
-  /** If there is a token, it is stored in this variable and can be called with this.token */
+  /** If there is a token, it is stored in this variable and can be called with ReptifeedApi.token */
   static token;
 
-  /** this.request: centralizes the core logic of all API calls in this class.
+  /** request: centralizes the core logic of all API calls in this class.
    * All furture calls to be written will follow the following format:
    * 
    * const res = await this.request(endpoint, data, method);
@@ -24,9 +24,9 @@ class ReptifeedApi {
     const params = method === 'get' ? data : {};
 
     try {
-      return (await axios({url, method, data, headers, params})).data;
+      return (await axios({ url, method, data, headers, params })).data;
     } catch (err) {
-      let message = err.response.data.console.error.message;
+      let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     };
   };
@@ -37,12 +37,12 @@ class ReptifeedApi {
 
   static async register(data) {
     const res = await this.request('auth/register', data, 'post');
-    return res.token;
+    return res; // Returns { id, token }
   };
 
   static async login(data) {
     const res = await this.request('auth/login', data, 'post');
-    return res.token;
+    return res; // Returns { id, token }
   };
 
   static async createUser(data) {
@@ -84,6 +84,11 @@ class ReptifeedApi {
     return res.reptiles;
   };
 
+  static async getReptilesByOwner(ownerId) {
+    const res = await this.request(`reptiles/owner/${ownerId}`);
+    return res.reptiles;
+  }
+
   static async getReptile(id) {
     const res = await this.request(`reptiles/${id}`);
     return res.reptile;
@@ -95,7 +100,7 @@ class ReptifeedApi {
   };
   
   static async deleteReptile(id) {
-    const res = await this.request(`reptiles.${id}`, {}, 'delete');
+    const res = await this.request(`reptiles/${id}`, {}, 'delete');
     return res.deleted;
   };
 
@@ -104,7 +109,7 @@ class ReptifeedApi {
   ///////////////////
 
   static async getPantry(userId) {
-    const res = await this.request(`pantries/${id}`);
+    const res = await this.request(`pantries/${userId}`);
     return res.pantry;
   };
 
@@ -122,29 +127,25 @@ class ReptifeedApi {
   // FOOD API ROUTES //
   /////////////////////
 
-  static async getAllFoods(species) {
-    const res = await this.request(`${species}/foods`);
+  static async getFoodsBySpecies(species, searchTerm = '') {
+    const res = await this.request(`api/${species}/foods`, searchTerm);
     return res.foods;
   };
   
   static async getFood(species, food) {
-    const res = await this.request(`${species}/foods/${food}`);
+    const res = await this.request(`api/${species}/foods/${food}`);
     return res.food;
   };
 
   static async getFoodByType(species, type) {
-    const res = await this.request(`${species}/types/${type}`);
+    const res = await this.request(`api/${species}/types/${type}`);
     return res.foods;
   };
   
   static async getTreats(species) {
-    const res = await this.request(`${species}/treats`);
-    return res.treats;
-  };
-  static async getTreatsByType(species, type) {
-    const res = await this.request(`${species}/treats/${type}`);
+    const res = await this.request(`api/${species}/treats`);
     return res.treats;
   };
 };
 
-module.exports = ReptifeedApi;
+export default ReptifeedApi;

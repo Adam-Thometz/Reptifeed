@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Login"
+  >
+    <h1>
+      Login to your Reptifeed account
+    </h1>
+    <form>
+      <div
+        class="Login-form-group"
+      >
+        <label
+          class="Login-label"
+          for="username"
+        >
+          Username:
+        </label>
+        <input
+          class="Login-input"
+          id="username"
+          name="username"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="Login-form-group"
+      >
+        <label
+          class="Login-label"
+          for="password"
+        >
+          Password:
+        </label>
+        <input
+          class="Login-input"
+          id="password"
+          name="password"
+          type="password"
+          value=""
+        />
+      </div>
+      <button
+        class="Login-submit"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

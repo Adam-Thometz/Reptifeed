@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Pantry-card-undefined"
+  >
+    <img />
+    <h4 />
+    <p>
+      Feed 
+    </p>
+    <button
+      class="Pantry-card-removebtn"
+    >
+      I ran out
+    </button>
+  </div>
+</DocumentFragment>
+`;

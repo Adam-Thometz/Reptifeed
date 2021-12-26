@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-2"
+  >
+    My Stuff
+  </button>
+</DocumentFragment>
+`;
