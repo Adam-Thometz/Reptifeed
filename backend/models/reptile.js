@@ -73,8 +73,9 @@ class Reptile {
     `, [userId]);
 
     const reptiles = result.rows;
+
+    if (reptiles.length) reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
     
-    if (reptiles) reptiles.forEach(r => r.birthday = dayjs(r.birthday).format('YYYY-MM-DD'));
     return reptiles;
   };
 

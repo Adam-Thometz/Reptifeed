@@ -4,7 +4,7 @@ const Reptile = require('../models/reptile');
 const jsonschema = require('jsonschema');
 const reptileNewSchema = require('../schemas/reptileNewSchema.json')
 const reptileUpdateSchema = require('../schemas/reptileUpdateSchema.json')
-const { BadRequestError, UnauthorizedError } = require('../expressError');
+const { BadRequestError } = require('../expressError');
 const { ensureAdminOrCorrectOwner, ensureAdmin, ensureAdminOrCorrectUser } = require('../middleware/auth');
 
 /** POST /reptiles

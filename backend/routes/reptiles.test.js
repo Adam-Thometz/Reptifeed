@@ -1,9 +1,6 @@
 "use strict";
 
 const request = require('supertest');
-const jwt = require('jsonwebtoken');
-const { SECRET_KEY } = require('../config')
-
 const app = require('../app');
 
 const {
@@ -15,7 +12,6 @@ const {
   tokens, // use idx 0 for user, idx 1 for admin
   testReptileIds
 } = require('./_testCommon');
-const { UnauthorizedError } = require('../expressError');
 
 beforeAll(commonBeforeAll);
 beforeEach(commonBeforeEach);
@@ -216,7 +212,7 @@ describe('get reptile by id', () => {
 });
 
 /** GET /reptiles/owner/:id */
-describe('get reptile by owner', () => {
+describe('get reptiles by owner', () => {
   test('success for user', async  () => {
     const ownerId = testUserIds[0];
     const token = tokens[0];
@@ -269,14 +265,6 @@ describe('get reptile by owner', () => {
     const res = await request(app)
       .get(`/reptiles/owner/${id}`)
     expect(res.statusCode).toEqual(401);
-  });
-
-  test('throws not found if no such user', async () => {
-    const token = tokens[1];
-    const res = await request(app)
-      .get('/reptiles/owner/-1')
-      .set('authorization', `Bearer ${token}`);
-    expect(res.statusCode).toEqual(404);
   });
 });
 
