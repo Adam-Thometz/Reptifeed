@@ -15,8 +15,7 @@
       "type": "string"
     },
     "birthday": {
-      "type": "string",
-      "format": "date"
+      "type": "string"
     },
     "imgUrl": {
       "type": "string"
