@@ -10,47 +10,80 @@ exports[`it matches snapshot for logged in user 1`] = `
     >
       Hello rickSanchez!
     </h1>
-    <div
-      class="Profile-reptile-options"
+    <a
+      class="Profile-todo-link"
+      href="/users/1/todos"
     >
-      <a
-        href="/users/NaN/reptiles"
+      Click here for next steps!
+    </a>
+    <div
+      class="Profile-section reptile"
+    >
+      <div
+        class="Profile-options"
       >
-        See your reptiles
-      </a>
-      <a
-        href="/users/NaN/reptiles/add"
-      >
-        Add a reptile
-      </a>
+        <a
+          href="/users/1/reptiles"
+        >
+          See your reptiles
+        </a>
+        <a
+          href="/users/1/reptiles/add"
+        >
+          Add a reptile
+        </a>
+      </div>
+      <img
+        alt=""
+        class="Profile-icon"
+        src="reptile.png"
+      />
     </div>
     <div
-      class="Profile-pantry-options"
+      class="Profile-section pantry"
     >
-      <a
-        href="/users/NaN/pantry"
+      <img
+        alt=""
+        class="Profile-icon"
+        src="pantry.png"
+      />
+      <div
+        class="Profile-options"
       >
-        See your pantry
-      </a>
-      <a
-        href="/foods"
-      >
-        Check out foods to add to pantry
-      </a>
+        <a
+          href="/users/1/pantry"
+        >
+          See your pantry
+        </a>
+        <a
+          href="/foods"
+        >
+          Add foods to pantry
+        </a>
+      </div>
     </div>
     <div
-      class="Profile-user-options"
+      class="Profile-section user"
     >
-      <a
-        href="/users/NaN/edit"
+      <div
+        class="Profile-options"
       >
-        Edit your profile
-      </a>
-      <a
-        href="/foods"
-      >
-        Delete account
-      </a>
+        <a
+          href="/users/1/edit"
+        >
+          Edit your profile
+        </a>
+        <a
+          href="/foods"
+        >
+          Delete account
+        </a>
+      </div>
+      <img
+        alt=""
+        class="Profile-icon"
+        src="user.png"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -58,20 +91,26 @@ exports[`it matches snapshot for logged in user 1`] = `
 
 exports[`it matches snapshot for logged out user 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="Unauthorized"
+  >
     <h4>
       You are not authorized to view this page! Here are your options:
     </h4>
-    <a
-      href="/login"
+    <div
+      class="Unauthorized-options"
     >
-      Log in to your account
-    </a>
-    <a
-      href="/register"
-    >
-      Register for an account with us
-    </a>
+      <a
+        href="/login"
+      >
+        Log in to your account
+      </a>
+      <a
+        href="/register"
+      >
+        Register for an account with us
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;

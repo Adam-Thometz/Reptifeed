@@ -1,0 +1,46 @@
+.PantryCard {
+  border: 2px solid #D5CE3B;
+  width: 25vw;
+  height: 70%;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 1%;
+  color: #D5CE3B;
+  box-shadow: 10px 5px 5px rgb(10, 143, 10);
+  display: inline-block;
+}
+
+.PantryCard-img-wrapper {
+  background: white;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.PantryCard-removebtn {
+  padding: 10px;
+  background-color: rgb(31, 31, 31);
+  border: none;
+  border-radius: 10px;
+  color: #D5CE3B;
+  cursor: pointer;
+}
+
+.vegetable {
+  background-color: #385802;
+}
+
+.fruit {
+  background-color: #D5CE3B;
+  color: #3E3E07;
+  border: 2px solid #3E3E07;
+}
+
+.protein {
+  background-color: #3E3E07;
+}
+
+.supplement {
+  background-color: whitesmoke;
+  color: #3E3E07;
+}

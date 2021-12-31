@@ -2,10 +2,32 @@
 
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
-  <button
-    aria-describedby="popup-2"
-  >
-    My Stuff
-  </button>
+  <div>
+    <a
+      class="Navbar-option"
+      href="/users/1/reptiles"
+    >
+      My Reptiles
+    </a>
+    <a
+      class="Navbar-option"
+      href="/users/1/pantry"
+    >
+      My Pantry
+    </a>
+    <a
+      class="Navbar-option"
+      href="/users/1"
+    >
+      My Account
+    </a>
+    <a
+      aria-current="page"
+      class="Navbar-option active"
+      href="/"
+    >
+      Log out
+    </a>
+  </div>
 </DocumentFragment>
 `;

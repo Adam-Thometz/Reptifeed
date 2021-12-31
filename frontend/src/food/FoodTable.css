@@ -1,0 +1,28 @@
+.FoodTable {
+  table-layout: fixed;
+  background-color: white;
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+.FoodTable-header {
+  margin: 0 1020px;
+  background-color: yellow;
+}
+
+.FoodTable-header-cells {
+  font-weight: 700;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.FoodTable-checkbox {
+  width: 20px;
+  height: 20px;
+}

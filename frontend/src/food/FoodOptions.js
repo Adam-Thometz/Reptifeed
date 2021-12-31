@@ -1,4 +1,5 @@
 import React from "react";
+import './FoodOptions.css'
 
 const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter, setFoodFilter, treatFilter, setTreatFilter}) => {
   const handleChangeSpecies = e => {
@@ -18,10 +19,12 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
   };
 
   return (
-    <div className="FoodsOptions">
-      <div className="FoodOptions-species">
-        <label htmlFor="species">Pick your species</label>
+    <div className="FoodOptions">
+      <h4>Use these options to filter foods</h4>
+      <div className="FoodOptions-group">
+        <label className="FoodOptions-label" htmlFor="species">Species</label>
         <select
+          className="FoodOptions-input"
           id="species"
           name="species"
           value={species}
@@ -30,18 +33,21 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
           <option value="blue-tongue-skink">Blue Tongue Skink</option>
         </select>
       </div>
-      <div className="FoodOptions-search">
-        <label htmlFor="search">Search foods</label>
+      <div className="FoodOptions-group">
+        <label className="FoodOptions-label" htmlFor="search">Search foods</label>
         <input
+        type="text"
+          className="FoodOptions-input"
           id="search"
           name="search"
           value={searchTerm}
           onChange={handleChangeSearch}
         />
       </div>
-      <div className="FoodOptions-type">
-        <label htmlFor="frequency">Select a food group</label>
+      <div className="FoodOptions-group">
+        <label className="FoodOptions-label" htmlFor="frequency">Food group</label>
         <select
+          className="FoodOptions-input"
           id="type"
           name="type"
           value={foodFilter}
@@ -54,9 +60,10 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
           <option value="supplement">Supplements</option>
         </select>
       </div>
-      <div className="FoodOptions-treats">
-        <label htmlFor="treats">Show treats?</label>
+      <div className="FoodOptions-group">
+        <label className="FoodOptions-label" htmlFor="treats">Treats</label>
         <input
+          className="FoodOptions-checkbox"
           type="checkbox"
           id="treats"
           name="treats"
@@ -64,9 +71,6 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
           onChange={handleChangeTreat}
         />
       </div>
-      {/* TODO: 
-        - search feature
-      */}
     </div>
   )
 };

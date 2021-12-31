@@ -1,0 +1,49 @@
+.Todos {
+  width: 30vw;
+  margin: 0 auto;
+  background-color: #9ab10683;
+  color: #3E3E07;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #3E3E07;
+  border-radius: 10px;
+}
+
+.Todos-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.Todos-essential-wrapper {
+  background-color: #5f0a0a7e;
+  color: #420b0b;
+  border-radius: 15px;
+}
+
+.Todos-niceToHave-wrapper {
+  background-color: #096b007e;
+  color: #053b00;
+  border-radius: 15px;
+}
+
+.Todos-todo {
+  text-decoration: none;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.essential {
+  background-color: #880f0f7e;
+  color: #1a0505;
+}
+
+.niceToHave {
+  background-color: #0969007e;
+  color: #031f00;
+}

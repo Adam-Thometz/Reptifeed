@@ -4,13 +4,13 @@ exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <a
-      class=""
+      class="Navbar-option"
       href="/login"
     >
       Login
     </a>
     <a
-      class=""
+      class="Navbar-option"
       href="/register"
     >
       Register

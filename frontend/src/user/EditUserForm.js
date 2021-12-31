@@ -3,9 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ReptifeedApi from "../api";
 import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
+import './EditUserForm.css'
 
 const EditUserForm = () => {
-  const { currUser } = useContext(UserContext)
+  const { currUser, setCurrUser } = useContext(UserContext)
   const { id } = useParams();
   const navigate = useNavigate();
   const init = {
@@ -26,6 +27,7 @@ const EditUserForm = () => {
     e.preventDefault();
     try {
       const res = await ReptifeedApi.updateUser(+id, formData);
+      setCurrUser(res);
       navigate(`/users/${res.id}`);
     } catch (errors) {
       setFormMessages(m => [...m, errors]);

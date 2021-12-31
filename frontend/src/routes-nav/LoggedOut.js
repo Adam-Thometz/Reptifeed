@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './Navbar.css'
 
 const LoggedOut = () => {
   return (
     <div>
-      <NavLink to='/login'>Login</NavLink>
-      <NavLink to='/register'>Register</NavLink>
+      <NavLink className="Navbar-option" to='/login'>Login</NavLink>
+      <NavLink className="Navbar-option" to='/register'>Register</NavLink>
     </div>
   );
 };

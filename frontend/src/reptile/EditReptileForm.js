@@ -3,12 +3,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ReptifeedApi from "../api";
 import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
+import './EditReptileForm.css'
 
 const EditReptileForm = () => {
   const { reptiles, setReptiles } = useContext(UserContext)
-  const { reptileId } = useParams();
+  const { id, reptileId } = useParams();
   const navigate = useNavigate();
-
   const reptile = reptiles.filter(r => r.id === +reptileId)[0];
 
   const init = {
@@ -35,6 +35,12 @@ const EditReptileForm = () => {
     } catch (errors) {
       setFormMessages(m => [...m, errors]);
     };
+  };
+
+  const handleDelete = async () => {
+    await ReptifeedApi.deleteReptile(+reptileId);
+    navigate(`/users/${+id}/reptiles`);
+    setReptiles(r => r.filter(reptile => reptile.id !== +reptileId));
   };
 
   return (
@@ -85,7 +91,8 @@ const EditReptileForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button className="EditReptileForm-submit" type="submit">Edit</button>
+        <button className="EditReptileForm-button submit" type="submit">Edit</button>
+        <button className="EditReptileForm-button delete" onClick={handleDelete}>Delete reptile</button>
         {formMessages.length ? <Alert type="danger" messages={formMessages} /> : null }
       </form>
     </div>

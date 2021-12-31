@@ -1,19 +1,12 @@
 import React from "react";
-import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render } from '../utils/testUtils';
 import Login from "./Login";
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <Login />
-  </MemoryRouter>);
+  render(<Login />);
 });
 
 test('it matches snapshot', () => {
-  const { asFragment } = render(
-    <MemoryRouter>
-      <Login />
-    </MemoryRouter>
-  );
+  const { asFragment } = render(<Login />);
   expect(asFragment()).toMatchSnapshot();
 });

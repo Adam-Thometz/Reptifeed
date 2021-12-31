@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Home"
+  >
+    <div
+      class="Home-background"
+    />
+    <div
+      class="Home-content"
+    >
+      <h1>
+        Welcome to Reptifeed!
+      </h1>
+      <h4>
+        Your personal assistant for all things reptile food!
+      </h4>
+      <div
+        class="Home-content-description"
+      >
+        <p>
+          You are here because you want what's best for your pet.
+        </p>
+        <img
+          alt="A bearded dragon perched on a log and looking into the camera with its mouth slightly open"
+          src="looking.jpeg"
+        />
+      </div>
+      <div
+        class="Home-content-description"
+      >
+        <img
+          alt="A tortoise about to eat a dandelion"
+          src="tortoise.jpeg"
+        />
+        <p>
+          You know that a diverse selection of food is key to good health.
+        </p>
+      </div>
+      <div
+        class="Home-content-description"
+      >
+        <p>
+          Keep an inventory of your food with us and we'll help you decide what to feed your reptile.
+        </p>
+        <img
+          alt="A bearded dragon about to eat from a bowl of greens and insects"
+          src="bearded-dragon.jpeg"
+        />
+      </div>
+      <div
+        class="Home-content-description"
+      >
+        <img
+          alt="A blue tongue skink eating dog food and an egg"
+          src="blue-tongue-skink.png"
+        />
+        <p>
+          We'll help you vary your reptile's diet so they can thrive.
+        </p>
+      </div>
+      <div
+        class="Home-cta"
+      >
+        <h4>
+          Get started with us!
+        </h4>
+        <button>
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

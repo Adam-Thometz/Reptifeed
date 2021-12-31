@@ -2,7 +2,9 @@
 
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="NotFound"
+  >
     <h4>
       The page you're looking for wasn't found
     </h4>

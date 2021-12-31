@@ -7,16 +7,38 @@ exports[`it matches snapshot (logged in) 1`] = `
   >
     <a
       aria-current="page"
-      class="active"
+      class="Navbar-header active"
       href="/"
     >
       Reptifeed
     </a>
-    <button
-      aria-describedby="popup-2"
-    >
-      My Stuff
-    </button>
+    <div>
+      <a
+        class="Navbar-option"
+        href="/users/1/reptiles"
+      >
+        My Reptiles
+      </a>
+      <a
+        class="Navbar-option"
+        href="/users/1/pantry"
+      >
+        My Pantry
+      </a>
+      <a
+        class="Navbar-option"
+        href="/users/1"
+      >
+        My Account
+      </a>
+      <a
+        aria-current="page"
+        class="Navbar-option active"
+        href="/"
+      >
+        Log out
+      </a>
+    </div>
   </nav>
 </DocumentFragment>
 `;
@@ -28,20 +50,20 @@ exports[`it matches snapshot (logged out) 1`] = `
   >
     <a
       aria-current="page"
-      class="active"
+      class="Navbar-header active"
       href="/"
     >
       Reptifeed
     </a>
     <div>
       <a
-        class=""
+        class="Navbar-option"
         href="/login"
       >
         Login
       </a>
       <a
-        class=""
+        class="Navbar-option"
         href="/register"
       >
         Register

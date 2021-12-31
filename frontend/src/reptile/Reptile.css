@@ -1,0 +1,67 @@
+.Reptile {
+  display: flex;
+  flex-direction: column;
+}
+
+.Reptile-card {
+  border: 2px solid #D5CE3B;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #385802;
+  border-radius: 20px;
+  height: 50vh;
+  box-shadow: 10px 5px 5px rgb(10, 143, 10);
+}
+
+.Reptile-card-img-wrapper {
+  padding: 20px;
+  border: 2px solid #3E3E07;
+  margin: 20px 0;
+  border-radius: 20px;
+  background-color: #D5CE3B;
+  width: 50%;
+  height: 80%;
+}
+
+.Reptile-card-img-wrapper img {
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.Reptile-card-info {
+  color: #D5CE3B;
+}
+
+.Reptile-button-wrapper {
+  border: 2px solid #D5CE3B;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #3E3E07;
+}
+
+button {
+  margin: 5px;
+  border: 1px solid #9AB106;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: #c88820;
+}
+
+.feed {
+  background-color: #45c770;
+}
+
+.treat {
+  background-color: #dad852;
+}

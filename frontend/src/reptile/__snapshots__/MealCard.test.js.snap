@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MealCard everything"
+  >
+    <div
+      class="MealCard-img-wrapper"
+    >
+      <img
+        alt="plumbus"
+        src=""
+      />
+    </div>
+    <h5>
+      plumbus
+    </h5>
+  </div>
+</DocumentFragment>
+`;

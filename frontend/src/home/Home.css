@@ -1,0 +1,62 @@
+.Home {
+  color: #3E3E07;
+  font-size: 1.5rem;
+  margin: 50px 0;
+}
+
+.Home-background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: url('./imgs/forest-background.jpeg');
+  filter: blur(5px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.Home-content {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
+  border: 5px solid #3E3E07;
+  border-radius: 20px;
+  width: 70vw;
+  margin: 0 auto;
+  background-color: #9ab106dc;
+}
+
+.Home-content-description {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #3e3e07a6;
+  width: 80%;
+  padding: 5%;
+  margin: 20px auto;
+  border: 2px solid #D5CE3B;
+  border-radius: 20px;
+}
+
+.Home-content-description p {
+  width: 20%;
+  margin: auto 0;
+  font-size: 1.2rem;
+  color: #e8e9a2;
+}
+
+.Home-content-description img {
+  height: 30vh;
+  width: 30vw;
+  border-radius: 20px;
+}
+
+.Home-cta button {
+  background-color: #D5CE3B;
+  border: 2px solid #3E3E07;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  padding: 20px;
+  margin-bottom: 20px;
+}

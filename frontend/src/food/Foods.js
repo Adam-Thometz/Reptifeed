@@ -53,6 +53,7 @@ const Foods = () => {
   return (
     <div className="Foods">
       <h1>Food for your reptiles!</h1>
+      <h5>Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.</h5>
       <FoodOptions
         species={species}
         setSpecies={setSpecies}
@@ -63,8 +64,6 @@ const Foods = () => {
         treatFilter={treatFilter}
         setTreatFilter={setTreatFilter}
       />
-      <h6>Pick foods you have or can easily get.</h6>
-      <h6>The more foods you pick, the better the variety we can provide for you.</h6>
       <FoodTable
         species={species}
         foods={foods}

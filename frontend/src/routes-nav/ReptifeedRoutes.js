@@ -6,14 +6,17 @@ import Login from "../auth/Login";
 import Register from "../auth/Register";
 import Profile from "../user/Profile";
 import EditUserForm from "../user/EditUserForm";
+import Todos from "../user/Todos";
+
 import Reptiles from "../reptile/Reptiles";
 import NewReptileForm from "../reptile/NewReptileForm";
+import EditReptileForm from "../reptile/EditReptileForm";
+import Reptile from "../reptile/Reptile";
 
 import Foods from "../food/Foods";
 import Pantry from "../pantry/Pantry";
+
 import NotFound from "../common/NotFound";
-import Reptile from "../reptile/Reptile";
-import EditReptileForm from "../reptile/EditReptileForm";
 import RequireAuth from "./RequireAuth";
 
 const ReptifeedRoutes = ({ login, register }) => {
@@ -40,6 +43,8 @@ const ReptifeedRoutes = ({ login, register }) => {
         <Route path="/users/:id" element={<RequireAuth><Profile /></RequireAuth>} />
         {/* PRIVATE ROUTE: Edit profile */}
         <Route path="/users/:id/edit" element={<RequireAuth><EditUserForm /></RequireAuth>} />
+        {/* PRIVATE ROUTE: Todo list */}
+        <Route path="/users/:id/todos" element={<RequireAuth><Todos /></RequireAuth>} />
 
         {/******************/}
         {/* REPTILE ROUTES */}

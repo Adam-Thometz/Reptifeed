@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <table
+    class="FoodTable"
+  >
+    <thead
+      class="FoodTable-header"
+    >
+      <tr
+        class="FoodTable-header-cells"
+      >
+        <td>
+          Image
+        </td>
+        <td>
+          Name
+        </td>
+        <td>
+          Type
+        </td>
+        <td>
+          How often?
+        </td>
+        <td>
+          Treat?
+        </td>
+        <td>
+          Tips
+        </td>
+        <td>
+          Add / Remove
+        </td>
+      </tr>
+    </thead>
+    <tbody
+      class="FoodTable-body"
+    >
+      <tr
+        class="FoodTable-body-cells"
+      >
+        <td>
+          <img
+            alt="plumbus"
+            src=""
+          />
+        </td>
+        <td>
+          plumbus
+        </td>
+        <td>
+          everything
+        </td>
+        <td>
+          always
+        </td>
+        <td>
+          Yes
+        </td>
+        <td>
+          Everyone needs a plumbus!
+        </td>
+        <td>
+          <input
+            checked=""
+            class="FoodTable-checkbox"
+            type="checkbox"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

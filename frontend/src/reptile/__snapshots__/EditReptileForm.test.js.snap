@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="EditReptileForm"
+  >
+    <h1>
+      Edit your reptile
+    </h1>
+    <form>
+      <div
+        class="EditReptileForm-form-group"
+      >
+        <label
+          class="EditReptileForm-label"
+          for="name"
+        >
+          Name:
+        </label>
+        <input
+          class="EditReptileForm-input"
+          id="name"
+          name="name"
+          type="text"
+          value="two crows"
+        />
+      </div>
+      <div
+        class="EditReptileForm-form-group"
+      >
+        <label
+          class="EditReptileForm-label"
+          for="subspecies"
+        >
+          Subspecies:
+        </label>
+        <input
+          class="EditReptileForm-input"
+          id="subspecies"
+          name="subspecies"
+          type="text"
+          value="two of them"
+        />
+      </div>
+      <div
+        class="EditReptileForm-form-group"
+      >
+        <label
+          class="EditReptileForm-label"
+          for="birthday"
+        >
+          Birthday:
+        </label>
+        <input
+          class="EditReptileForm-input"
+          id="birthday"
+          name="birthday"
+          type="date"
+          value="2015-10-29"
+        />
+      </div>
+      <div
+        class="EditReptileForm-form-group"
+      >
+        <label
+          class="EditReptileForm-label"
+          for="imgUrl"
+        >
+          Picture:
+        </label>
+        <input
+          class="EditReptileForm-input"
+          id="imgUrl"
+          name="imgUrl"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="EditReptileForm-button submit"
+        type="submit"
+      >
+        Edit
+      </button>
+      <button
+        class="EditReptileForm-button delete"
+      >
+        Delete reptile
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

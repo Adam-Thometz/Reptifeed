@@ -1,7 +1,11 @@
 import React from "react";
 import UserContext from "./UserContext";
+import { render } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 
-const demoUser = {
+/** Test user, reptiles, and pantry/food */
+
+const testUser = {
   id: 1,
   username: 'rickSanchez',
   password: 'ilikeMorty',
@@ -9,7 +13,7 @@ const demoUser = {
   isAdmin: false
 };
 
-const demoReptile = [
+const testReptile = [
   {
     id: 1,
     name: 'two crows',
@@ -21,21 +25,60 @@ const demoReptile = [
   }
 ];
 
-const demoPantry = [
+const testPantry = [
   {
     name: 'plumbus',
     type: 'everything',
-    frequency: 'always',
+    frequency: 'often',
     image: '',
     isTreat: true,
     tips: "Everyone needs a plumbus!"
   }
 ];
 
-const UserProvider = ({ children, currUser = demoUser, pantry = demoPantry, reptiles = demoReptile }) => (
+/** UserContext mock
+ * 
+ * Wrap components in UserProvider in test files if UserContext is used by a component
+ */
+
+const UserProvider = ({ children, currUser = testUser, pantry = testPantry, reptiles = testReptile }) => (
   <UserContext.Provider value={{currUser, pantry, reptiles}}>
     {children}
   </UserContext.Provider>
 );
 
-export { UserProvider };
+/** custom render
+ * 
+ * wraps component in MemoryRouter. Useful for all components.
+ */
+
+const MemoryRouterWithInitialRoutes = ({ children, initialRoutes }) => {
+  return (
+    <MemoryRouter initialEntries={initialRoutes}>
+      {children}
+    </MemoryRouter>
+  )
+}
+
+const customRender = (component, options) => {
+  const initialRoutes = (options && options.initialRoutes)
+    ? options.initialRoutes
+    : ['/'];
+  return render(component, { wrapper: (args) =>
+    MemoryRouterWithInitialRoutes({
+      ...args,
+      initialRoutes
+    }), ...options
+  });
+};
+
+// This export command overrides the render function from the testing library so that we may call our custom render function 'render'
+export * from '@testing-library/react'
+
+export { 
+  UserProvider,
+  customRender as render,
+  testUser as user,
+  testReptile as reptiles,
+  testPantry as pantry
+};

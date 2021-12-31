@@ -1,0 +1,16 @@
+.Alert {
+  width: 25vw;
+  margin: 5px auto;
+  border: 1px solid #D5CE3B;
+  color: #D5CE3B;
+  padding: 1%;;
+  border-radius: 25px;
+}
+
+.danger {
+  background-color: rgb(138, 0, 0)
+}
+
+.success {
+  background-color: green;
+}

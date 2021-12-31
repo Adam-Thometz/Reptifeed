@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Alert from "../common/Alert";
+import './Login.css'
 
 const Login = ({ login }) => {
   const navigate = useNavigate();

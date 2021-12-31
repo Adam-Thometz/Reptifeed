@@ -1,23 +1,17 @@
 import React from "react";
-import { render } from '@testing-library/react'
 import Foods from "./Foods";
-import { MemoryRouter } from "react-router-dom";
-import { UserProvider } from '../utils/testUtils'
+import { render, UserProvider } from '../utils/testUtils';
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <UserProvider>
-      <Foods />
-    </UserProvider>
-  </MemoryRouter>);
+  render(<UserProvider>
+    <Foods />
+  </UserProvider>);
 });
 
 test('it matches snapshot', () => {
   const { asFragment } = render(
-    <MemoryRouter>
-      <UserProvider>
-        <Foods />
-      </UserProvider>
-    </MemoryRouter>);
+    <UserProvider>
+      <Foods />
+    </UserProvider>);
   expect(asFragment()).toMatchSnapshot();
 })

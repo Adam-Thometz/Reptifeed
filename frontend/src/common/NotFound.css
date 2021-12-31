@@ -1,0 +1,16 @@
+.NotFound {
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid #D5CE3B;
+  color: #D5CE3B;
+  padding: 5%;
+  background-color: rgb(70, 70, 70);
+  border-radius: 25px;
+}
+
+.NotFound a {
+  display: flex;
+  justify-content: space-evenly;
+  color: #D5CE3B;
+  text-decoration: none;
+}

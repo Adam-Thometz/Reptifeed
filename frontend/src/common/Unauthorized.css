@@ -1,0 +1,19 @@
+.Unauthorized {
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid #D5CE3B;
+  color: #D5CE3B;
+  padding: 5%;
+  background-color: rgb(138, 0, 0);
+  border-radius: 25px;
+}
+
+.Unauthorized-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Unauthorized-options a {
+  color: #D5CE3B;
+  text-decoration: none;
+}

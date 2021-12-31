@@ -1,13 +1,23 @@
+/* Color palette for Reptifeed: 
+ * 
+ * dark yellow: #D5CE3B
+ * light brown: #AA7B08
+ * light green: #9AB106
+ * dark green: #385802
+ * dark brown: #3E3E07
+ *
+ * Taken from: https://rrgraphdesign.com/blog/wp-content/uploads/2021/04/Subtle-appreciation-1-min.jpg
+*/
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: #459900;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: -50;
+  color: #3E3E07;
 }

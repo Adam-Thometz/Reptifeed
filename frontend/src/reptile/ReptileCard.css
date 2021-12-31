@@ -1,0 +1,19 @@
+.ReptileCard {
+  border: 2px solid #D5CE3B;
+  width: 30vw;
+  height: 60%;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 1%;
+  color: #D5CE3B;
+  box-shadow: 10px 5px 5px rgb(4, 66, 4);
+  display: inline-block;
+  background-color: green;
+  cursor: pointer;
+}
+
+.ReptileCard img {
+  height: 250px;
+  width: 300px;
+  border-radius: 20%;
+}

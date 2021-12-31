@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import ReptifeedApi from "../api";
 import PantryCard from "./PantryCard";
+import './Pantry.css'
 
 const Pantry = () => {
   const { pantry, setPantry } = useContext(UserContext);
@@ -15,6 +16,10 @@ const Pantry = () => {
 
   return (
     <div className="Pantry">
+      <div>
+        <h1>My Pantry</h1>
+        <Link className="Pantry-link" to="/foods">Add foods to pantry</Link>
+      </div>
       {pantry.map((f, i) => (
         <PantryCard
           key={i}

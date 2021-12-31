@@ -5,9 +5,399 @@ exports[`it matches snapshot 1`] = `
   <div
     class="Routes"
   >
-    <h1>
-      Welcome to Reptifeed!
-    </h1>
+    <div
+      class="Home"
+    >
+      <div
+        class="Home-background"
+      />
+      <div
+        class="Home-content"
+      >
+        <h1>
+          Welcome to Reptifeed!
+        </h1>
+        <h4>
+          Your personal assistant for all things reptile food!
+        </h4>
+        <div
+          class="Home-content-description"
+        >
+          <p>
+            You are here because you want what's best for your pet.
+          </p>
+          <img
+            alt="A bearded dragon perched on a log and looking into the camera with its mouth slightly open"
+            src="looking.jpeg"
+          />
+        </div>
+        <div
+          class="Home-content-description"
+        >
+          <img
+            alt="A tortoise about to eat a dandelion"
+            src="tortoise.jpeg"
+          />
+          <p>
+            You know that a diverse selection of food is key to good health.
+          </p>
+        </div>
+        <div
+          class="Home-content-description"
+        >
+          <p>
+            Keep an inventory of your food with us and we'll help you decide what to feed your reptile.
+          </p>
+          <img
+            alt="A bearded dragon about to eat from a bowl of greens and insects"
+            src="bearded-dragon.jpeg"
+          />
+        </div>
+        <div
+          class="Home-content-description"
+        >
+          <img
+            alt="A blue tongue skink eating dog food and an egg"
+            src="blue-tongue-skink.png"
+          />
+          <p>
+            We'll help you vary your reptile's diet so they can thrive.
+          </p>
+        </div>
+        <div
+          class="Home-cta"
+        >
+          <h4>
+            Get started with us!
+          </h4>
+          <button>
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of 404 page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="NotFound"
+    >
+      <h4>
+        The page you're looking for wasn't found
+      </h4>
+      <a
+        href="/"
+      >
+        Go back home
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of edit user page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="EditUserForm"
+    >
+      <h1>
+        Edit your information
+      </h1>
+      <form>
+        <div
+          class="EditUserForm-form-group"
+        >
+          <label
+            class="EditUserForm-label"
+            for="username"
+          >
+            Username:
+          </label>
+          <input
+            class="EditUserForm-input"
+            id="username"
+            name="username"
+            type="text"
+            value="rickSanchez"
+          />
+        </div>
+        <div
+          class="EditUserForm-form-group"
+        >
+          <label
+            class="EditUserForm-label"
+            for="password"
+          >
+            Password:
+          </label>
+          <input
+            class="EditUserForm-input"
+            id="password"
+            name="password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          class="EditUserForm-form-group"
+        >
+          <label
+            class="EditUserForm-label"
+            for="email"
+          >
+            Email:
+          </label>
+          <input
+            class="EditUserForm-input"
+            id="email"
+            name="email"
+            type="email"
+            value="rickman@qmail.com"
+          />
+        </div>
+        <button
+          class="EditUserForm-submit"
+          type="submit"
+        >
+          Edit
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of login page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Login"
+    >
+      <h1>
+        Login to your Reptifeed account
+      </h1>
+      <form>
+        <div
+          class="Login-form-group"
+        >
+          <label
+            class="Login-label"
+            for="username"
+          >
+            Username:
+          </label>
+          <input
+            class="Login-input"
+            id="username"
+            name="username"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="Login-form-group"
+        >
+          <label
+            class="Login-label"
+            for="password"
+          >
+            Password:
+          </label>
+          <input
+            class="Login-input"
+            id="password"
+            name="password"
+            type="password"
+            value=""
+          />
+        </div>
+        <button
+          class="Login-submit"
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of profile page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Profile"
+    >
+      <h1
+        class="Profile-header"
+      >
+        Hello rickSanchez!
+      </h1>
+      <a
+        class="Profile-todo-link"
+        href="/users/1/todos"
+      >
+        Click here for next steps!
+      </a>
+      <div
+        class="Profile-section reptile"
+      >
+        <div
+          class="Profile-options"
+        >
+          <a
+            href="/users/1/reptiles"
+          >
+            See your reptiles
+          </a>
+          <a
+            href="/users/1/reptiles/add"
+          >
+            Add a reptile
+          </a>
+        </div>
+        <img
+          alt=""
+          class="Profile-icon"
+          src="reptile.png"
+        />
+      </div>
+      <div
+        class="Profile-section pantry"
+      >
+        <img
+          alt=""
+          class="Profile-icon"
+          src="pantry.png"
+        />
+        <div
+          class="Profile-options"
+        >
+          <a
+            href="/users/1/pantry"
+          >
+            See your pantry
+          </a>
+          <a
+            href="/foods"
+          >
+            Add foods to pantry
+          </a>
+        </div>
+      </div>
+      <div
+        class="Profile-section user"
+      >
+        <div
+          class="Profile-options"
+        >
+          <a
+            href="/users/1/edit"
+          >
+            Edit your profile
+          </a>
+          <a
+            href="/foods"
+          >
+            Delete account
+          </a>
+        </div>
+        <img
+          alt=""
+          class="Profile-icon"
+          src="user.png"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of registration page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Register"
+    >
+      <h1>
+        Register for your Reptifeed account
+      </h1>
+      <form>
+        <div
+          class="Register-form-group"
+        >
+          <label
+            class="Register-label"
+            for="username"
+          >
+            Username:
+          </label>
+          <input
+            class="Register-input"
+            id="username"
+            name="username"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="Register-form-group"
+        >
+          <label
+            class="Register-label"
+            for="password"
+          >
+            Password:
+          </label>
+          <input
+            class="Register-input"
+            id="password"
+            name="password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          class="Register-form-group"
+        >
+          <label
+            class="Register-label"
+            for="email"
+          >
+            Email:
+          </label>
+          <input
+            class="Register-input"
+            id="email"
+            name="email"
+            type="email"
+            value=""
+          />
+        </div>
+        <button
+          class="Register-submit"
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+    </div>
   </div>
 </DocumentFragment>
 `;

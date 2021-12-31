@@ -1,23 +1,18 @@
 import React from "react";
-import { render } from '@testing-library/react'
 import PantryCard from "./PantryCard";
-import { MemoryRouter } from "react-router-dom";
-import { UserProvider } from '../utils/testUtils'
+import { render, UserProvider } from '../utils/testUtils'
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <UserProvider>
-      <PantryCard />
-    </UserProvider>
-  </MemoryRouter>);
+  render(<PantryCard />);
 });
 
 test('it matches snapshot', () => {
-  const { asFragment } = render(
-    <MemoryRouter>
-      <UserProvider>
-        <PantryCard />
-      </UserProvider>
-    </MemoryRouter>);
+  const { asFragment } = render(<PantryCard
+    name="plumbus"
+    type="everything"
+    frequency="always"
+    image=""
+    isTreat={true}
+  />);
   expect(asFragment()).toMatchSnapshot();
 });

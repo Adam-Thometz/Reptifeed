@@ -1,0 +1,45 @@
+.EditReptileForm {
+  border: 2px solid #D5CE3B;
+  width: 50vw;
+  height: 60%;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 1%;
+  background-color: #3E3E07;
+  color: #D5CE3B;
+  box-shadow: 10px 5px 5px rgb(4, 66, 4);
+}
+
+.EditReptileForm-form-group {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.EditReptileForm-label {
+  width: 8%;
+  margin: 0 1%;
+}
+
+.EditReptileForm-input {
+  width: 70%;
+  padding: 1%;
+  border-radius: 5px;
+  border: none;
+}
+
+.EditReptileForm-button {
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #D5CE3B;
+  font-size: 1rem;
+}
+
+.submit {
+  background-color: #AA7B08;
+}
+
+.delete {
+  background-color: #d65454;
+}

@@ -5,22 +5,45 @@ exports[`it matches snapshot 1`] = `
   <div
     class="Pantry"
   >
+    <div>
+      <h1>
+        My Pantry
+      </h1>
+      <a
+        class="Pantry-link"
+        href="/foods"
+      >
+        Add foods to pantry
+      </a>
+    </div>
     <div
-      class="Pantry-card-everything"
+      class="PantryCard everything"
     >
-      <img
-        alt="plumbus"
-        src=""
-      />
+      <div
+        class="PantryCard-img-wrapper"
+      >
+        <img
+          alt="plumbus"
+          src=""
+        />
+      </div>
       <h4>
         plumbus
       </h4>
       <p>
-        Feed always
+        Feed often
       </p>
-      Give as a treat!Helpful tip: Everyone needs a plumbus!
+      <p>
+        Treat?: 
+        <b>
+          Yes
+        </b>
+      </p>
+      <p>
+        Tips: Everyone needs a plumbus!
+      </p>
       <button
-        class="Pantry-card-removebtn"
+        class="PantryCard-removebtn"
       >
         I ran out
       </button>

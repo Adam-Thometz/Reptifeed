@@ -1,14 +1,17 @@
 import React from "react";
+import './PantryCard.css'
 
 const PantryCard = ({name, type, frequency, image, isTreat, tips, remove}) => {
   return (
-    <div className={`Pantry-card-${type}`}>
-      <img src={image} alt={name} />
+    <div className={`PantryCard ${type}`}>
+      <div className="PantryCard-img-wrapper">
+        <img src={image} alt={name} />
+      </div>
       <h4>{name}</h4>
       <p>Feed {frequency}</p>
-      {isTreat ? "Give as a treat!" : null}
-      {tips ? `Helpful tip: ${tips}` : null}
-      <button className="Pantry-card-removebtn" onClick={() => remove(name)}>I ran out</button>
+      <p>Treat?: {isTreat ? <b>Yes</b> : <span>No</span>}</p>
+      <p>Tips: {tips ? tips : 'N/A'}</p>
+      <button className="PantryCard-removebtn" onClick={() => remove(name)}>I ran out</button>
     </div>
   );
 };

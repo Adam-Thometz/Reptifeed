@@ -1,0 +1,50 @@
+.Profile a {
+  text-decoration: none;
+  color: #9AB106;
+}
+
+.Profile-todo-link {
+  color: #3E3E07;
+  border: 1px solid #D5CE3B;
+  padding: 15px;
+  background-color: #5c4402;
+  border-radius: 10px;
+}
+
+.Profile-section {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 30px;
+  box-shadow: 10px 5px 5px rgb(4, 66, 4);
+}
+
+.Profile .user a {
+  color: #3E3E07;
+}
+
+.Profile-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Profile-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.reptile {
+  background-color: #036610;
+}
+
+.pantry {
+  background-color: #5c4402;
+}
+
+.user {
+  background-color: #D5CE3B;
+}

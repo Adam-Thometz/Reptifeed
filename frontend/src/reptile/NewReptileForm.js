@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ReptifeedApi from "../api";
 import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
+import './NewReptileForm.css';
 
 const NewReptileForm = () => {
   const navigate = useNavigate();

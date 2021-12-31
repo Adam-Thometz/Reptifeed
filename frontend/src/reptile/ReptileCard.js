@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import './ReptileCard.css'
 
 const ReptileCard = ({ id, name, image, species, ownerId }) => {
   const navigate = useNavigate();

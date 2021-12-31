@@ -3,15 +3,33 @@
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Pantry-card-undefined"
+    class="PantryCard everything"
   >
-    <img />
-    <h4 />
+    <div
+      class="PantryCard-img-wrapper"
+    >
+      <img
+        alt="plumbus"
+        src=""
+      />
+    </div>
+    <h4>
+      plumbus
+    </h4>
     <p>
-      Feed 
+      Feed always
+    </p>
+    <p>
+      Treat?: 
+      <b>
+        Yes
+      </b>
+    </p>
+    <p>
+      Tips: N/A
     </p>
     <button
-      class="Pantry-card-removebtn"
+      class="PantryCard-removebtn"
     >
       I ran out
     </button>

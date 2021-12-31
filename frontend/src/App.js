@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserContext.Provider value={{ currUser, reptiles, setReptiles, pantry, setPantry }}>
+      <UserContext.Provider value={{ currUser, setCurrUser, reptiles, setReptiles, pantry, setPantry }}>
         <Navbar logout={logout} />
         <ReptifeedRoutes login={login} register={register} />
       </UserContext.Provider>

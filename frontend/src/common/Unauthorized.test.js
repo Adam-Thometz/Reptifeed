@@ -1,18 +1,12 @@
 import React from "react";
-import { render } from '@testing-library/react'
+import { render } from '../utils/testUtils';
 import Unauthorized from "./Unauthorized";
-import { MemoryRouter } from "react-router-dom";
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <Unauthorized />
-  </MemoryRouter>);
+  render(<Unauthorized />);
 });
 
 test('it matches snapshot', () => {
-  const { asFragment } = render(
-    <MemoryRouter>
-      <Unauthorized />
-    </MemoryRouter>);
+  const { asFragment } = render(<Unauthorized />);
   expect(asFragment()).toMatchSnapshot();
 })

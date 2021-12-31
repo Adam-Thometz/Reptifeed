@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="FoodOptions"
+  >
+    <h4>
+      Use these options to filter foods
+    </h4>
+    <div
+      class="FoodOptions-group"
+    >
+      <label
+        class="FoodOptions-label"
+        for="species"
+      >
+        Species
+      </label>
+      <select
+        class="FoodOptions-input"
+        id="species"
+        name="species"
+      >
+        <option
+          value="blue-tongue-skink"
+        >
+          Blue Tongue Skink
+        </option>
+      </select>
+    </div>
+    <div
+      class="FoodOptions-group"
+    >
+      <label
+        class="FoodOptions-label"
+        for="search"
+      >
+        Search foods
+      </label>
+      <input
+        class="FoodOptions-input"
+        id="search"
+        name="search"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="FoodOptions-group"
+    >
+      <label
+        class="FoodOptions-label"
+        for="frequency"
+      >
+        Food group
+      </label>
+      <select
+        class="FoodOptions-input"
+        id="type"
+        name="type"
+      >
+        <option
+          value=""
+        >
+          --
+        </option>
+        <option
+          value="protein"
+        >
+          Protein
+        </option>
+        <option
+          value="vegetable"
+        >
+          Vegetables/Greens
+        </option>
+        <option
+          value="fruit"
+        >
+          Fruit
+        </option>
+        <option
+          value="supplement"
+        >
+          Supplements
+        </option>
+      </select>
+    </div>
+    <div
+      class="FoodOptions-group"
+    >
+      <label
+        class="FoodOptions-label"
+        for="treats"
+      >
+        Treats
+      </label>
+      <input
+        class="FoodOptions-checkbox"
+        id="treats"
+        name="treats"
+        type="checkbox"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

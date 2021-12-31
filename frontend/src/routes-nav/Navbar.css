@@ -1,0 +1,21 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #459900;
+}
+
+.Navbar-header {
+  border: 1px solid #3E3E07;
+  border-radius: 5px;
+  color: #D5CE3B;
+  background-color: #3E3E07;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.Navbar-option {
+  padding: 10px;
+  text-decoration: none;
+  color: #3E3E07;
+}

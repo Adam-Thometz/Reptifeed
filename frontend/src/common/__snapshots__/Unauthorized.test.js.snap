@@ -2,20 +2,26 @@
 
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="Unauthorized"
+  >
     <h4>
       You are not authorized to view this page! Here are your options:
     </h4>
-    <a
-      href="/login"
+    <div
+      class="Unauthorized-options"
     >
-      Log in to your account
-    </a>
-    <a
-      href="/register"
-    >
-      Register for an account with us
-    </a>
+      <a
+        href="/login"
+      >
+        Log in to your account
+      </a>
+      <a
+        href="/register"
+      >
+        Register for an account with us
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;

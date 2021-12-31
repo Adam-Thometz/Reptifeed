@@ -1,19 +1,12 @@
 import React from "react";
-import { render } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom';
+import { render } from '../utils/testUtils'
 import LoggedOut from "./LoggedOut";
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <LoggedOut />
-  </MemoryRouter>);
+  render(<LoggedOut />);
 });
 
 test('it matches snapshot', () => {
-  const { asFragment } = render(
-    <MemoryRouter>
-      <LoggedOut />
-    </MemoryRouter>
-  );
+  const { asFragment } = render(<LoggedOut />);
   expect(asFragment()).toMatchSnapshot();
-})
+});
