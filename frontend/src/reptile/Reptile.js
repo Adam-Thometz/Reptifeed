@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { foodQueue, treatQueue } from "../utils/foodQueue";
+import { foodStack, treatStack } from "../utils/foodStack";
 import UserContext from "../utils/UserContext";
 import { getFoodFromPantry, getTreatFromPantry, getNextSupplement } from "../utils/feedingFunctions";
 import Meal from "./Meal";
@@ -21,8 +21,8 @@ const Reptile = () => {
   const [lastSupplement, setLastSupplement] = useLocalStorage(`${reptile.name}'s-last-supplement-${reptile.id}`)
 
   const handleFeed = () => {
-    const queue = (!foodFreqs || !JSON.parse(foodFreqs).length) ? [...foodQueue] : JSON.parse(foodFreqs);
-    const freq = queue.shift();
+    const queue = (!foodFreqs || !JSON.parse(foodFreqs).length) ? [...foodStack] : JSON.parse(foodFreqs);
+    const freq = queue.pop();
     const protein = getFoodFromPantry(pantry, freq, "protein");
     const vegetable = getFoodFromPantry(pantry, freq, "vegetable");
     const supplement = getNextSupplement(pantry, lastSupplement);
@@ -33,8 +33,8 @@ const Reptile = () => {
   };
   
   const handleTreat = () => {
-    const queue = (!treatFreqs || !JSON.parse(treatFreqs).length) ? [...treatQueue] : JSON.parse(treatFreqs);
-    const freq = queue.shift();
+    const queue = (!treatFreqs || !JSON.parse(treatFreqs).length) ? [...treatStack] : JSON.parse(treatFreqs);
+    const freq = queue.pop();
     const treat = getTreatFromPantry(pantry, freq);
     setDisplayFreq(freq);
     setTreatFreqs(JSON.stringify(queue));
