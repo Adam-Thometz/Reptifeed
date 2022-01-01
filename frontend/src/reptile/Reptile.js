@@ -16,28 +16,28 @@ const Reptile = () => {
 
   const [meal, setMeal] = useState([]);
   const [displayFreq, setDisplayFreq] = useState(null);
-  const [foodFreqs, setFoodFreqs] = useLocalStorage(`food-queue-for-${reptile.name}-${reptile.id}`);
-  const [treatFreqs, setTreatFreqs] = useLocalStorage(`treat-queue-for-${reptile.name}-${reptile.id}`);
+  const [foodFreqs, setFoodFreqs] = useLocalStorage(`food-stack-for-${reptile.name}-${reptile.id}`);
+  const [treatFreqs, setTreatFreqs] = useLocalStorage(`treat-stack-for-${reptile.name}-${reptile.id}`);
   const [lastSupplement, setLastSupplement] = useLocalStorage(`${reptile.name}'s-last-supplement-${reptile.id}`)
 
   const handleFeed = () => {
-    const queue = (!foodFreqs || !JSON.parse(foodFreqs).length) ? [...foodStack] : JSON.parse(foodFreqs);
-    const freq = queue.pop();
+    const stack = (!foodFreqs || !JSON.parse(foodFreqs).length) ? [...foodStack] : JSON.parse(foodFreqs);
+    const freq = stack.pop();
     const protein = getFoodFromPantry(pantry, freq, "protein");
     const vegetable = getFoodFromPantry(pantry, freq, "vegetable");
     const supplement = getNextSupplement(pantry, lastSupplement);
     setLastSupplement(supplement.name);
     setDisplayFreq(freq);
-    setFoodFreqs(JSON.stringify(queue));
+    setFoodFreqs(JSON.stringify(stack));
     setMeal([protein, vegetable, supplement]);
   };
   
   const handleTreat = () => {
-    const queue = (!treatFreqs || !JSON.parse(treatFreqs).length) ? [...treatStack] : JSON.parse(treatFreqs);
-    const freq = queue.pop();
+    const stack = (!treatFreqs || !JSON.parse(treatFreqs).length) ? [...treatStack] : JSON.parse(treatFreqs);
+    const freq = stack.pop();
     const treat = getTreatFromPantry(pantry, freq);
     setDisplayFreq(freq);
-    setTreatFreqs(JSON.stringify(queue));
+    setTreatFreqs(JSON.stringify(stack));
     setMeal([treat]);
   };
 
