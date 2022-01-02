@@ -25,10 +25,10 @@ describe('get all foods', () => {
       .get('/api/blue-tongue-skink/foods')
       .set('authorization', `Bearer ${token}`);
     expect(res.body.foods[0]).toEqual({
-      "name": "dog food",
-      "type": "protein",
+      "name": "arugula",
+      "type": "vegetable",
       "frequency": "often",
-      "image": "",
+      "image": "https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif",
       "isTreat": false,
       "tips": ""
     });
@@ -40,10 +40,10 @@ describe('get all foods', () => {
       .get('/api/blue-tongue-skink/foods')
       .set('authorization', `Bearer ${token}`);
     expect(res.body.foods[0]).toEqual({
-      "name": "dog food",
-      "type": "protein",
+      "name": "arugula",
+      "type": "vegetable",
       "frequency": "often",
-      "image": "",
+      "image": "https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif",
       "isTreat": false,
       "tips": ""
     });
@@ -68,7 +68,7 @@ describe('get a specific food', () => {
         "name": "eggs",
         "type": "protein",
         "frequency": "occasionally",
-        "image": "",
+        "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00041130076305/d443cbda6e8e410d15712bd13e544668_large.png&width=256&type=webp&quality=80",
         "isTreat": true,
         "tips": "Can be eaten raw or boiled."
       }
@@ -85,7 +85,7 @@ describe('get a specific food', () => {
         "name": "eggs",
         "type": "protein",
         "frequency": "occasionally",
-        "image": "",
+        "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00041130076305/d443cbda6e8e410d15712bd13e544668_large.png&width=256&type=webp&quality=80",
         "isTreat": true,
         "tips": "Can be eaten raw or boiled."
       }
@@ -102,7 +102,7 @@ describe('get a specific food', () => {
         "name": "cat food",
         "type": "protein",
         "frequency": "occasionally",
-        "image": "",
+        "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00050000424443/9da038c7d43db93b821df85a8f3ef41a_large.png&width=256&type=webp&quality=80",
         "isTreat": false,
         "tips": ""
       }
@@ -137,7 +137,7 @@ describe('get food by type', () => {
           "name": "calcium",
           "type": "supplement",
           "frequency": "often",
-          "image": "",
+          "image": "https://s7d2.scene7.com/is/image/PetSmart/5047843?$CLEARjpg$",
           "isTreat": false,
           "tips": ""
         },
@@ -145,7 +145,7 @@ describe('get food by type', () => {
           "name": "multivitamin",
           "type": "supplement",
           "frequency": "often",
-          "image": "",
+          "image": "https://m.media-amazon.com/images/I/817pGZlvwML._AC_SX679_.jpg",
           "isTreat": false,
           "tips": ""
         },
@@ -163,7 +163,7 @@ describe('get food by type', () => {
           "name": "calcium",
           "type": "supplement",
           "frequency": "often",
-          "image": "",
+          "image": "https://s7d2.scene7.com/is/image/PetSmart/5047843?$CLEARjpg$",
           "isTreat": false,
           "tips": ""
         },
@@ -171,7 +171,7 @@ describe('get food by type', () => {
           "name": "multivitamin",
           "type": "supplement",
           "frequency": "often",
-          "image": "",
+          "image": "https://m.media-amazon.com/images/I/817pGZlvwML._AC_SX679_.jpg",
           "isTreat": false,
           "tips": ""
         },

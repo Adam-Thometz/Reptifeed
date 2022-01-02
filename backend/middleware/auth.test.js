@@ -1,6 +1,7 @@
 "use strict";
 
 const jwt = require('jsonwebtoken');
+const db = require('../db');
 const { UnauthorizedError } = require('../expressError');
 
 const { SECRET_KEY } = require('../config')
@@ -170,6 +171,7 @@ describe('ensureAdminOrCorrectOwner', () => {
       expect(err).toBeFalsy();
     };
     ensureAdminOrCorrectOwner(req, res, next);
+    db.end()
   });
 
   test('works for admin', async () => {
@@ -189,6 +191,7 @@ describe('ensureAdminOrCorrectOwner', () => {
       expect(err).toBeFalsy();
     };
     ensureAdminOrCorrectOwner(req, res, next);
+    db.end()
   });
 
   test('throws unauth for mismatch', async () => {
@@ -208,5 +211,6 @@ describe('ensureAdminOrCorrectOwner', () => {
       expect(err instanceof UnauthorizedError).toBeTruthy();
     };
     ensureAdminOrCorrectOwner(req, res, next);
+    db.end()
   });
 });
