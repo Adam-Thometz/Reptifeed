@@ -42,12 +42,12 @@ exports[`it matches snapshot 1`] = `
       >
         <td>
           <img
-            alt="arugula"
-            src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
+            alt="cactus"
+            src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/2311591/5ab686083ea474ccd5e332dd39df9a79_large.png&width=256&type=webp&quality=80"
           />
         </td>
         <td>
-          arugula
+          cactus
         </td>
         <td>
           vegetable
@@ -61,7 +61,6 @@ exports[`it matches snapshot 1`] = `
         <td />
         <td>
           <input
-            checked=""
             class="FoodTable-checkbox"
             type="checkbox"
           />
@@ -91,6 +90,36 @@ exports[`it matches snapshot 1`] = `
         <td />
         <td>
           <input
+            class="FoodTable-checkbox"
+            type="checkbox"
+          />
+        </td>
+      </tr>
+      <tr
+        class="FoodTable-body-cells"
+      >
+        <td>
+          <img
+            alt="arugula"
+            src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
+          />
+        </td>
+        <td>
+          arugula
+        </td>
+        <td>
+          vegetable
+        </td>
+        <td>
+          often
+        </td>
+        <td>
+          No
+        </td>
+        <td />
+        <td>
+          <input
+            checked=""
             class="FoodTable-checkbox"
             type="checkbox"
           />

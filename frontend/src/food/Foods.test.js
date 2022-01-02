@@ -14,4 +14,4 @@ test('it matches snapshot', () => {
       <Foods />
     </UserProvider>);
   expect(asFragment()).toMatchSnapshot();
-})
+});

@@ -18,7 +18,7 @@ function getFoodFromPantry(pantry, freq, type) {
 function getTreatFromPantry(pantry, freq) {
   let availableTreats = pantry.filter(food => food.isTreat && food.frequency === freq);
   if (!availableTreats.length) {
-    availableTreats = pantry.filter(food => food.isTreat && food.frequency === 'moderately');
+    availableTreats = pantry.filter(food => food.isTreat);
   };
   const selectedIdx = Math.floor(Math.random() * availableTreats.length); 
   
@@ -27,10 +27,10 @@ function getTreatFromPantry(pantry, freq) {
 
 function getNextSupplement(pantry, lastSupplement) {
   const nextSupplement = lastSupplement === 'calcium' ?
-    pantry.filter(food => food.name === 'multivitamin') :
-    pantry.filter(food => food.name === 'calcium');
+    pantry.find(food => food.name === 'multivitamin') :
+    pantry.find(food => food.name === 'calcium');
   
-  return nextSupplement[0];
+  return nextSupplement;
 }
 
 export { getFoodFromPantry, getTreatFromPantry, getNextSupplement };

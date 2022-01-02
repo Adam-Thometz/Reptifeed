@@ -12,6 +12,12 @@ test('it matches snapshot for danger', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
+test('it matches snapshot for warning', () => {
+  let messages = ["Uh-oh..."];
+  const { asFragment } = render(<Alert type="warning" messages={messages} />);
+  expect(asFragment()).toMatchSnapshot();
+});
+
 test('it matches snapshot for success', () => {
   let messages = ["You did it!", "You have an incredible work ethic!"];
   const { asFragment } = render(<Alert type="success" messages={messages} />);
