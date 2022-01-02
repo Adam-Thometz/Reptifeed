@@ -4,12 +4,20 @@ import { render, UserProvider } from '../utils/testUtils'
 
 const food = [
   {
-    name: 'plumbus',
-    type: 'everything',
-    frequency: 'always',
-    image: '',
-    isTreat: true,
-    tips: "Everyone needs a plumbus!"
+    name: 'arugula',
+    type: 'vegetable',
+    frequency: 'often',
+    image: 'https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif',
+    isTreat: false,
+    tips: ''
+  },
+  {
+    name: 'dog food',
+    type: 'protein',
+    frequency: 'often',
+    image: 'https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00036800086821/3b0b51456eaf177a3679cee48f7d6314_large.png&width=200&type=webp&quality=80',
+    isTreat: false,
+    tips: ''
   }
 ];
 

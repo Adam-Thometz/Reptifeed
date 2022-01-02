@@ -27,12 +27,12 @@ const testReptile = [
 
 const testPantry = [
   {
-    name: 'plumbus',
-    type: 'everything',
+    name: 'arugula',
+    type: 'vegetable',
     frequency: 'often',
-    image: '',
-    isTreat: true,
-    tips: "Everyone needs a plumbus!"
+    image: 'https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif',
+    isTreat: false,
+    tips: ''
   }
 ];
 

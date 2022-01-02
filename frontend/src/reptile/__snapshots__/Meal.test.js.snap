@@ -12,18 +12,18 @@ exports[`it matches snapshot 1`] = `
       class="Meal-wrapper"
     >
       <div
-        class="MealCard everything"
+        class="MealCard vegetable"
       >
         <div
           class="MealCard-img-wrapper"
         >
           <img
-            alt="plumbus"
-            src=""
+            alt="arugula"
+            src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
           />
         </div>
         <h5>
-          plumbus
+          arugula
         </h5>
       </div>
     </div>

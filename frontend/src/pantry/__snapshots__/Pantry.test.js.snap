@@ -17,30 +17,30 @@ exports[`it matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="PantryCard everything"
+      class="PantryCard vegetable"
     >
       <div
         class="PantryCard-img-wrapper"
       >
         <img
-          alt="plumbus"
-          src=""
+          alt="arugula"
+          src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
         />
       </div>
       <h4>
-        plumbus
+        arugula
       </h4>
       <p>
         Feed often
       </p>
       <p>
         Treat?: 
-        <b>
-          Yes
-        </b>
+        <span>
+          No
+        </span>
       </p>
       <p>
-        Tips: Everyone needs a plumbus!
+        Tips: N/A
       </p>
       <button
         class="PantryCard-removebtn"
