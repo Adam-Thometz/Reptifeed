@@ -4,7 +4,6 @@ import UserContext from "../utils/UserContext";
 import './Todos.css';
 
 const Todos = () => {
-  debugger;
   const { currUser } = useContext(UserContext);
   const location = useLocation();
   const navigate = useNavigate();
