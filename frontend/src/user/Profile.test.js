@@ -1,5 +1,4 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import Profile from "./Profile";
 import { render, UserProvider } from "../utils/testUtils";
 import RequireAuth from "../routes-nav/RequireAuth";
