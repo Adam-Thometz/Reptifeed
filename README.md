@@ -10,11 +10,11 @@ Reptifeed is an app that is designed to offer suggestions to reptile owners on w
 
 ### How Does It Work? 🌿
 
-When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry and if the pantry is not full enough, they must add other foods to their pantry.
+When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry.
 
-The user can learn about the foods they need to feed a balanced diet by checking out the foods page, which is also where they can go to add foods to their pantry. At the moment, it only works for blue tongue skinks. Learn more in the 'Where Does the Food Data Come From?' section.
+The user can learn about the foods they need to feed a balanced diet by checking out the foods page. At the moment, it only works for blue tongue skinks. Learn more in the 'Where Does the Food Data Come From?' section.
 
-The app keeps track of a specific reptile's diet by randomly assigning food based on a stack of frequencies* that is kept in localStorage for each reptile, which replenishes everytime it runs out. It searches the user's pantry to look for foods of the frequency. This feature only runs when the user meets certain criteria, which is outlined in the user's todo list.
+The app keeps track of a specific reptile's diet by randomly assigning food based on a frequency pulled from a stack of frequencies*. This stack is kept in localStorage for each reptile and replenishes everytime it runs out.
 
 *`exampleFreqStack = ['occasionally', 'often', 'often', 'moderately', 'often', 'often']`
 Stacks for this app can be found in `/forntend/src/utils/foodStack.js`
