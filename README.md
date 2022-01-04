@@ -4,11 +4,11 @@
 
 ## Info about repo
 
-### What is Reptifeed?
+### What is Reptifeed? 🐸
 
 Reptifeed is an app that is designed to offer suggestions to reptile owners on what to feed their pets. A user stores information about their reptiles, fills up a virtual pantry that matches what they have in their kitchen, and gets suggestions on what to feed and how often. The app mixes up suggestions in order to keep reptile diets balanced.
 
-### How Does It Work?
+### How Does It Work? 🌿
 
 When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry and if the pantry is not full enough, they must add other foods to their pantry.
 
@@ -19,14 +19,14 @@ The app keeps track of a specific reptile's diet by randomly assigning food base
 *`exampleFreqStack = ['occasionally', 'often', 'often', 'moderately', 'often', 'often']`
 Stacks for this app can be found in `/forntend/src/utils/foodStack.js`
 
-### Where Does the Food Data Come From?
+### Where Does the Food Data Come From? 🍎
 
 I got the data for this from two main sources and then pieced them together in `backend/reptifeed-skink-diet.sql`:
 
 - This chart: https://bluetongueskinks.net/foodchart.html
 - This page: https://www.lizards101.com/what-can-blue-tongue-skinks-eat-and-not-eat-60-foods/
 
-Consistent data on what blue tongue skinks eat was hard to come by, which was one of the reasons I started developing this app. As a new blue tongue skink owner, I was excited but also overwhelmed by the amount of choices regarding what they could eat. I plan to refine the data as I learn more about what skinks eat, perhaps even add in information about nutirition amounts. I also hope to add capabilities for bearded dragons and such in the future!
+Truly consistent data on what blue tongue skinks eat was hard to come by, which was one of the reasons I started developing this app. As a new blue tongue skink owner, I was excited but also overwhelmed by the amount of choices regarding what they could eat. I plan to refine the data as I learn more about what skinks eat, perhaps even add in information about nutirition amounts. I also hope to add capabilities for bearded dragons and such in the future!
 
 ### Tech stack:
 
