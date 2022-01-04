@@ -3,7 +3,7 @@
 function getDatabaseUrl() {
   return (process.env.NODE_ENV === 'test')
     ? "reptifeed_test"
-    : process.env.DATABASE_URL_1 || 'reptifeed';
+    : process.env.DATABASE_URL || 'reptifeed';
 }
 
 require('dotenv').config();
