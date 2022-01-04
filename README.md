@@ -63,6 +63,20 @@ npm start
 ```
 It should show the home page.
 
+### How to run tests
+
+Easy!
+
+Backend:
+```
+jest
+```
+Frontend:
+```
+npm test
+```
+
+
 ### How to add a reptile database to expand the selection of reptiles
 
 1. Create a sql file in the /backend directory.
@@ -92,12 +106,14 @@ VALUES ...
 \i reptifeed-skink-diet.sql
 \i // YOUR FILE NAME
 ```
+
+Reactvate with `psql -f reptifeed.sql`
 5. Go to `/frontend/src/food/FoodOptions.js` and in the group with the Species label, nest the following into the `<select>` tag:
 
 ```
 <option value="reptile-name">Reptile Name</option>
 ```
 
-Make sure that the value attribute is the same as the database name (minus `_diet`) excepts with dashes (`-`) instead of low dashes (`_`).
+Make sure that the value attribute is the same as the database name (minus `_diet`) except with dashes (`-`) instead of low dashes (`_`).
 
 *Example: database name = bearded_dragon_diet, value name = 'bearded-dragon'*
