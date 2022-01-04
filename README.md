@@ -110,6 +110,7 @@ VALUES ...
 ```
 
 Reactvate with `psql -f reptifeed.sql`
+
 5. Go to `/frontend/src/food/FoodOptions.js` and in the group with the Species label, nest the following into the `<select>` tag:
 
 ```
