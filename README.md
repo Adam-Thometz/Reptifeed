@@ -2,6 +2,8 @@
 
 #### developed by Adam Thometz
 
+Check out deployment: https://reptifeed.surge.sh/
+
 ## Info about repo
 
 ### What is Reptifeed? 🐸
