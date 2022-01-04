@@ -51,4 +51,18 @@ function createTodos(reptiles, pantry) {
   return {essentialTodos, niceToHaveTodos};
 };
 
-export default createTodos;
+// The following functions are used individually and are exported as such:
+const vegetableOftenCheck = pantry => {
+  return pantry.some(food => food.type === 'vegetable' && food.frequency === 'often');
+};
+const proteinOftenCheck = pantry => {
+  return pantry.some(food => food.type === 'protein' && food.frequency === 'often');
+};
+const treatModeratelyCheck = pantry => {
+  return pantry.some(food => food.isTreat && food.frequency === 'moderately');
+};
+const supplementCheck = pantry => {
+  return (pantry.filter(food => food.type === 'supplement')).length >= 2;
+};
+
+export {createTodos, vegetableOftenCheck, proteinOftenCheck, treatModeratelyCheck, supplementCheck };
