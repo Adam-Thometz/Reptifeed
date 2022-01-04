@@ -23,3 +23,9 @@ test('it matches snapshot for success', () => {
   const { asFragment } = render(<Alert type="success" messages={messages} />);
   expect(asFragment()).toMatchSnapshot();
 });
+
+test('it matches snapshot for link', () => {
+  let messages = ["Go home!"];
+  const { asFragment } = render(<Alert messages={messages} link='/' />);
+  expect(asFragment()).toMatchSnapshot();
+});
