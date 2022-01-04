@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { foodStack, treatStack } from "../utils/foodStack";
 import UserContext from "../utils/UserContext";
 import { getFoodFromPantry, getTreatFromPantry, getNextSupplement } from "../utils/feedingFunctions";
