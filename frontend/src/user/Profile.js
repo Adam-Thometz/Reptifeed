@@ -4,7 +4,7 @@ import UserContext from "../utils/UserContext";
 import reptileIcon from './profile-imgs/reptile.png';
 import pantryIcon from './profile-imgs/pantry.png';
 import userIcon from './profile-imgs/user.png';
-import createTodos from '../utils/createTodos';
+import { createTodos } from '../utils/createTodos';
 import './Profile.css';
 
 const Profile = () => {
