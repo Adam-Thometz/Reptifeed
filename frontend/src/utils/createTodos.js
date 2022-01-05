@@ -2,22 +2,8 @@
  * 
  * Takes a user's reptiles and pantry and creates a list of things they need to do to unlock the app's full features
  * 
- * Returns an two arrays of Link components, one of important things and one of nice-to-haves
+ * Returns an two arrays of todos, one of important things and one of nice-to-haves
  */
-
-// The following functions are used individually in createTodos and are/can be exported as such:
-const vegetableOftenCheck = pantry => {
-  return pantry.some(food => food.type === 'vegetable' && food.frequency === 'often');
-};
-const proteinOftenCheck = pantry => {
-  return pantry.some(food => food.type === 'protein' && food.frequency === 'often');
-};
-const treatModeratelyCheck = pantry => {
-  return pantry.some(food => food.isTreat && food.frequency === 'moderately');
-};
-const supplementCheck = pantry => {
-  return (pantry.filter(food => food.type === 'supplement')).length >= 2;
-};
 
 // Helper for createTodos function; frequency counter so that the pantry is looped over only once.
 const makePantryInventory = pantry => {
@@ -64,6 +50,20 @@ function createTodos(reptiles, pantry) {
   if (!pantryInventory.hasTreatOccasionally) niceToHaveTodos.push('Add a treat eaten occasionally');
 
   return {essentialTodos, niceToHaveTodos};
+};
+
+// The following functions are used individually in createTodos and are/can be exported as such:
+const vegetableOftenCheck = pantry => {
+  return pantry.some(food => food.type === 'vegetable' && food.frequency === 'often');
+};
+const proteinOftenCheck = pantry => {
+  return pantry.some(food => food.type === 'protein' && food.frequency === 'often');
+};
+const treatModeratelyCheck = pantry => {
+  return pantry.some(food => food.isTreat && food.frequency === 'moderately');
+};
+const supplementCheck = pantry => {
+  return (pantry.filter(food => food.type === 'supplement')).length >= 2;
 };
 
 export {createTodos, vegetableOftenCheck, proteinOftenCheck, treatModeratelyCheck, supplementCheck };
