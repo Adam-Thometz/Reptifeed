@@ -24,7 +24,7 @@ describe('get all foods', () => {
         name: 'dog food',
         type: 'protein',
         frequency: 'often',
-        image: '',
+        image: 'https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00036800086821/3b0b51456eaf177a3679cee48f7d6314_large.png&width=200&type=webp&quality=80',
         isTreat: false,
         tips: ''
       }
@@ -40,7 +40,7 @@ describe('get a single food', () => {
       name: 'eggs',
       type: 'protein',
       frequency: 'occasionally',
-      image: '',
+      image: 'https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00041130076305/d443cbda6e8e410d15712bd13e544668_large.png&width=256&type=webp&quality=80',
       isTreat: true,
       tips: 'Can be eaten raw or boiled.'
     });
@@ -52,7 +52,7 @@ describe('get a single food', () => {
       name: 'dog food',
       type: 'protein',
       frequency: 'often',
-      image: '',
+      image: 'https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00036800086821/3b0b51456eaf177a3679cee48f7d6314_large.png&width=200&type=webp&quality=80',
       isTreat: false,
       tips: ''
     });
@@ -76,7 +76,7 @@ describe('get all foods by food group', () => {
         name: 'calcium',
         type: 'supplement',
         frequency: 'often',
-        image: '',
+        image: 'https://s7d2.scene7.com/is/image/PetSmart/5047843?$CLEARjpg$',
         isTreat: false,
         tips: ''
       },
@@ -84,7 +84,7 @@ describe('get all foods by food group', () => {
         name: 'multivitamin',
         type: 'supplement',
         frequency: 'often',
-        image: '',
+        image: 'https://m.media-amazon.com/images/I/817pGZlvwML._AC_SX679_.jpg',
         isTreat: false,
         tips: ''
       }

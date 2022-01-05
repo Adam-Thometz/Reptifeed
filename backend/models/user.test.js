@@ -44,7 +44,7 @@ describe('register', () => {
 /** User.login(data) */
 describe('login', () => {
   test('success', async () => {
-    const user = await User.login('spongebob', 'garyIzQueen123');
+    const user = await User.login({username: 'spongebob', password: 'garyIzQueen123'});
     expect(user).toEqual({
       id: expect.any(Number),
       username: 'spongebob',

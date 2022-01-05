@@ -10,7 +10,7 @@ describe("config can come from env", () => {
     const config = require('./config');
     expect(config.SECRET_KEY).toBe('secrecy!');
     expect(config.PORT).toBe(5000);
-    expect(config.getDatabaseUrl()).toBe('reptifeed');
+    expect(config.getDatabaseUrl()).toBe('and');
     expect(config.BCRYPT_WORK_FACTOR).toBe(13);
 
     delete process.env.SECRET_KEY;
@@ -19,7 +19,7 @@ describe("config can come from env", () => {
     delete process.env.DATABASE_URL_1;
     delete process.env.DATABASE_URL_2;
 
-    expect(config.getDatabaseUrl()).toBe('reptifeed');
+    expect(config.getDatabaseUrl()).toBe('and');
 
     process.env.NODE_ENV = 'test';
     expect(config.getDatabaseUrl()).toBe('reptifeed_test');
