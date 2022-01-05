@@ -1,17 +1,17 @@
 import React from "react";
 import { render, UserProvider } from '../utils/testUtils';
-import ReptifeedRoutes from "../routes-nav/ReptifeedRoutes";
+import NewReptileForm from "./NewReptileForm";
 
 test('it renders without crashing', () => {
   render(<UserProvider>
-    <ReptifeedRoutes />
-  </UserProvider>, { initialRoutes: ['/users/1/reptiles/add'] });
+    <NewReptileForm />
+  </UserProvider>);
 });
 
 test('it matches snapshot', () => {
   const { asFragment } = render(
     <UserProvider>
-      <ReptifeedRoutes />
-    </UserProvider>, { initialRoutes: ['/users/1/reptiles/add'] });
+      <NewReptileForm />
+    </UserProvider>);
   expect(asFragment()).toMatchSnapshot();
 });

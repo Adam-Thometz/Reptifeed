@@ -3,87 +3,91 @@
 exports[`it matches snapshot for logged in user 1`] = `
 <DocumentFragment>
   <div
-    class="Profile"
+    class="Routes"
   >
-    <h1
-      class="Profile-header"
-    >
-      Hello rickSanchez!
-    </h1>
-    <a
-      class="Profile-todo-link"
-      href="/users/1/todos"
-    >
-      Click here for next steps!
-    </a>
     <div
-      class="Profile-section reptile"
+      class="Profile"
     >
-      <div
-        class="Profile-options"
+      <h1
+        class="Profile-header"
       >
-        <a
-          href="/users/1/reptiles"
-        >
-          See your reptiles
-        </a>
-        <a
-          href="/users/1/reptiles/add"
-        >
-          Add a reptile
-        </a>
-      </div>
-      <img
-        alt=""
-        class="Profile-icon"
-        src="reptile.png"
-      />
-    </div>
-    <div
-      class="Profile-section pantry"
-    >
-      <img
-        alt=""
-        class="Profile-icon"
-        src="pantry.png"
-      />
-      <div
-        class="Profile-options"
+        Hello rickSanchez!
+      </h1>
+      <a
+        class="Profile-todo-link"
+        href="/users/1/todos"
       >
-        <a
-          href="/users/1/pantry"
-        >
-          See your pantry
-        </a>
-        <a
-          href="/foods"
-        >
-          Add foods to pantry
-        </a>
-      </div>
-    </div>
-    <div
-      class="Profile-section user"
-    >
+        Click here for next steps!
+      </a>
       <div
-        class="Profile-options"
+        class="Profile-section reptile"
       >
-        <a
-          href="/users/1/edit"
+        <div
+          class="Profile-options"
         >
-          Edit your profile
-        </a>
-        <a
-          href="/foods"
-        >
-          Delete account
-        </a>
+          <a
+            href="/users/1/reptiles"
+          >
+            See your reptiles
+          </a>
+          <a
+            href="/users/1/reptiles/add"
+          >
+            Add a reptile
+          </a>
+        </div>
+        <img
+          alt=""
+          class="Profile-icon"
+          src="reptile.png"
+        />
       </div>
-      <img
-        alt=""
-        class="Profile-icon"
-        src="user.png"
-      />
+      <div
+        class="Profile-section pantry"
+      >
+        <img
+          alt=""
+          class="Profile-icon"
+          src="pantry.png"
+        />
+        <div
+          class="Profile-options"
+        >
+          <a
+            href="/users/1/pantry"
+          >
+            See your pantry
+          </a>
+          <a
+            href="/foods"
+          >
+            Add foods to pantry
+          </a>
+        </div>
+      </div>
+      <div
+        class="Profile-section user"
+      >
+        <div
+          class="Profile-options"
+        >
+          <a
+            href="/users/1/edit"
+          >
+            Edit your profile
+          </a>
+          <a
+            href="/foods"
+          >
+            Delete account
+          </a>
+        </div>
+        <img
+          alt=""
+          class="Profile-icon"
+          src="user.png"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -92,24 +96,28 @@ exports[`it matches snapshot for logged in user 1`] = `
 exports[`it matches snapshot for logged out user 1`] = `
 <DocumentFragment>
   <div
-    class="Unauthorized"
+    class="Routes"
   >
-    <h4>
-      You are not authorized to view this page! Here are your options:
-    </h4>
     <div
-      class="Unauthorized-options"
+      class="Unauthorized"
     >
-      <a
-        href="/login"
+      <h4>
+        You are not authorized to view this page! Here are your options:
+      </h4>
+      <div
+        class="Unauthorized-options"
       >
-        Log in to your account
-      </a>
-      <a
-        href="/register"
-      >
-        Register for an account with us
-      </a>
+        <a
+          href="/login"
+        >
+          Log in to your account
+        </a>
+        <a
+          href="/register"
+        >
+          Register for an account with us
+        </a>
+      </div>
     </div>
   </div>
 </DocumentFragment>

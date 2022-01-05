@@ -1,11 +1,12 @@
 import React from "react";
 import { render, UserProvider } from "../utils/testUtils";
 import ReptifeedRoutes from '../routes-nav/ReptifeedRoutes';
+import Reptiles from './Reptiles'
 
 test('it renders without crashing', () => {
   render(<UserProvider>
-    <ReptifeedRoutes />
-  </UserProvider>, { initialRoutes: ['/users/1/reptiles'] });
+    <Reptiles />
+  </UserProvider>);
 });
 
 test('it matches snapshot for logged in user', () => {

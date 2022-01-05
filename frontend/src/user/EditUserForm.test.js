@@ -5,14 +5,14 @@ import { render, UserProvider } from '../utils/testUtils'
 test('it renders without crashing', () => {
   render(<UserProvider>
     <EditUserForm />
-  </UserProvider>, { initialRoutes: ['/users/1/edit'] });
+  </UserProvider>);
 });
 
 test('it matches snapshot', () => {
   const { asFragment } = render(
     <UserProvider>
       <EditUserForm />
-    </UserProvider>, { initialRoutes: ['/users/1/edit'] }
+    </UserProvider>
   );
   expect(asFragment()).toMatchSnapshot();
 });

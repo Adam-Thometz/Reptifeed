@@ -3,117 +3,113 @@
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    class="NewReptileForm"
   >
-    <div
-      class="NewReptileForm"
-    >
-      <h1>
-        Add a reptile to your account
-      </h1>
-      <form>
-        <div
-          class="NewReptileForm-form-group"
+    <h1>
+      Add a reptile to your account
+    </h1>
+    <form>
+      <div
+        class="NewReptileForm-form-group"
+      >
+        <label
+          class="NewReptileForm-label"
+          for="name"
         >
-          <label
-            class="NewReptileForm-label"
-            for="name"
-          >
-            Name:
-          </label>
-          <input
-            class="NewReptileForm-input"
-            id="name"
-            name="name"
-            type="text"
+          Name:
+        </label>
+        <input
+          class="NewReptileForm-input"
+          id="name"
+          name="name"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="NewReptileForm-form-group"
+      >
+        <label
+          class="NewReptileForm-label"
+          for="species"
+        >
+          Species:
+        </label>
+        <select
+          class="NewReptileForm-input"
+          id="species"
+          name="species"
+        >
+          <option
             value=""
-          />
-        </div>
-        <div
-          class="NewReptileForm-form-group"
-        >
-          <label
-            class="NewReptileForm-label"
-            for="species"
           >
-            Species:
-          </label>
-          <select
-            class="NewReptileForm-input"
-            id="species"
-            name="species"
+            -
+          </option>
+          <option
+            value="blue tongue skink"
           >
-            <option
-              value=""
-            >
-              -
-            </option>
-            <option
-              value="blue tongue skink"
-            >
-              Blue Tongue Skink
-            </option>
-          </select>
-        </div>
-        <div
-          class="NewReptileForm-form-group"
+            Blue Tongue Skink
+          </option>
+        </select>
+      </div>
+      <div
+        class="NewReptileForm-form-group"
+      >
+        <label
+          class="NewReptileForm-label"
+          for="subspecies"
         >
-          <label
-            class="NewReptileForm-label"
-            for="subspecies"
-          >
-            Subspecies:
-          </label>
-          <input
-            class="NewReptileForm-input"
-            id="subspecies"
-            name="subspecies"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="NewReptileForm-form-group"
+          Subspecies:
+        </label>
+        <input
+          class="NewReptileForm-input"
+          id="subspecies"
+          name="subspecies"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="NewReptileForm-form-group"
+      >
+        <label
+          class="NewReptileForm-label"
+          for="birthday"
         >
-          <label
-            class="NewReptileForm-label"
-            for="birthday"
-          >
-            Birthday:
-          </label>
-          <input
-            class="NewReptileForm-input"
-            id="birthday"
-            name="birthday"
-            type="date"
-            value=""
-          />
-        </div>
-        <div
-          class="NewReptileForm-form-group"
+          Birthday:
+        </label>
+        <input
+          class="NewReptileForm-input"
+          id="birthday"
+          name="birthday"
+          type="date"
+          value=""
+        />
+      </div>
+      <div
+        class="NewReptileForm-form-group"
+      >
+        <label
+          class="NewReptileForm-label"
+          for="imgUrl"
         >
-          <label
-            class="NewReptileForm-label"
-            for="imgUrl"
-          >
-            Picture:
-          </label>
-          <input
-            class="NewReptileForm-input"
-            id="imgUrl"
-            name="imgUrl"
-            type="text"
-            value=""
-          />
-        </div>
-        <button
-          class="NewReptileForm-submit"
-          type="submit"
-        >
-          Add Reptile
-        </button>
-      </form>
-    </div>
+          Picture:
+        </label>
+        <input
+          class="NewReptileForm-input"
+          id="imgUrl"
+          name="imgUrl"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="NewReptileForm-submit"
+        type="submit"
+      >
+        Add Reptile
+      </button>
+    </form>
   </div>
 </DocumentFragment>
 `;
