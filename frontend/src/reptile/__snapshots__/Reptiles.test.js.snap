@@ -3,27 +3,31 @@
 exports[`it matches snapshot for logged in user 1`] = `
 <DocumentFragment>
   <div
-    class="Reptiles"
+    class="Routes"
   >
-    <h1>
-      My Reptiles
-    </h1>
-    <h4>
-      Click on a reptile to feed them.
-    </h4>
     <div
-      class="ReptileCard"
+      class="Reptiles"
     >
-      <img
-        alt="two crows"
-        src=""
-      />
+      <h1>
+        My Reptiles
+      </h1>
       <h4>
-        two crows
+        Click on a reptile to feed them.
       </h4>
-      <h5>
-        crows
-      </h5>
+      <div
+        class="ReptileCard"
+      >
+        <img
+          alt="two crows"
+          src=""
+        />
+        <h4>
+          two crows
+        </h4>
+        <h5>
+          crows
+        </h5>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -32,24 +36,28 @@ exports[`it matches snapshot for logged in user 1`] = `
 exports[`it matches snapshot for logged out user 1`] = `
 <DocumentFragment>
   <div
-    class="Unauthorized"
+    class="Routes"
   >
-    <h4>
-      You are not authorized to view this page! Here are your options:
-    </h4>
     <div
-      class="Unauthorized-options"
+      class="Unauthorized"
     >
-      <a
-        href="/login"
+      <h4>
+        You are not authorized to view this page! Here are your options:
+      </h4>
+      <div
+        class="Unauthorized-options"
       >
-        Log in to your account
-      </a>
-      <a
-        href="/register"
-      >
-        Register for an account with us
-      </a>
+        <a
+          href="/login"
+        >
+          Log in to your account
+        </a>
+        <a
+          href="/register"
+        >
+          Register for an account with us
+        </a>
+      </div>
     </div>
   </div>
 </DocumentFragment>

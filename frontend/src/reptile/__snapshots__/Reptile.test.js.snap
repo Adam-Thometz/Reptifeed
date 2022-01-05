@@ -3,56 +3,60 @@
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Reptile"
+    class="Routes"
   >
     <div
-      class="Reptile-card"
+      class="Reptile"
     >
       <div
-        class="Reptile-card-img-wrapper"
+        class="Reptile-card"
       >
-        <img
-          alt="two crows"
-          src=""
-        />
-      </div>
-      <div>
         <div
-          class="Reptile-card-info"
+          class="Reptile-card-img-wrapper"
         >
-          <h1>
-            two crows
-          </h1>
-          <h4>
-            Species: crows
-          </h4>
-          <h4>
-            Subspecies: two of them
-          </h4>
-          <h5>
-            Born on 2015-10-29
-          </h5>
+          <img
+            alt="two crows"
+            src=""
+          />
         </div>
+        <div>
+          <div
+            class="Reptile-card-info"
+          >
+            <h1>
+              two crows
+            </h1>
+            <h4>
+              Species: crows
+            </h4>
+            <h4>
+              Subspecies: two of them
+            </h4>
+            <h5>
+              Born on 2015-10-29
+            </h5>
+          </div>
+          <button
+            class="edit"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+      <div
+        class="Reptile-button-wrapper"
+      >
         <button
-          class="edit"
+          class="feed"
         >
-          Edit
+          Feed
+        </button>
+        <button
+          class="treat"
+        >
+          Give a treat
         </button>
       </div>
-    </div>
-    <div
-      class="Reptile-button-wrapper"
-    >
-      <button
-        class="feed"
-      >
-        Feed
-      </button>
-      <button
-        class="treat"
-      >
-        Give a treat
-      </button>
     </div>
   </div>
 </DocumentFragment>

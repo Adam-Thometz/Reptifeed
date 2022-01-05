@@ -1,23 +1,32 @@
 import React from "react";
-import { render } from '@testing-library/react'
 import Pantry from "./Pantry";
-import { MemoryRouter } from "react-router-dom";
-import { UserProvider } from '../utils/testUtils'
+import { render, UserProvider } from '../utils/testUtils'
+import ReptifeedRoutes from '../routes-nav/ReptifeedRoutes'
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <UserProvider>
-      <Pantry />
-    </UserProvider>
-  </MemoryRouter>);
+  render(<UserProvider>
+    <Pantry />
+  </UserProvider>);
+});
+
+test('it renders on correct webpage', () => {
+  render(<UserProvider>
+    <ReptifeedRoutes />
+  </UserProvider>, { initialRoutes: ['/users/1/pantry'] });
 });
 
 test('it matches snapshot', () => {
   const { asFragment } = render(
-    <MemoryRouter>
-      <UserProvider>
-        <Pantry />
-      </UserProvider>
-    </MemoryRouter>);
+    <UserProvider>
+      <Pantry />
+    </UserProvider>, { initialRoutes: ['/users/1/pantry'] });
+  expect(asFragment()).toMatchSnapshot();
+});
+
+test('it matches snapshot when no pantry', () => {
+  const { asFragment } = render(
+    <UserProvider pantry={[]}>
+      <Pantry />
+    </UserProvider>, { initialRoutes: ['/users/1/pantry'] });
   expect(asFragment()).toMatchSnapshot();
 });

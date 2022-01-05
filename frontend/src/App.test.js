@@ -1,10 +1,7 @@
 import React from "react";
-import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render } from './utils/testUtils';
 import App from "./App";
 
 test('it renders without crashing', () => {
-  render(<MemoryRouter>
-    <App />
-  </MemoryRouter>);
+  render(<App />);
 });

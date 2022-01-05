@@ -101,6 +101,221 @@ exports[`it matches snapshot of 404 page 1`] = `
 </DocumentFragment>
 `;
 
+exports[`it matches snapshot of add new reptile 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="NewReptileForm"
+    >
+      <h1>
+        Add a reptile to your account
+      </h1>
+      <form>
+        <div
+          class="NewReptileForm-form-group"
+        >
+          <label
+            class="NewReptileForm-label"
+            for="name"
+          >
+            Name:
+          </label>
+          <input
+            class="NewReptileForm-input"
+            id="name"
+            name="name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="NewReptileForm-form-group"
+        >
+          <label
+            class="NewReptileForm-label"
+            for="species"
+          >
+            Species:
+          </label>
+          <select
+            class="NewReptileForm-input"
+            id="species"
+            name="species"
+          >
+            <option
+              value=""
+            >
+              -
+            </option>
+            <option
+              value="blue tongue skink"
+            >
+              Blue Tongue Skink
+            </option>
+          </select>
+        </div>
+        <div
+          class="NewReptileForm-form-group"
+        >
+          <label
+            class="NewReptileForm-label"
+            for="subspecies"
+          >
+            Subspecies:
+          </label>
+          <input
+            class="NewReptileForm-input"
+            id="subspecies"
+            name="subspecies"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="NewReptileForm-form-group"
+        >
+          <label
+            class="NewReptileForm-label"
+            for="birthday"
+          >
+            Birthday:
+          </label>
+          <input
+            class="NewReptileForm-input"
+            id="birthday"
+            name="birthday"
+            type="date"
+            value=""
+          />
+        </div>
+        <div
+          class="NewReptileForm-form-group"
+        >
+          <label
+            class="NewReptileForm-label"
+            for="imgUrl"
+          >
+            Picture:
+          </label>
+          <input
+            class="NewReptileForm-input"
+            id="imgUrl"
+            name="imgUrl"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="NewReptileForm-submit"
+          type="submit"
+        >
+          Add Reptile
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of edit reptile 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="EditReptileForm"
+    >
+      <h1>
+        Edit your reptile
+      </h1>
+      <form>
+        <div
+          class="EditReptileForm-form-group"
+        >
+          <label
+            class="EditReptileForm-label"
+            for="name"
+          >
+            Name:
+          </label>
+          <input
+            class="EditReptileForm-input"
+            id="name"
+            name="name"
+            type="text"
+            value="two crows"
+          />
+        </div>
+        <div
+          class="EditReptileForm-form-group"
+        >
+          <label
+            class="EditReptileForm-label"
+            for="subspecies"
+          >
+            Subspecies:
+          </label>
+          <input
+            class="EditReptileForm-input"
+            id="subspecies"
+            name="subspecies"
+            type="text"
+            value="two of them"
+          />
+        </div>
+        <div
+          class="EditReptileForm-form-group"
+        >
+          <label
+            class="EditReptileForm-label"
+            for="birthday"
+          >
+            Birthday:
+          </label>
+          <input
+            class="EditReptileForm-input"
+            id="birthday"
+            name="birthday"
+            type="date"
+            value="2015-10-29"
+          />
+        </div>
+        <div
+          class="EditReptileForm-form-group"
+        >
+          <label
+            class="EditReptileForm-label"
+            for="imgUrl"
+          >
+            Picture:
+          </label>
+          <input
+            class="EditReptileForm-input"
+            id="imgUrl"
+            name="imgUrl"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="EditReptileForm-button submit"
+          type="submit"
+        >
+          Edit
+        </button>
+        <button
+          class="EditReptileForm-button delete"
+        >
+          Delete reptile
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`it matches snapshot of edit user page 1`] = `
 <DocumentFragment>
   <div
@@ -176,6 +391,164 @@ exports[`it matches snapshot of edit user page 1`] = `
 </DocumentFragment>
 `;
 
+exports[`it matches snapshot of food finder 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Foods"
+    >
+      <h1>
+        Food for your reptiles!
+      </h1>
+      <h5>
+        Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.
+      </h5>
+      <div
+        class="FoodOptions"
+      >
+        <h4>
+          Use these options to filter foods
+        </h4>
+        <div
+          class="FoodOptions-group"
+        >
+          <label
+            class="FoodOptions-label"
+            for="species"
+          >
+            Species
+          </label>
+          <select
+            class="FoodOptions-input"
+            id="species"
+            name="species"
+          >
+            <option
+              value="blue-tongue-skink"
+            >
+              Blue Tongue Skink
+            </option>
+          </select>
+        </div>
+        <div
+          class="FoodOptions-group"
+        >
+          <label
+            class="FoodOptions-label"
+            for="search"
+          >
+            Search foods
+          </label>
+          <input
+            class="FoodOptions-input"
+            id="search"
+            name="search"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="FoodOptions-group"
+        >
+          <label
+            class="FoodOptions-label"
+            for="frequency"
+          >
+            Food group
+          </label>
+          <select
+            class="FoodOptions-input"
+            id="type"
+            name="type"
+          >
+            <option
+              value=""
+            >
+              --
+            </option>
+            <option
+              value="protein"
+            >
+              Protein
+            </option>
+            <option
+              value="vegetable"
+            >
+              Vegetables/Greens
+            </option>
+            <option
+              value="fruit"
+            >
+              Fruit
+            </option>
+            <option
+              value="supplement"
+            >
+              Supplements
+            </option>
+          </select>
+        </div>
+        <div
+          class="FoodOptions-group"
+        >
+          <label
+            class="FoodOptions-label"
+            for="treats"
+          >
+            Treats
+          </label>
+          <input
+            class="FoodOptions-checkbox"
+            id="treats"
+            name="treats"
+            type="checkbox"
+            value="false"
+          />
+        </div>
+      </div>
+      <table
+        class="FoodTable"
+      >
+        <thead
+          class="FoodTable-header"
+        >
+          <tr
+            class="FoodTable-header-cells"
+          >
+            <td>
+              Image
+            </td>
+            <td>
+              Name
+            </td>
+            <td>
+              Type
+            </td>
+            <td>
+              How often?
+            </td>
+            <td>
+              Treat?
+            </td>
+            <td>
+              Tips
+            </td>
+            <td>
+              Add / Remove
+            </td>
+          </tr>
+        </thead>
+        <tbody
+          class="FoodTable-body"
+        />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`it matches snapshot of login page 1`] = `
 <DocumentFragment>
   <div
@@ -229,6 +602,62 @@ exports[`it matches snapshot of login page 1`] = `
           Login
         </button>
       </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of pantry 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Pantry"
+    >
+      <div>
+        <h1>
+          My Pantry
+        </h1>
+        <a
+          class="Pantry-link"
+          href="/foods"
+        >
+          Add foods to pantry
+        </a>
+      </div>
+      <div
+        class="PantryCard vegetable"
+      >
+        <div
+          class="PantryCard-img-wrapper"
+        >
+          <img
+            alt="arugula"
+            src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
+          />
+        </div>
+        <h4>
+          arugula
+        </h4>
+        <p>
+          Feed often
+        </p>
+        <p>
+          Treat?: 
+          <span>
+            No
+          </span>
+        </p>
+        <p>
+          Tips: N/A
+        </p>
+        <button
+          class="PantryCard-removebtn"
+        >
+          I ran out
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -397,6 +826,147 @@ exports[`it matches snapshot of registration page 1`] = `
           Register
         </button>
       </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of reptile page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Reptile"
+    >
+      <div
+        class="Reptile-card"
+      >
+        <div
+          class="Reptile-card-img-wrapper"
+        >
+          <img
+            alt="two crows"
+            src=""
+          />
+        </div>
+        <div>
+          <div
+            class="Reptile-card-info"
+          >
+            <h1>
+              two crows
+            </h1>
+            <h4>
+              Species: crows
+            </h4>
+            <h4>
+              Subspecies: two of them
+            </h4>
+            <h5>
+              Born on 2015-10-29
+            </h5>
+          </div>
+          <button
+            class="edit"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+      <div
+        class="Reptile-button-wrapper"
+      >
+        <button
+          class="feed"
+        >
+          Feed
+        </button>
+        <button
+          class="treat"
+        >
+          Give a treat
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of reptiles page 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Reptiles"
+    >
+      <h1>
+        My Reptiles
+      </h1>
+      <h4>
+        Click on a reptile to feed them.
+      </h4>
+      <div
+        class="ReptileCard"
+      >
+        <img
+          alt="two crows"
+          src=""
+        />
+        <h4>
+          two crows
+        </h4>
+        <h5>
+          crows
+        </h5>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`it matches snapshot of todos 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div
+      class="Todos"
+    >
+      <h3>
+        Click on one to get started
+      </h3>
+      <div
+        class="Todos-wrapper"
+      >
+        <div
+          class="Todos-wrapper essential-wrapper"
+        >
+          <h4>
+            Essential
+          </h4>
+          <a
+            class="Todos-todo essential"
+            href="/foods"
+          >
+            Buy a plumbus
+          </a>
+        </div>
+        <div
+          class="Todos-wrapper niceToHave-wrapper"
+        >
+          <h4>
+            Nice to Have
+          </h4>
+          <a
+            class="Todos-todo niceToHave"
+            href="/foods"
+          >
+            Figure out the plumbus
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

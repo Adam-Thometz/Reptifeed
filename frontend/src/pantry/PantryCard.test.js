@@ -1,6 +1,6 @@
 import React from "react";
 import PantryCard from "./PantryCard";
-import { render, UserProvider } from '../utils/testUtils'
+import { render } from '../utils/testUtils'
 
 test('it renders without crashing', () => {
   render(<PantryCard />);

@@ -60,6 +60,14 @@ const MemoryRouterWithInitialRoutes = ({ children, initialRoutes }) => {
   )
 }
 
+const MemoryRouterWithInitialRoutesAndUser = ({ children, initialRoutes }) => {
+  return (
+    <MemoryRouter initialEntries={initialRoutes}>
+      {children}
+    </MemoryRouter>
+  )
+}
+
 const customRender = (component, options) => {
   const initialRoutes = (options && options.initialRoutes)
     ? options.initialRoutes
