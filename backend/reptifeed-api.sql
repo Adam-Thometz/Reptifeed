@@ -3,6 +3,7 @@
 
 \connect reptifeed
 
+DROP TABLE blue_tongue_skink_diet;
 \i reptifeed-skink-diet.sql
 
 \echo 'Create reptifeed api for test database?'
@@ -10,4 +11,5 @@
 
 \connect reptifeed_test
 
+DROP TABLE blue_tongue_skink_diet;
 \i reptifeed-skink-diet.sql
