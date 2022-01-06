@@ -34,7 +34,7 @@ Truly consistent data on what blue tongue skinks eat was hard to come by, which 
 
 A user token is required for all the routes (listed below). A token could be for users or for admin.
 
-There are two test accounts available on the app, one for regular users, and one for admin:
+There are two test accounts available on the app when you run locally, one for regular users, and one for admin:
 
 User:
 - Username: testuser
@@ -51,38 +51,38 @@ Authentication middleware is located in `/backend/middleware`
 Routes on the backend are divided into five sections:
 
 1. API routes (this provides access to the food API - login required):
-   1. GET `/api/:species/foods`: Get all foods by species.
-   2. GET `/api/:species/foods/:food`: Get a specific food for a species.
-   3. GET `/api/:species/types/:type`: Get a food group for a species.
-   4. GET `/api/:species/treats`: Get treats for a species.
+   1. `GET /api/:species/foods`: Get all foods by species.
+   2. `GET /api/:species/foods/:food`: Get a specific food for a species.
+   3. `GET /api/:species/types/:type`: Get a food group for a species.
+   4. `GET /api/:species/treats`: Get treats for a species.
 2. Auth routes (authentication routes - no authentication required to access):
-   1. POST `/auth/register`: Register for an account.
-   2. POST `/auth/login`: Login to your account.
+   1. `POST /auth/register`: Register for an account.
+   2. `POST /auth/login`: Login to your account.
 3. User routes (user-related routes - admin or user only):
-   1. *POST `/users`: Create an account (**not to be confused with the register route above**).
-   2. *GET `/users`: Get all users.
-   3. GET `/users/:id`: Get a specific user.
-   4. PATCH `/users/:id`: Edit a specific user.
-   5. DELETE `/users/:id`: Delete a specific user.
+   1. `POST /users`: Create an account (**not to be confused with the register route above**).**
+   2. `GET /users`: Get all users.**
+   3. `GET /users/:id`: Get a user.
+   4. `PATCH /users/:id`: Edit a user.
+   5. `DELETE /users/:id`: Delete a user.
 4. Reptile routes (reptile-related routes - admin or owner only):
-   1. POST `/reptiles`: Create a new reptile.
-   2. *GET `/reptiles`: Get all reptiles.
-   3. GET `/reptiles/:id`: Get a specfic reptile.
-   4. GET `/reptiles/owner/:id/`: Get all reptiles by owner.
-   5. PATCH `/reptiles/:id`: Edit a reptile.
-   6. DELETE `/reptiles/:id`: Delete a reptile.
+   1. `POST /reptiles`: Create a new reptile.
+   2. `GET /reptiles`: Get all reptiles.**
+   3. `GET /reptiles/:id`: Get a specfic reptile.
+   4. `GET /reptiles/owner/:id/`: Get all reptiles by owner.
+   5. `PATCH /reptiles/:id`: Edit a reptile.
+   6. `DELETE /reptiles/:id`: Delete a reptile.
 5. Pantry routes (pantry-related routes - admin or owner only):
-   1. GET `/pantries/:id`: Get a user's pantry.
-   2. POST `/pantries/:id`: Add a food to the user's pantry.
-   3. DELETE `/pantries/:id/:food`: Remove a food from the user's pantry.
+   1. `GET /pantries/:id`: Get a user's pantry.
+   2. `POST /pantries/:id`: Add a food to the user's pantry.
+   3. `DELETE /pantries/:id/:food`: Remove a food from the user's pantry.
 
-*Admin only
+**Admin only
 
 ### Tech stack:
 
 - *Frontend*: React.js, React Router, CSS
 - *Backend*: Node.js, Express, SQL, PostgresQL
-- *Other*: Jest
+- *Other*: Jest, Heroku
 
 ## Using this repo
 
