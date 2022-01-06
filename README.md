@@ -84,7 +84,7 @@ Routes on the backend are divided into five sections:
 
 **Admin only
 
-### User flow:
+### Sample User flow:
 
 Log in or register...
 
@@ -94,7 +94,7 @@ Log in or register...
 
 ![Profile page for testuser](frontend/user-flow-pictures/profile-todos.png)
 
-Things to do to set up! Let's start with adding a reptile!
+Things to do to set up! Let's start with adding a reptile! (hint: Clicking on the todo brings you where you need to go)
 
 ![Todo list](frontend/user-flow-pictures/todos.png)
 
@@ -106,9 +106,51 @@ Success! Can we feed her yet?
 
 ![Added reptile](frontend/user-flow-pictures/reptile.png)
 
-Nope! We need to get some food. Off to the todos!
+Bummer! We need to get some food. Off to the todos!
 
 ![No food!](frontend/user-flow-pictures/reptile-no-food.png)
+
+Well, the todo list is shorter! Let's go add some food!
+
+![Todo list](frontend/user-flow-pictures/todos-9-items.png)
+
+We're on the food page! You can get food by type or species, search for food, and even filter treats
+
+![Food page](frontend/user-flow-pictures/food-page.png)
+
+After searching through my real pantry, I found that I have arugula, dog food, mangoes, and calcium and multivitamin supplements and checked them off.
+
+This is what my pantry looks like now:
+
+![Pantry](frontend/user-flow-pictures/pantry.png)
+
+NOOWWWW we can feed her!
+
+![Feeding time](frontend/user-flow-pictures/feed.png)
+
+We can also feed treats!
+
+![Treat time](frontend/user-flow-pictures/feed-treat.png)
+
+You might be reminded to add more food to your pantry.
+
+![Prompt to get more food!](frontend/user-flow-pictures/need-more.png)
+
+Clicking the alert takes you to the todo page. Let's see what we have!
+
+![Todos with only nice to haves](frontend/user-flow-pictures/nice-to-haves-only.png)
+
+Back to the food page!
+
+![Food page](frontend/user-flow-pictures/food-page.png)
+
+I found some beef, mealworms, bok choy, basil, and carrots. They're now in my pantry.
+
+![Updated pantry](frontend/user-flow-pictures/pantry-update.png)
+
+Now I have a varied diet for Unity. Look how happy she is!
+
+![A picture of Unity](frontend/user-flow-pictures/happy-unity.png)
 
 ### Tech stack:
 
@@ -195,8 +237,10 @@ VALUES ...
 4. Go into `reptifeed-api.sql` and add the following for both `reptifeed` AND `reptifeed_test` databases
 
 ```
+DROP TABLE blue_tongue_skink_diet;
+DROP TABLE (new table)
 \i reptifeed-skink-diet.sql
-\i // YOUR NEW FILE
+\i (new file)
 ```
 
 5. Reactvate API with `psql -f reptifeed-api.sql`
