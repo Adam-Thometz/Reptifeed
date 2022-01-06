@@ -1,8 +1,10 @@
 # 🦎 Reptifeed 🦎
 
+![Reptifeed Home Page](frontend/user-flow-pictures/home.png)
+
 #### developed by Adam Thometz
 
-Check out deployment: https://reptifeed.surge.sh/
+[Link to deployment](https://reptifeed.surge.sh/)
 
 ## Info about repo
 
@@ -81,6 +83,32 @@ Routes on the backend are divided into five sections:
    3. `DELETE /pantries/:id/:food`: Remove a food from the user's pantry.
 
 **Admin only
+
+### User flow:
+
+Log in or register...
+
+![Login page](frontend/user-flow-pictures/login.png)
+
+...takes you to user profile. What's in next steps?
+
+![Profile page for testuser](frontend/user-flow-pictures/profile-todos.png)
+
+Things to do to set up! Let's start with adding a reptile!
+
+![Todo list](frontend/user-flow-pictures/todos.png)
+
+Let's add our baby!
+
+![New reptile form](frontend/user-flow-pictures/add-new-reptile.png)
+
+Success! Can we feed her yet?
+
+![Added reptile](frontend/user-flow-pictures/reptile.png)
+
+Nope! We need to get some food. Off to the todos!
+
+![No food!](frontend/user-flow-pictures/reptile-no-food.png)
 
 ### Tech stack:
 
