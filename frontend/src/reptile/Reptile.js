@@ -41,15 +41,18 @@ const Reptile = () => {
   const [lastSupplement, setLastSupplement] = useLocalStorage(`${reptile.name}'s-last-supplement-${reptile.id}`)
 
   const handleFeed = () => {
+    setMessages([])
     if (!hasFood) {
-      setMessages(["You don't have enough food in your pantry. See your account for more information"]);
+      setMessages(["You don't have enough food in your pantry.", "Click to see your todos."]);
       setMeal([]);
       return
     }
     const stack = (!foodFreqs || !JSON.parse(foodFreqs).length) ? [...foodStack] : JSON.parse(foodFreqs);
     const freq = stack.pop();
     const protein = getFoodFromPantry(pantry, freq, "protein");
+    if (protein.frequency !== freq) setMessages(m => [...m, "Consider getting more protein. Click for suggestions."])
     const vegetable = getFoodFromPantry(pantry, freq, "vegetable");
+    if (vegetable.frequency !== freq) setMessages(m => [...m, "Consider getting more vegetables. Click for suggestions."])
     const supplement = getNextSupplement(pantry, lastSupplement);
     setLastSupplement(supplement.name);
     setDisplayFreq(freq);
@@ -58,14 +61,16 @@ const Reptile = () => {
   };
   
   const handleTreat = () => {
+    setMessages([])
     if (!hasTreats) {
-      setMessages(["You don't have enough food in your pantry. See your account for more information"]);
+      setMessages(["You don't have enough treats in your pantry.", "Click to see your todos."]);
       setMeal([]);
       return
     }
     const stack = (!treatFreqs || !JSON.parse(treatFreqs).length) ? [...treatStack] : JSON.parse(treatFreqs);
     const freq = stack.pop();
     const treat = getTreatFromPantry(pantry, freq);
+    if (treat.frequency !== freq) setMessages(["Consider getting more treats. Click for suggestions"])
     setDisplayFreq(freq);
     setTreatFreqs(JSON.stringify(stack));
     setMeal([treat]);
@@ -94,7 +99,7 @@ const Reptile = () => {
         <button className="treat" onClick={handleTreat}>Give a treat</button>
       </div>
 
-      {messages.length ? <Alert messages={messages} link={`/users/${+id}`} /> : null}
+      {messages.length ? <Alert type={messages[0].slice(0, 8) === 'Consider' ? 'warning' : 'danger'} messages={messages} link={`/users/${+id}/todos`} /> : null}
       {meal.length ? <Meal meal={meal} freq={displayFreq} /> : null}
     </div>
   );

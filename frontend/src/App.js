@@ -6,6 +6,7 @@ import UserContext from './utils/UserContext';
 import useLocalStorage from './utils/useLocalStorage';
 import ReptifeedApi from './api';
 import jwt from 'jsonwebtoken';
+import { createTodos } from './utils/createTodos';
 
 function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
@@ -13,6 +14,7 @@ function App() {
   const [token, setToken] = useLocalStorage('reptifeed-token');
   const [reptiles, setReptiles] = useState([]);
   const [pantry, setPantry] = useState([]);
+  const [todos, setTodos] = useState(null);
   
   useEffect(() => {
     async function getUserInfo() {
@@ -28,6 +30,8 @@ function App() {
           setPantry(userPantry);
         } catch (e) {
           setCurrUser(null);
+          setReptiles([]);
+          setPantry([]);
         };
       };
       setInfoLoaded(true);
@@ -35,6 +39,11 @@ function App() {
     setInfoLoaded(false);
     getUserInfo();
   }, [token]);
+
+  useEffect(() => {
+    const todos = createTodos(reptiles, pantry);
+    setTodos(todos);
+  }, [reptiles, pantry]);
 
   const login = async loginData => {
     try {
@@ -65,7 +74,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserContext.Provider value={{ currUser, setCurrUser, reptiles, setReptiles, pantry, setPantry }}>
+      <UserContext.Provider value={{ currUser, setCurrUser, reptiles, setReptiles, pantry, setPantry, todos }}>
         <Navbar logout={logout} />
         <ReptifeedRoutes login={login} register={register} />
       </UserContext.Provider>

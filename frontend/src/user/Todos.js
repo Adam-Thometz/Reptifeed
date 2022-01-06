@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
 import './Todos.css';
 
 const Todos = () => {
-  const { currUser } = useContext(UserContext);
-  const location = useLocation();
-  const navigate = useNavigate();
-  if (!location.state.todos) navigate(`/users/${currUser.id}`);
-  
-  const { essentialTodos, niceToHaveTodos } = location.state.todos;
+  const { currUser, todos } = useContext(UserContext);
+
+  const { essentialTodos, niceToHaveTodos } = todos;
+
+  if (!essentialTodos.length && !niceToHaveTodos.length) return <Alert type="success" messages={["You've done everything you need to do. Just keep up the variety!", "Click here to go back to your profile"]} link={`/users/${currUser.id}`} />
 
   return (
     <div className="Todos">

@@ -1,30 +1,23 @@
-import React, { useContext, useMemo, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import reptileIcon from './profile-imgs/reptile.png';
 import pantryIcon from './profile-imgs/pantry.png';
 import userIcon from './profile-imgs/user.png';
-import { createTodos } from '../utils/createTodos';
 import './Profile.css';
 
 const Profile = () => {
-  const { currUser, reptiles, pantry } = useContext(UserContext);
+  const { currUser, todos } = useContext(UserContext);
   const { id } = useParams();
-  const [hasTodos, setHasTodos] = useState(true)
 
-  const todos = useMemo(() => createTodos(reptiles, pantry), [reptiles, pantry]);
-
-  useEffect(() => {
-    setHasTodos(todos.essentialTodos.length || todos.niceToHaveTodos.length)
-  }, [todos])
+  const { essentialTodos, niceToHaveTodos } = todos;
 
   return (
     <div className="Profile">
       <h1 className="Profile-header">Hello {currUser.username}!</h1>
-     {hasTodos ? (
-       <Link className="Profile-todo-link" to={`/users/${+id}/todos`} state={{todos}}>Click here for next steps!</Link>
+     {(essentialTodos.length || niceToHaveTodos.length) ? (
+       <Link className="Profile-todo-link" to={`/users/${+id}/todos`}>Click here for next steps!</Link>
      ) : null}
-     {/* <Todos todos={todos} /> */}
       <div className="Profile-section reptile">
         <div className="Profile-options">
           <Link to={`/users/${+id}/reptiles`}>See your reptiles</Link>
