@@ -5,7 +5,7 @@ const router = express.Router();
 const FoodApi = require('../models/foodApi');
 const { ensureLoggedIn } = require('../middleware/auth');
 
-/** GET /api/foods 
+/** GET /api/:species/foods 
  * 
  * Route to get all foods for a spceific species
  * 
@@ -21,7 +21,7 @@ router.get('/:species/foods', ensureLoggedIn, async (req, res, next) => {
   };
 });
 
-/** GET /api/foods/:food 
+/** GET /api/:species/foods/:food 
  * 
  * Route to get a specific food.
 */
@@ -34,7 +34,7 @@ router.get('/:species/foods/:food', ensureLoggedIn, async (req, res, next) => {
   };
 });
 
-/** GET /api/types/:type
+/** GET /api/:species/types/:type
  * 
  * Route to get foods by type (e.g., protein, vegetables, etc)
  */
@@ -47,7 +47,7 @@ router.get('/:species/types/:type', ensureLoggedIn, async (req, res, next) => {
   };
 });
 
-/** GET /api/treats/
+/** GET /api/:species/treats/
  * 
  * Route to get all treats
  */
