@@ -26,3 +26,10 @@ CREATE TABLE pantries (
   tips TEXT,
   CONSTRAINT food_name PRIMARY KEY (owner_id, name)
 );
+
+-- Test accounts
+INSERT INTO users (username, password, email, is_admin)
+VALUES ('testuser', '$2a$13$x9/O7D3Dpby5uZrJhKdP9eNWeFapfNSkeRcv1wWpAxzduCBM8qfty', 'test@test.com', FALSE),
+-- hashed password is testpassword
+       ('testadmin', '$2a$13$btV21u6VSduaG7KMf5tyteNl2/5MU.guMddvRcxMExwokBvJR5x1.', 'admin@test.com', TRUE)
+-- hashed password is adminpassword
