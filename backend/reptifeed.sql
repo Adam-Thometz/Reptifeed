@@ -6,7 +6,6 @@ CREATE DATABASE reptifeed;
 \connect reptifeed
 
 \i reptifeed-schema.sql
-\i reptifeed-skink-diet.sql
 
 \echo 'Delete and recreate reptifeed_test db?'
 \prompt 'Return for yes or control-C to cancel > ' foo
@@ -16,4 +15,3 @@ CREATE DATABASE reptifeed_test;
 \connect reptifeed_test
 
 \i reptifeed-schema.sql
-\i reptifeed-skink-diet.sql
