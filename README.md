@@ -46,6 +46,10 @@ Admin:
 
 Authentication middleware is located in `/backend/middleware`
 
+### Database Schema
+
+![Database schema](/backend/reptifeed-schema-visual.png)
+
 ### Routing Overview
 
 Routes on the backend are divided into five sections:
@@ -110,7 +114,7 @@ You should receive a prompt to create the API for both the 'reptifeed' and the '
 ```
 node server.js
 ```
-It should be listening on port 3001. Add `--inspect` in the middle for debugging ability.
+It should be listening on port 3001. Add `--inspect` in the middle of this command for debugging ability.
 
 4. Go into the frontend directory and activate frontend
 
@@ -118,29 +122,30 @@ It should be listening on port 3001. Add `--inspect` in the middle for debugging
 cd ../frontend
 npm start
 ```
-It should load the home page.
+It should run on port 3000 and load the home page.
 
 ### How to run tests
 
-Easy!
+Simple!
 
-Backend:
+Test backend:
 ```
+cd backend
 jest
 ```
-Frontend:
+Test frontend:
 ```
+cd frontend
 npm test
 ```
 
-
 ### How to add a reptile food database to expand the selection of reptiles
 
-1. Create a sql file in the /backend directory.
-2. In the file, create a table with the following schema:
+1. Create a sql file in the backend directory.
+2. In the file, place this code, replacing `REPTILE_NAME` with the name of the reptile in camel case:
 
 ```
-CREATE TABLE (REPTILE_IN_CAMEL_CASE)_diet (
+CREATE TABLE (REPTILE_NAME)_diet (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
@@ -152,20 +157,23 @@ CREATE TABLE (REPTILE_IN_CAMEL_CASE)_diet (
 3. Insert data into the sql file:
 
 ```
-INSERT INTO (REPTILE_IN_CAMEL_CASE)_diet (name, type, frequency, image, is_treat, tips)
+INSERT INTO (REPTILE_NAME)_diet (name, type, frequency, image, is_treat, tips)
 VALUES ...
 ```
 
-4. Go into reptifeed-api.sql and add the following for both `reptifeed` AND `reptifeed_test` databases
+`type` should be either `vegetable`, `protein`, `fruit`, or `supplement`
+`frequency` should be either `often`, `moderately`, or `occasionally`
+
+4. Go into `reptifeed-api.sql` and add the following for both `reptifeed` AND `reptifeed_test` databases
 
 ```
 \i reptifeed-skink-diet.sql
-\i // YOUR FILE NAME
+\i // YOUR NEW FILE
 ```
 
-Reactvate with `psql -f reptifeed-api.sql`
+5. Reactvate API with `psql -f reptifeed-api.sql`
 
-5. Go to `/frontend/src/food/FoodOptions.js` and in the group with the Species label, nest the following into the `<select>` tag:
+6. Go to `/frontend/src/food/FoodOptions.js` and in the group with the Species label, nest the following into the `<select>` tag:
 
 ```
 <option value="reptile-name">Reptile Name</option>
