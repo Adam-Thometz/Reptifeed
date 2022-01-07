@@ -9,7 +9,7 @@ test('it renders without crashing', () => {
   };
   render(<UserProvider>
     <ReptifeedRoutes />
-  </UserProvider>, { initialRoutes: [{ pathname: '/users/1/todos', state: { todos } }] });
+  </UserProvider>, { initialRoutes: ['/users/1/todos'] });
 });
 
 test('it matches snapshot', () => {
@@ -20,6 +20,6 @@ test('it matches snapshot', () => {
   const { asFragment } = render(
     <UserProvider>
       <ReptifeedRoutes />
-    </UserProvider>, { initialRoutes: [{ pathname: '/users/1/todos', state: { todos } }] });
+    </UserProvider>, { initialRoutes: ['/users/1/todos'] });
   expect(asFragment()).toMatchSnapshot();
 });

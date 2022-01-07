@@ -5,9 +5,6 @@ exports[`it matches snapshot 1`] = `
   <div
     class="Meal"
   >
-    <h4>
-      Feed this often
-    </h4>
     <div
       class="Meal-wrapper"
     >
@@ -27,6 +24,9 @@ exports[`it matches snapshot 1`] = `
         </h5>
       </div>
     </div>
+    <h4>
+      Feed this often
+    </h4>
   </div>
 </DocumentFragment>
 `;

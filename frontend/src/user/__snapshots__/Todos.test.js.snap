@@ -24,7 +24,19 @@ exports[`it matches snapshot 1`] = `
             class="Todos-todo essential"
             href="/foods"
           >
-            Buy a plumbus
+            Add protein eaten often
+          </a>
+          <a
+            class="Todos-todo essential"
+            href="/foods"
+          >
+            Add a treat eaten moderately
+          </a>
+          <a
+            class="Todos-todo essential"
+            href="/foods"
+          >
+            Add at least two supplements
           </a>
         </div>
         <div
@@ -37,7 +49,31 @@ exports[`it matches snapshot 1`] = `
             class="Todos-todo niceToHave"
             href="/foods"
           >
-            Figure out the plumbus
+            Add a vegetable eaten moderately
+          </a>
+          <a
+            class="Todos-todo niceToHave"
+            href="/foods"
+          >
+            Add a vegetable eaten occasionally
+          </a>
+          <a
+            class="Todos-todo niceToHave"
+            href="/foods"
+          >
+            Add a protein eaten moderately
+          </a>
+          <a
+            class="Todos-todo niceToHave"
+            href="/foods"
+          >
+            Add a protein eaten occasionally
+          </a>
+          <a
+            class="Todos-todo niceToHave"
+            href="/foods"
+          >
+            Add a treat eaten occasionally
           </a>
         </div>
       </div>
