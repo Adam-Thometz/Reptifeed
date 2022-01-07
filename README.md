@@ -50,14 +50,17 @@ Admin:
 - Username: testadmin
 - Password: adminpassword
 
-Authentication middleware is located in `/backend/middleware`
+Tokens for these accounts can be found in `/backend/reptifeed-schema.sql`
+*Please note that this login info is not available in the deployed version*
+
+Authentication middleware is located in `/backend/middleware/auth.js`.
 
 ### Routing Overview
 
 Routes on the backend are divided into five sections:
 
 1. API routes (this provides access to the food API - login required):
-   1. `GET /api/:species/foods`: Get all foods by species.
+   1. `GET /api/:species/foods`: Get all foods by species. (You can also put a searchTerm into the query section to search for foods)
    2. `GET /api/:species/foods/:food`: Get a specific food for a species.
    3. `GET /api/:species/types/:type`: Get a food group for a species.
    4. `GET /api/:species/treats`: Get treats for a species.

@@ -31,5 +31,8 @@ CREATE TABLE pantries (
 INSERT INTO users (username, password, email, is_admin)
 VALUES ('testuser', '$2a$13$x9/O7D3Dpby5uZrJhKdP9eNWeFapfNSkeRcv1wWpAxzduCBM8qfty', 'test@test.com', FALSE),
 -- hashed password is testpassword
+-- user token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE1NjQzNjd9.Umpnsl2CMs4cQDvc43zsrWtbdJzq79q29aILYBoOUHo
+
        ('testadmin', '$2a$13$btV21u6VSduaG7KMf5tyteNl2/5MU.guMddvRcxMExwokBvJR5x1.', 'admin@test.com', TRUE)
 -- hashed password is adminpassword
+-- admin token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0YWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDE1NjQ0ODB9.ifk0xGGEPrDAO_x1AZOqDbF3oSg7n44A4mN1m-uEbFg
