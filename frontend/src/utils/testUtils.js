@@ -2,6 +2,7 @@ import React from "react";
 import UserContext from "./UserContext";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { createTodos } from "./createTodos";
 
 /** Test user, reptiles, and pantry/food */
 
@@ -36,13 +37,15 @@ const testPantry = [
   }
 ];
 
+const testTodos = createTodos(testReptile, testPantry)
+
 /** UserContext mock
  * 
  * Wrap components in UserProvider in test files if UserContext is used by a component
  */
 
-const UserProvider = ({ children, currUser = testUser, pantry = testPantry, reptiles = testReptile }) => (
-  <UserContext.Provider value={{currUser, pantry, reptiles}}>
+const UserProvider = ({ children, currUser = testUser, pantry = testPantry, reptiles = testReptile, todos = testTodos}) => (
+  <UserContext.Provider value={{currUser, pantry, reptiles, todos}}>
     {children}
   </UserContext.Provider>
 );
