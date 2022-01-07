@@ -21,7 +21,7 @@ The user can learn about the foods they need to feed a balanced diet by checking
 The app keeps track of a specific reptile's diet by randomly assigning food based on a frequency pulled from a stack of frequencies*. This stack is kept in localStorage for each reptile and replenishes everytime it runs out.
 
 *`exampleFreqStack = ['occasionally', 'often', 'often', 'moderately', 'often', 'often']`
-Stacks for this app can be found in `/forntend/src/utils/foodStack.js`
+Stacks for this app can be found in `/frontend/src/utils/foodStack.js`
 
 ### Where Does the Food Data Come From? 🍎
 
@@ -32,9 +32,13 @@ I got the data for this from two main sources and then pieced them together in `
 
 Truly consistent data on what blue tongue skinks eat was hard to come by, which was one of the reasons I started developing this app. As a new blue tongue skink owner, I was excited but also overwhelmed by the amount of choices regarding what they could eat. I plan to refine the data as I learn more about what skinks eat, perhaps even add in information about nutirition amounts. I also hope to add capabilities for bearded dragons and such in the future!
 
+### Database Schema
+
+![Database schema](/backend/reptifeed-schema-visual.png)
+
 ### Authentication overview
 
-A user token is required for all the routes (listed below). A token could be for users or for admin.
+A user token is required for nearly all routes (listed below). A token could be for users or for admin.
 
 There are two test accounts available on the app when you run locally, one for regular users, and one for admin:
 
@@ -47,10 +51,6 @@ Admin:
 - Password: adminpassword
 
 Authentication middleware is located in `/backend/middleware`
-
-### Database Schema
-
-![Database schema](/backend/reptifeed-schema-visual.png)
 
 ### Routing Overview
 
@@ -114,7 +114,7 @@ Well, the todo list is shorter! Let's go add some food!
 
 ![Todo list](frontend/user-flow-pictures/todos-9-items.png)
 
-We're on the food page! You can get food by type or species, search for food, and even filter treats
+We're on the food page! You can get food by type or species (blue tongue skink only for now), search for food, and even filter treats
 
 ![Food page](frontend/user-flow-pictures/food-page.png)
 
@@ -144,7 +144,7 @@ Back to the food page!
 
 ![Food page](frontend/user-flow-pictures/food-page.png)
 
-I found some beef, mealworms, bok choy, basil, and carrots. They're now in my pantry.
+I found some beef, mealworms, bok choy, beets, and basil. They're now in my virtual pantry.
 
 ![Updated pantry](frontend/user-flow-pictures/pantry-update.png)
 
@@ -177,7 +177,7 @@ You should receive a prompt to delete and recreate the 'reptifeed' and the 'rept
 ```
 psql -f reptifeed-api.sql
 ```
-You should receive a prompt to create the API for both the 'reptifeed' and the 'reptifeed_test' databases. Agree to both.
+You should receive a prompt to create the API for both the 'reptifeed' and 'reptifeed_test' databases. Agree to both.
 
 3. Activate the server on the backend.
 
@@ -231,7 +231,7 @@ INSERT INTO (REPTILE_NAME)_diet (name, type, frequency, image, is_treat, tips)
 VALUES ...
 ```
 
-`type` should be either `vegetable`, `protein`, `fruit`, or `supplement`
+`type` should be either `vegetable`, `protein`, `fruit`, or `supplement`  
 `frequency` should be either `often`, `moderately`, or `occasionally`
 
 4. Go into `reptifeed-api.sql` and add the following for both `reptifeed` AND `reptifeed_test` databases
