@@ -1,6 +1,6 @@
 ﻿CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  username VARCHAR(20),
+  username VARCHAR(20) UNIQUE,
   password TEXT NOT NULL,
   email TEXT NOT NULL,
   is_admin BOOLEAN NOT NULL DEFAULT FALSE
@@ -10,9 +10,9 @@ CREATE TABLE reptiles (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   species TEXT NOT NULL,
-  subspecies TEXT DEFAULT 'N/A',
+  subspecies TEXT DEFAULT 'Unknown',
   birthday DATE NOT NULL,
-  img_url TEXT,
+  img_url TEXT DEFAULT 'https://as2.ftcdn.net/v2/jpg/00/89/55/15/1000_F_89551596_LdHAZRwz3i4EM4J0NHNHy2hEUYDfXc0j.jpg',
   owner_id INTEGER NOT NULL REFERENCES users ON DELETE CASCADE
 );
 
@@ -21,7 +21,7 @@ CREATE TABLE pantries (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
   frequency TEXT NOT NULL,
-  image TEXT NOT NULL,
+  image TEXT,
   is_treat BOOLEAN NOT NULL,
   tips TEXT,
   CONSTRAINT food_name PRIMARY KEY (owner_id, name)
