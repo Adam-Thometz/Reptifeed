@@ -128,7 +128,7 @@ NOOWWWW we can feed her!
 
 ![Feeding time](frontend/user-flow-pictures/feed.png)
 
-We can also feed treats!
+And we can feed treats too!
 
 ![Treat time](frontend/user-flow-pictures/feed-treat.png)
 
