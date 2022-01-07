@@ -13,11 +13,11 @@ function makePantryInventory(pantry) {
     if (food.isTreat) {
       if (food.frequency === 'moderately') inv.hasTreatModerately = true;
       if (food.frequency === 'occasionally') inv.hasTreatOccasionally = true;
-    } else if (!food.isTreat && food.type === 'protein') {
+    } else if (food.type === 'protein') {
       if (food.frequency === 'often') inv.hasProteinOften = true;
       if (food.frequency === 'moderately') inv.hasProteinModerately = true;
       if (food.frequency === 'occasionally') inv.hasProteinOccasionally = true;
-    } else if (!food.isTreat && food.type === 'vegetable') {
+    } else if (food.type === 'vegetable') {
       if (food.frequency === 'often') inv.hasVegetableOften = true;
       if (food.frequency === 'moderately') inv.hasVegetableModerately = true;
       if (food.frequency === 'occasionally') inv.hasVegetableOccasionally = true;
@@ -39,7 +39,7 @@ function createTodos(reptiles, pantry) {
   if (!pantryInventory.hasVegetableOften) essentialTodos.push('Add vegetables eaten often');
   if (!pantryInventory.hasProteinOften) essentialTodos.push('Add protein eaten often');
   if (!pantryInventory.hasTreatModerately) essentialTodos.push('Add a treat eaten moderately');
-  if (!pantryInventory.supplementCounter || !pantryInventory.supplementCounter >= 2) essentialTodos.push('Add at least two supplements');
+  if (!pantryInventory.supplementCounter || pantryInventory.supplementCounter < 2) essentialTodos.push('Add at least two supplements');
 
   const niceToHaveTodos = [];
 
