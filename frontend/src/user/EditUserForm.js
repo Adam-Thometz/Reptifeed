@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import ReptifeedApi from "../api";
 import Alert from "../common/Alert";
@@ -9,22 +9,10 @@ const EditUserForm = () => {
   const { currUser, setCurrUser } = useContext(UserContext)
   const { id } = useParams();
   const navigate = useNavigate();
-  const [user, setUser] = useState(currUser);
-
-  useEffect(() => {
-    async function getUserInfo() {
-      if (currUser.isAdmin && currUser.id !== +id) {
-        const targetUser = await ReptifeedApi.getUser(+id)
-        setUser(targetUser);
-      };
-    };
-    getUserInfo();
-  }, [currUser.id, currUser.isAdmin, id]);
-
   const init = {
-    username: user.username,
+    username: currUser.username,
     password: '',
-    email: user.email
+    email: currUser.email
   }; 
 
   const [formData, setFormData] = useState(init);
@@ -39,7 +27,7 @@ const EditUserForm = () => {
     e.preventDefault();
     try {
       const res = await ReptifeedApi.updateUser(+id, formData);
-      if (currUser.id === +id) setCurrUser(res);
+      setCurrUser(res);
       navigate(`/users/${res.id}`);
     } catch (errors) {
       setFormMessages(m => [...m, errors]);
