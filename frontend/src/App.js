@@ -6,7 +6,7 @@ import UserContext from './utils/UserContext';
 import useLocalStorage from './utils/useLocalStorage';
 import ReptifeedApi from './api';
 import jwt from 'jsonwebtoken';
-import { createTodos } from './utils/createTodos';
+import { createTodos } from './utils/todoHelpers';
 
 function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
