@@ -1,4 +1,4 @@
-import { createTodos } from './createTodos';
+import { createTodos } from './todoHelpers';
 import { reptiles } from './testUtils';
 
 const arugula = {
@@ -38,7 +38,6 @@ describe('createTodos', () => {
 
   test('it should return todos with a reptile', () => {
     const todos = createTodos(reptiles, [arugula, bokChoy, broccoli])
-    console.log(todos)
     expect(todos.essentialTodos).not.toContain('Add a reptile');
     expect(todos.essentialTodos.length).toBe(3);
     expect(todos.niceToHaveTodos.length).toBe(3);

@@ -3,10 +3,10 @@
  * Takes a user's reptiles and pantry and creates a list of things they need to do to unlock the app's full features
  * 
  * Returns an two arrays of todos, one of important things and one of nice-to-haves
- */
+*/
 
 // Helper for createTodos function; frequency counter so that the pantry is looped over only once.
-const makePantryInventory = pantry => {
+function makePantryInventory(pantry) {
   const inv = {}
 
   for (let food of pantry) {

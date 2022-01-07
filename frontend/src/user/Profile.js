@@ -6,7 +6,7 @@ import pantryIcon from './profile-imgs/pantry.png';
 import userIcon from './profile-imgs/user.png';
 import './Profile.css';
 import ReptifeedApi from "../api";
-import { createTodos } from "../utils/feedingHelpers";
+import { createTodos } from "../utils/todoHelpers";
 
 const Profile = () => {
   const { currUser, todos } = useContext(UserContext);

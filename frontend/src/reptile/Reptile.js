@@ -2,11 +2,11 @@ import React, { useState, useContext, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { foodStack, treatStack } from "../utils/foodStack";
 import UserContext from "../utils/UserContext";
-import { getFoodFromPantry, getTreatFromPantry, getNextSupplement } from "../utils/feedingFunctions";
+import { getFoodFromPantry, getTreatFromPantry, getNextSupplement } from "../utils/feedingHelpers";
 import Meal from "./Meal";
 import useLocalStorage from '../utils/useLocalStorage';
 import Alert from '../common/Alert';
-import { vegetableOftenCheck, proteinOftenCheck, treatModeratelyCheck, supplementCheck } from '../utils/createTodos'
+import { vegetableOftenCheck, proteinOftenCheck, treatModeratelyCheck, supplementCheck } from '../utils/todoHelpers'
 import './Reptile.css';
 
 const Reptile = () => {
@@ -99,8 +99,8 @@ const Reptile = () => {
         <button className="treat" onClick={handleTreat}>Give a treat</button>
       </div>
 
-      {messages.length ? <Alert type={messages[0].slice(0, 8) === 'Consider' ? 'warning' : 'danger'} messages={messages} link={`/users/${+id}/todos`} /> : null}
       {meal.length ? <Meal meal={meal} freq={displayFreq} /> : null}
+      {messages.length ? <Alert type={messages[0].slice(0, 8) === 'Consider' ? 'warning' : 'danger'} messages={messages} link={`/users/${+id}/todos`} /> : null}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
 import './Todos.css';
 import ReptifeedApi from "../api";
-import { createTodos } from "../utils/feedingHelpers";
+import { createTodos } from "../utils/todoHelpers";
 
 const Todos = () => {
   const { currUser, todos } = useContext(UserContext);
