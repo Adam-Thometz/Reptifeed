@@ -32,5 +32,5 @@ test('it renders a specific user', () => {
       <ReptifeedRoutes />
     </UserProvider>, { initialRoutes: ['/users/1'] }
   );
-  expect(getByText("Hello rickSanchez!")).toBeInTheDocument();
+  expect(getByText("rickSanchez")).toBeInTheDocument();
 });

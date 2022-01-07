@@ -1,15 +1,33 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import Alert from "../common/Alert";
 import UserContext from "../utils/UserContext";
 import './Todos.css';
+import ReptifeedApi from "../api";
+import { createTodos } from "../utils/feedingHelpers";
 
 const Todos = () => {
   const { currUser, todos } = useContext(UserContext);
+  const { id } = useParams()
+  const [user, setUser] = useState(currUser);
+  const [userTodos, setUserTodos] = useState(todos);
 
-  const { essentialTodos, niceToHaveTodos } = todos;
+  useEffect(() => {
+    async function getUserInfo() {
+      if (currUser.isAdmin && currUser.id !== +id) {
+        const targetUser = await ReptifeedApi.getUser(+id)
+        setUser(targetUser);
+        const userReptiles = await ReptifeedApi.getReptilesByOwner(+id);
+        const userPantry = await ReptifeedApi.getPantry(+id);
+        setUserTodos(createTodos(userReptiles, userPantry));
+      };
+    };
+    getUserInfo();
+  }, [currUser.id, currUser.isAdmin, id]);
 
-  if (!essentialTodos.length && !niceToHaveTodos.length) return <Alert type="success" messages={["You've done everything you need to do. Just keep up the variety!", "Click here to go back to your profile"]} link={`/users/${currUser.id}`} />
+  const { essentialTodos, niceToHaveTodos } = userTodos;
+
+  if (!essentialTodos.length && !niceToHaveTodos.length) return <Alert type="success" messages={["You've done everything you need to do. Just keep up the variety!", "Click here to go back to your profile"]} link={`/users/${user.id}`} />
 
   return (
     <div className="Todos">
@@ -19,7 +37,7 @@ const Todos = () => {
           <div className="Todos-wrapper essential-wrapper">
             <h4>Essential</h4>
             {essentialTodos.map((t, i) => (
-              <Link key={i} className="Todos-todo essential" to={(t === 'Add a reptile') ? `/users/${currUser.id}/reptiles/add` : '/foods'} >{t}</Link>
+              <Link key={i} className="Todos-todo essential" to={(t === 'Add a reptile') ? `/users/${user.id}/reptiles/add` : '/foods'} >{t}</Link>
               ))}
           </div>
         ) : null}

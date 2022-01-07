@@ -11,7 +11,7 @@ exports[`it matches snapshot for logged in user 1`] = `
       <h1
         class="Profile-header"
       >
-        Hello rickSanchez!
+        rickSanchez
       </h1>
       <a
         class="Profile-todo-link"

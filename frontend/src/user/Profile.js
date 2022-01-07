@@ -1,20 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import reptileIcon from './profile-imgs/reptile.png';
 import pantryIcon from './profile-imgs/pantry.png';
 import userIcon from './profile-imgs/user.png';
 import './Profile.css';
+import ReptifeedApi from "../api";
+import { createTodos } from "../utils/feedingHelpers";
 
 const Profile = () => {
   const { currUser, todos } = useContext(UserContext);
   const { id } = useParams();
+  const [user, setUser] = useState(currUser);
+  const [userTodos, setUserTodos] = useState(todos);
 
-  const { essentialTodos, niceToHaveTodos } = todos;
+  useEffect(() => {
+    async function getUserInfo() {
+      if (currUser.isAdmin && currUser.id !== +id) {
+        const targetUser = await ReptifeedApi.getUser(+id)
+        setUser(targetUser);
+        const userReptiles = await ReptifeedApi.getReptilesByOwner(+id);
+        const userPantry = await ReptifeedApi.getPantry(+id);
+        setUserTodos(createTodos(userReptiles, userPantry));
+      };
+    };
+    getUserInfo();
+  }, [currUser.id, currUser.isAdmin, id]);
+
+  const { essentialTodos, niceToHaveTodos } = userTodos;
 
   return (
     <div className="Profile">
-      <h1 className="Profile-header">Hello {currUser.username}!</h1>
+      <h1 className="Profile-header">{user.username}</h1>
      {(essentialTodos.length || niceToHaveTodos.length) ? (
        <Link className="Profile-todo-link" to={`/users/${+id}/todos`}>Click here for next steps!</Link>
      ) : null}
