@@ -103,7 +103,7 @@ Things to do to set up! Let's start with adding a reptile! (hint: Clicking on th
 
 Let's add our baby!
 
-![New reptile form](frontend/user-flow-pictures/add-new-reptile.png)
+![New reptile form](user-flow-pictures/add-new-reptile.png)
 
 Success! Can we feed her yet?
 
