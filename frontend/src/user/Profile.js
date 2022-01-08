@@ -4,11 +4,18 @@ import UserContext from "../utils/UserContext";
 import reptileIcon from './profile-imgs/reptile.png';
 import pantryIcon from './profile-imgs/pantry.png';
 import userIcon from './profile-imgs/user.png';
+import adminIcon from './profile-imgs/admin.png';
 import './Profile.css';
+import ReptifeedApi from "../api";
 
 const Profile = () => {
-  const { currUser, todos } = useContext(UserContext);
+  const { currUser, setCurrUser, todos } = useContext(UserContext);
   const { id } = useParams();
+
+  const handleDeleteUser = async id => {
+    await ReptifeedApi.deleteUser(id);
+    setCurrUser(null)
+  }
 
   const { essentialTodos, niceToHaveTodos } = todos;
 
@@ -35,10 +42,19 @@ const Profile = () => {
       <div className="Profile-section user">
         <div className="Profile-options">
           <Link to={`/users/${+id}/edit`}>Edit your profile</Link>
-          <Link to="/foods">Delete account</Link>
+          <Link to="/" onClick={() => handleDeleteUser(+id)}>Delete account</Link>
         </div>
         <img className="Profile-icon" src={userIcon} alt='' />
       </div>
+      {currUser.isAdmin ?
+        <div className="Profile-section admin">
+          <img className="Profile-icon" src={adminIcon} alt='' />
+          <div className="Profile-options">
+            <Link to="/admin-users">See all users</Link>
+            <Link to="/admin-reptiles">See all reptiles</Link>
+          </div>
+        </div>
+      : null}
     </div>
   );
 };
