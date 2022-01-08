@@ -1,9 +1,6 @@
 import React from "react";
 import FoodTable from "./FoodTable";
-import { screen, waitFor } from '@testing-library/react'
 import { render, UserProvider } from '../utils/testUtils';
-import userEvent from '@testing-library/user-event';
-import Navbar from "../routes-nav/Navbar";
 
 const food = [
   {
@@ -44,23 +41,4 @@ test('it matches snapshot', () => {
       <FoodTable foods={food} />
     </UserProvider>);
   expect(asFragment()).toMatchSnapshot();
-});
-
-
-test('it adds food to the pantry', async () => {
-  render(<UserProvider>
-    <Navbar />
-    <FoodTable foods={food} />
-  </UserProvider>);
-  
-  const checkboxes = screen.getAllByRole('checkbox');
-  const cactus = checkboxes[0];
-  expect(cactus).not.toBeChecked();
-  userEvent.click(cactus);
-  waitFor(() => expect(cactus).toBeChecked())
-  
-  const pantryBtn = screen.getByText('My Pantry');
-  userEvent.click(pantryBtn);
-  expect(screen.getByText('dog food')).not.toBeInTheDocument();
-  expect(screen.getByText('cactus')).toBeInTheDocument();
 });
