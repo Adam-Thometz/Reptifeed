@@ -99,8 +99,8 @@ const Reptile = () => {
         <button className="treat" onClick={handleTreat}>Give a treat</button>
       </div>
 
-      {meal.length ? <Meal meal={meal} freq={displayFreq} /> : null}
       {messages.length ? <Alert type={messages[0].slice(0, 8) === 'Consider' ? 'warning' : 'danger'} messages={messages} link={`/users/${+id}/todos`} /> : null}
+      {meal.length ? <Meal meal={meal} freq={displayFreq} /> : null}
     </div>
   );
 };

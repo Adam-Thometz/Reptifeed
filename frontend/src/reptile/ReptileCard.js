@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import './ReptileCard.css'
 
-const ReptileCard = ({ id, name, image, species, ownerId }) => {
+const ReptileCard = ({ id, name, image, species, ownerId, link = false }) => {
   const navigate = useNavigate();
   return (
-    <div className="ReptileCard" onClick={() => navigate(`/users/${ownerId}/reptiles/${id}`)}>
+    <div className="ReptileCard" onClick={link ? () => navigate(`/users/${ownerId}/reptiles/${id}`) : null}>
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <h5>{species}</h5>

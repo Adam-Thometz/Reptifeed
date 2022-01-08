@@ -21,6 +21,7 @@ const Reptiles = () => {
           image={r.imgUrl}
           species={r.species}
           ownerId={r.ownerId}
+          link
         />
       ))}
     </div>
