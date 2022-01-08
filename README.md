@@ -7,10 +7,10 @@
 [Link to deployment](https://reptifeed.surge.sh/)
 
 ## Table of Contents
-[I. Info About Repo (high level)](#info-about-repo-high-level)
-[-- i. What is Reptifeed?](#what-is-reptifeed-🐸)
-[-- ii. How Does It Work?](#how-does-it-work-🌿)
-[-- iii. Where Does The Food Data Come From?](#where-does-the-food-data-come-from-🍎)  
+[I. Info About Repo (high level)](#info-about-repo-high-level)  
+[-- i. What is Reptifeed?](#what-is-reptifeed)  
+[-- ii. How Does It Work?](#how-does-it-work)  
+[-- iii. Where Does The Food Data Come From?](#where-does-the-food-data-come-from)  
 [II. Info About Repo (technical details)](#info-about-repo-technical-details)  
 [-- i. Tech Stack](#tech-stack)  
 [-- ii. Database Schema](#database-schema)  
@@ -24,11 +24,11 @@
 
 ## Info about repo (high-level)
 
-### What is Reptifeed? 🐸
+### What is Reptifeed?
 
 Reptifeed is an app that is designed to offer suggestions to reptile owners on what to feed their pets. A user stores information about their reptiles, fills up a virtual pantry that matches what they have in their kitchen, and gets suggestions on what to feed and how often. The app mixes up suggestions in order to keep reptile diets balanced.
 
-### How Does It Work? 🌿
+### How Does It Work?
 
 When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry.
 
@@ -39,7 +39,7 @@ The app keeps track of a specific reptile's diet by randomly assigning food base
 *`exampleFreqStack = ['occasionally', 'often', 'often', 'moderately', 'often', 'often']`
 Stacks for this app can be found in `/frontend/src/utils/foodStack.js`
 
-### Where Does the Food Data Come From? 🍎
+### Where Does the Food Data Come From?
 
 I got the data for this from two main sources and then pieced them together in `backend/reptifeed-skink-diet.sql`:
 
