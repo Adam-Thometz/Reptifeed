@@ -22,13 +22,13 @@
 [-- ii. How to run tests](#how-to-test)  
 [-- iii. How to add a reptile food database](#how-to-add-database)  
 
-## Info about repo (high-level){info-about-repo-high-level}
+## Info about repo (high-level) {#info-about-repo-high-level}
 
-### What is Reptifeed? 🐸{what-is-reptifeed}
+### What is Reptifeed? 🐸 {#what-is-reptifeed}
 
 Reptifeed is an app that is designed to offer suggestions to reptile owners on what to feed their pets. A user stores information about their reptiles, fills up a virtual pantry that matches what they have in their kitchen, and gets suggestions on what to feed and how often. The app mixes up suggestions in order to keep reptile diets balanced.
 
-### How Does It Work? 🌿{how-does-it-work}
+### How Does It Work? 🌿 {#how-does-it-work}
 
 When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry.
 
@@ -39,7 +39,7 @@ The app keeps track of a specific reptile's diet by randomly assigning food base
 *`exampleFreqStack = ['occasionally', 'often', 'often', 'moderately', 'often', 'often']`
 Stacks for this app can be found in `/frontend/src/utils/foodStack.js`
 
-### Where Does the Food Data Come From? 🍎{where-does-the-food-data-come-from}
+### Where Does the Food Data Come From? 🍎 {#where-does-the-food-data-come-from}
 
 I got the data for this from two main sources and then pieced them together in `backend/reptifeed-skink-diet.sql`:
 
@@ -48,19 +48,19 @@ I got the data for this from two main sources and then pieced them together in `
 
 Truly consistent data on what blue tongue skinks eat was hard to come by, which was one of the reasons I started developing this app. As a new blue tongue skink owner, I was excited but also overwhelmed by the amount of choices regarding what they could eat. I plan to refine the data as I learn more about what skinks eat, perhaps even add in information about nutirition amounts. I also hope to add capabilities for bearded dragons and such in the future!
 
-## Info about Repo (technical details) {#info-about-repo-technical-details}
+## Info about Repo (technical details) {##info-about-repo-technical-details}
 
-### Tech stack {tech-stack}
+### Tech stack {#tech-stack}
 
 - *Frontend*: React.js, React Router, CSS
 - *Backend*: Node.js, Express, SQL, PostgresQL
 - *Other*: Jest, Heroku
 
-### Database Schema {database-schema}
+### Database Schema {#database-schema}
 
 ![Database schema](reptifeed-schema-visual.png)
 
-### Authentication overview {authentication-overview}
+### Authentication overview {#authentication-overview}
 
 A user token is required for nearly all routes (listed below). A token could be for users or for admin.
 
@@ -79,7 +79,7 @@ Tokens for these accounts can be found in `/backend/reptifeed-schema.sql`
 
 Authentication middleware is located in `/backend/middleware/auth.js`.
 
-### Routing Overview {routing-overview}
+### Routing Overview {#routing-overview}
 
 Routes on the backend are divided into five sections:
 
@@ -111,7 +111,7 @@ Routes on the backend are divided into five sections:
 
 **Admin only
 
-### Sample User Flow {sample-user-flow}
+### Sample User Flow {#sample-user-flow}
 
 Log in or register...
 
@@ -179,9 +179,9 @@ Now I have a varied diet for Unity. Look how happy she is!
 
 ![A picture of Unity](user-flow-pictures/happy-unity.png)
 
-## Using this repo {using-this-repo}
+## Using this repo {#using-this-repo}
 
-### How to run app locally {how-to-run}
+### How to run app locally {#how-to-run}
 
 **Make sure you have `psql` command available. This app runs on PostgresQL.**
 
@@ -215,7 +215,7 @@ npm start
 ```
 It should run on port 3000 and load the home page.
 
-### How to run tests {how-to-test}
+### How to run tests {#how-to-test}
 
 Simple!
 
@@ -230,7 +230,7 @@ cd frontend
 npm test
 ```
 
-### How to add a reptile food database to expand the selection of reptiles {how-to-add-database}
+### How to add a reptile food database to expand the selection of reptiles {#how-to-add-database}
 
 1. Create a sql file in the backend directory.
 2. In the file, place this code, replacing `REPTILE_NAME` with the name of the reptile in camel case:
