@@ -7,10 +7,10 @@
 [Link to deployment](https://reptifeed.surge.sh/)
 
 ## Table of Contents
-[I. Info About Repo (high level)](#info-about-repo-high-level)  
-[-- i. What is Reptifeed?](#what-is-reptifeed)  
-[-- ii. How Does It Work?](#how-does-it-work)  
-[-- iii. Where Does The Food Data Come From?](#where-does-the-food-data-come-from)  
+[I. Info About Repo (high level)](#info-about-repo-high-level)
+[-- i. What is Reptifeed?](#what-is-reptifeed-🐸)
+[-- ii. How Does It Work?](#how-does-it-work-🌿)
+[-- iii. Where Does The Food Data Come From?](#where-does-the-food-data-come-from-🍎)  
 [II. Info About Repo (technical details)](#info-about-repo-technical-details)  
 [-- i. Tech Stack](#tech-stack)  
 [-- ii. Database Schema](#database-schema)  
