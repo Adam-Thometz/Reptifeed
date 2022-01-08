@@ -34,7 +34,7 @@ Truly consistent data on what blue tongue skinks eat was hard to come by, which 
 
 ### Database Schema
 
-![Database schema](/backend/reptifeed-schema-visual.png)
+![Database schema](reptifeed-schema-visual.png)
 
 ### Authentication overview
 
@@ -91,15 +91,15 @@ Routes on the backend are divided into five sections:
 
 Log in or register...
 
-![Login page](frontend/user-flow-pictures/login.png)
+![Login page](user-flow-pictures/login.png)
 
 ...takes you to user profile. What's in next steps?
 
-![Profile page for testuser](frontend/user-flow-pictures/profile-todos.png)
+![Profile page for testuser](user-flow-pictures/profile-todos.png)
 
 Things to do to set up! Let's start with adding a reptile! (hint: Clicking on the todo brings you where you need to go)
 
-![Todo list](frontend/user-flow-pictures/todos.png)
+![Todo list](user-flow-pictures/todos.png)
 
 Let's add our baby!
 
@@ -107,53 +107,53 @@ Let's add our baby!
 
 Success! Can we feed her yet?
 
-![Added reptile](frontend/user-flow-pictures/reptile.png)
+![Added reptile](user-flow-pictures/reptile.png)
 
 Bummer! We need to get some food. Off to the todos!
 
-![No food!](frontend/user-flow-pictures/reptile-no-food.png)
+![No food!](user-flow-pictures/reptile-no-food.png)
 
 Well, the todo list is shorter! Let's go add some food!
 
-![Todo list](frontend/user-flow-pictures/todos-9-items.png)
+![Todo list](user-flow-pictures/todos-9-items.png)
 
 We're on the food page! You can get food by type or species (blue tongue skink only for now), search for food, and even filter treats
 
-![Food page](frontend/user-flow-pictures/food-page.png)
+![Food page](user-flow-pictures/food-page.png)
 
 After searching through my real pantry, I found that I have arugula, dog food, mangoes, and calcium and multivitamin supplements and checked them off.
 
 This is what my pantry looks like now:
 
-![Pantry](frontend/user-flow-pictures/pantry.png)
+![Pantry](user-flow-pictures/pantry.png)
 
 NOOWWWW we can feed her!
 
-![Feeding time](frontend/user-flow-pictures/feed.png)
+![Feeding time](user-flow-pictures/feed.png)
 
 And we can feed treats too!
 
-![Treat time](frontend/user-flow-pictures/feed-treat.png)
+![Treat time](user-flow-pictures/feed-treat.png)
 
-You might be reminded to add more food to your pantry.
+You might be reminded to add more food to your pantry. That won't stop you from feeding your pet, since you clearly have the important stuff at this point.
 
-![Prompt to get more food!](frontend/user-flow-pictures/need-more.png)
+![Prompt to get more food!](user-flow-pictures/need-more.png)
 
 Clicking the alert takes you to the todo page. Let's see what we have!
 
-![Todos with only nice to haves](frontend/user-flow-pictures/nice-to-haves-only.png)
+![Todos with only nice to haves](user-flow-pictures/nice-to-haves-only.png)
 
 Back to the food page!
 
-![Food page](frontend/user-flow-pictures/food-page.png)
+![Food page](user-flow-pictures/food-page.png)
 
 I found some beef, mealworms, bok choy, beets, and basil. They're now in my virtual pantry.
 
-![Updated pantry](frontend/user-flow-pictures/pantry-update.png)
+![Updated pantry](user-flow-pictures/pantry-update.png)
 
 Now I have a varied diet for Unity. Look how happy she is!
 
-![A picture of Unity](frontend/user-flow-pictures/happy-unity.png)
+![A picture of Unity](user-flow-pictures/happy-unity.png)
 
 ### Tech stack:
 
