@@ -18,9 +18,9 @@
 [-- iv. Routing Overview](#routing-overview)  
 [-- v. Sample User Flow](#sample-user-flow)  
 [III. Using This Repo](#using-this-repo)  
-[-- i. How to run app locally](#how-to-run)  
-[-- ii. How to run tests](#how-to-test)  
-[-- iii. How to add a reptile food database](#how-to-add-database)  
+[-- i. How to run app locally](#how-to-run-app-locally)  
+[-- ii. How to run tests](#how-to-run-tests)  
+[-- iii. How to add a reptile food database](#how-to-add-a-reptile-food-database)  
 
 ## Info about repo (high-level)
 
@@ -48,19 +48,19 @@ I got the data for this from two main sources and then pieced them together in `
 
 Truly consistent data on what blue tongue skinks eat was hard to come by, which was one of the reasons I started developing this app. As a new blue tongue skink owner, I was excited but also overwhelmed by the amount of choices regarding what they could eat. I plan to refine the data as I learn more about what skinks eat, perhaps even add in information about nutirition amounts. I also hope to add capabilities for bearded dragons and such in the future!
 
-## Info about Repo (technical details) {##info-about-repo-technical-details}
+## Info about Repo (technical details)
 
-### Tech stack {#tech-stack}
+### Tech stack
 
 - *Frontend*: React.js, React Router, CSS
 - *Backend*: Node.js, Express, SQL, PostgresQL
 - *Other*: Jest, Heroku
 
-### Database Schema {#database-schema}
+### Database Schema
 
 ![Database schema](reptifeed-schema-visual.png)
 
-### Authentication overview {#authentication-overview}
+### Authentication overview
 
 A user token is required for nearly all routes (listed below). A token could be for users or for admin.
 
@@ -79,7 +79,7 @@ Tokens for these accounts can be found in `/backend/reptifeed-schema.sql`
 
 Authentication middleware is located in `/backend/middleware/auth.js`.
 
-### Routing Overview {#routing-overview}
+### Routing Overview
 
 Routes on the backend are divided into five sections:
 
@@ -111,7 +111,7 @@ Routes on the backend are divided into five sections:
 
 **Admin only
 
-### Sample User Flow {#sample-user-flow}
+### Sample User Flow
 
 Log in or register...
 
@@ -179,9 +179,9 @@ Now I have a varied diet for Unity. Look how happy she is!
 
 ![A picture of Unity](user-flow-pictures/happy-unity.png)
 
-## Using this repo {#using-this-repo}
+## Using this repo
 
-### How to run app locally {#how-to-run}
+### How to run app locally
 
 **Make sure you have `psql` command available. This app runs on PostgresQL.**
 
@@ -215,7 +215,7 @@ npm start
 ```
 It should run on port 3000 and load the home page.
 
-### How to run tests {#how-to-test}
+### How to run tests
 
 Simple!
 
@@ -230,7 +230,7 @@ cd frontend
 npm test
 ```
 
-### How to add a reptile food database to expand the selection of reptiles {#how-to-add-database}
+### How to add a reptile food database
 
 1. Create a sql file in the backend directory.
 2. In the file, place this code, replacing `REPTILE_NAME` with the name of the reptile in camel case:
