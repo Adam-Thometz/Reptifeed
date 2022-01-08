@@ -1,6 +1,6 @@
 # 🦎 Reptifeed 🦎
 
-![Reptifeed Home Page](frontend/user-flow-pictures/home.png)
+![Reptifeed Home Page](user-flow-pictures/home.png)
 
 #### developed by Adam Thometz
 
