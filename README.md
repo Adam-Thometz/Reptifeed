@@ -344,7 +344,7 @@ Now type:
 
 ```
 cp build/index.html build/200.html
-npx surge
+npx surge build
 ```
 
 You'll be prompted to create a URL.  
