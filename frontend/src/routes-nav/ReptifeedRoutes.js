@@ -21,6 +21,7 @@ import AdminUsers from "../admin/AdminUsers";
 import RequireAuth from "./RequireAuth";
 import NotFound from "../common/NotFound";
 import AdminReptiles from "../admin/AdminReptiles";
+import LoadingSpinner from "../common/LoadingSpinner";
 
 const ReptifeedRoutes = ({ login, register }) => {
   return (
@@ -79,6 +80,8 @@ const ReptifeedRoutes = ({ login, register }) => {
         <Route path="/admin-users" element={<RequireAuth adminOnly><AdminUsers /></RequireAuth>} />
         {/* ADMIN ONLY ROUTE: View all reptiles on website */}
         <Route path="/admin-reptiles" element={<RequireAuth adminOnly><AdminReptiles /></RequireAuth>} />
+
+        <Route path='/loading' element={<LoadingSpinner />} />
 
         {/* GENERAL 404 HANDLER */}
         <Route path="*" element={<NotFound />} />

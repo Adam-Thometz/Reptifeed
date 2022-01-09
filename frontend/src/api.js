@@ -6,7 +6,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
  * 
  * The ReptifeedApi class centralizes all possible calls to the backend.
  * If writing more calls to the backend or the Reptifeed API, put them here!
- */
+*/
 
 class ReptifeedApi {
   /** If there is a token, it is stored in this variable and can be called with ReptifeedApi.token */
@@ -17,7 +17,7 @@ class ReptifeedApi {
    * 
    * const res = await this.request(endpoint, data, method);
    * return res.value;
-   */
+  */
   static async request(endpoint, data = {}, method = 'get') {
     const url = `${BASE_URL}/${endpoint}`;
     const headers = {Authorization: `Bearer ${this.token}`};

@@ -7,6 +7,7 @@ import useLocalStorage from './utils/useLocalStorage';
 import ReptifeedApi from './api';
 import jwt from 'jsonwebtoken';
 import { createTodos } from './utils/todoHelpers';
+import LoadingSpinner from './common/LoadingSpinner';
 
 function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
@@ -70,7 +71,7 @@ function App() {
     setCurrUser(null);
   };
 
-  if (!infoLoaded) return <h1>Loading...</h1>
+  if (!infoLoaded) return <LoadingSpinner />
 
   return (
     <div className="App">
