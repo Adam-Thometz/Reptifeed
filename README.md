@@ -304,7 +304,7 @@ git commit -m 'ready to deploy backend'
 git push heroku master
 ```
 
-Make sure it's there! There's nothing in the index route on the backend so a 404 is expected behavior. Now let's push our databases onto Heroku.
+Go to `APP_NAME.herokuapp.com` to make sure it's up! There's nothing in the index route on the backend so a 404 is expected. Now let's push our databases onto Heroku.
 
 ```
 heroku addons:create heroku-postgresql:hobby-dev -a APP_NAME
@@ -312,7 +312,9 @@ heroku pg:push reptifeed DATABASE_URL -a APP_NAME
 heroku config:set PGSSLMODE=no-verify
 ```
 
-Try registering an account through your API client and you should get back a JSON object with a token and an id.
+Try registering an account through your API client and you should get back a JSON object with a token and an id.  
+
+The backend has been deployed.
 
 #### Frontend
 
