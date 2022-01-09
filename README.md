@@ -336,7 +336,7 @@ This is how the frontend and the backend talk to each other. To actually link th
 REACT_APP_BASE_URL=YOUR_HEROKU_BACKEND_URL npm run build
 ```
 
-Make sure the URL doesn't end with a slash. Otherwise, communications won't be made formatted correctly and it won't work.  
+Make sure the URL doesn't end with a slash. Otherwise, backend/API calls won't be formatted correctly and it won't work.  
 
 Now type:
 
