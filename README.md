@@ -20,7 +20,7 @@
 [III. Using This Repo](#using-this-repo)  
 [- i. How to run app locally](#how-to-run-app-locally)  
 [- ii. How to run tests](#how-to-run-tests)  
-[- iii. How to add a reptile food database](#how-to-add-a-reptile-food-database) 
+[- iii. How to add a reptile food database](#how-to-add-a-reptile-food-database)  
 [- iv. How to deploy](#how-to-deploy-the-app) 
 
 ## Info about repo (high-level)
