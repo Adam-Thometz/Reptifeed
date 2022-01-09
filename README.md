@@ -2,7 +2,7 @@
 
 ![Reptifeed Home Page](user-flow-pictures/home.png)
 
-#### developed by Adam Thometz
+#### full stack project by Adam Thometz
 
 [Link to deployment](https://reptifeed.surge.sh/)
 
@@ -27,11 +27,11 @@
 
 ### What is Reptifeed?
 
-Reptifeed is an app that is designed to offer suggestions to reptile owners on what to feed their pets. A user stores information about their reptiles, fills up a virtual pantry that matches what they have in their kitchen, and gets suggestions on what to feed and how often. The app mixes up suggestions in order to keep reptile diets balanced.
+Reptifeed is an app that is designed to offer suggestions to reptile owners on what to feed their omnivorous pets. A user stores information about their reptiles, fills up a virtual pantry that matches what they have in their kitchen, and gets suggestions on what to feed and how often. The app mixes up suggestions in order to keep reptile diets balanced, a requirement for optimal health as it closely resembles their eating habits in the wild.
 
 ### How Does It Work?
 
-When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry.
+When a user makes an account, they are then prompted to add at least one reptile and add some foods that their reptiles eat often to their pantry. They can then feed their reptile based on what's in their pantry. As they feed their pet, users may be prompted to add more foods to their pantry to vary their pet's diet.
 
 The user can learn about the foods they need to feed a balanced diet by checking out the foods page. At the moment, it only works for blue tongue skinks. Learn more in the 'Where Does the Food Data Come From?' section.
 
@@ -304,7 +304,7 @@ git commit -m 'ready to deploy backend'
 git push heroku master
 ```
 
-Almost there! Now let's push our databases onto Heroku.
+Make sure it's there! There's nothing in the index route on the backend so a 404 is expected behavior. Now let's push our databases onto Heroku.
 
 ```
 heroku addons:create heroku-postgresql:hobby-dev -a APP_NAME
@@ -312,7 +312,7 @@ heroku pg:push reptifeed DATABASE_URL -a APP_NAME
 heroku config:set PGSSLMODE=no-verify
 ```
 
-Now make sure it works! There's nothing in the root directory so a 404 is expected behavior. Try registering an account through your API client to make sure it works.
+Try registering an account through your API client and you should get back a JSON object with a token and an id.
 
 #### Frontend
 
@@ -322,7 +322,7 @@ Let's go to the frontend directory!
 cd ../frontend
 ```
 
-If you look at the API on the frontend (`/frontend/src/api.js`), you'll notice the following line at the top:
+If you look at the API in the frontend (`/frontend/src/api.js`), you'll notice the following line at the top:
 
 ```
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
