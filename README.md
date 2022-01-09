@@ -20,7 +20,8 @@
 [III. Using This Repo](#using-this-repo)  
 [- i. How to run app locally](#how-to-run-app-locally)  
 [- ii. How to run tests](#how-to-run-tests)  
-[- iii. How to add a reptile food database](#how-to-add-a-reptile-food-database)  
+[- iii. How to add a reptile food database](#how-to-add-a-reptile-food-database) 
+[- iv. How to deploy](#how-to-deploy-the-app) 
 
 ## Info about repo (high-level)
 
@@ -75,7 +76,6 @@ Admin:
 - Password: adminpassword
 
 Tokens for these accounts can be found in `/backend/reptifeed-schema.sql`
-*Please note that this login info is not available in the deployed version*
 
 Authentication middleware is located in `/backend/middleware/auth.js`.
 
@@ -159,11 +159,11 @@ And we can feed treats too!
 
 ![Treat time](user-flow-pictures/feed-treat.png)
 
-You might be reminded to add more food to your pantry. That won't stop you from feeding your pet, since you clearly have the important stuff at this point.
+You might be reminded to add more food to your pantry. That won't stop you from feeding your pet, since you clearly have the staples at this point.
 
 ![Prompt to get more food!](user-flow-pictures/need-more.png)
 
-Clicking the alert takes you to the todo page. Let's see what we have!
+Clicking the alert takes you to the todo page. Let's see what we can do!
 
 ![Todos with only nice to haves](user-flow-pictures/nice-to-haves-only.png)
 
@@ -185,7 +185,7 @@ Now I have a varied diet for Unity. Look how happy she is!
 
 **Make sure you have `psql` command available. This app runs on PostgresQL.**
 
-1. Go into the backend driectory and activate `reptifeed.sql`
+1. Go into the backend driectory and activate the database by running `reptifeed.sql`:
 
 ```
 cd backend
@@ -219,12 +219,12 @@ It should run on port 3000 and load the home page.
 
 Simple!
 
-Test backend:
+#### Backend
 ```
 cd backend
 jest
 ```
-Test frontend:
+#### Frontend
 ```
 cd frontend
 npm test
@@ -275,3 +275,74 @@ DROP TABLE (new table)
 Make sure that the value attribute is the same as the database name (minus `_diet`) except with dashes (`-`) instead of low dashes (`_`).
 
 *Example: database name = bearded_dragon_diet, value name = 'bearded-dragon'*
+
+### How to deploy the app
+
+The current deployment of this app uses Heroku for backend deployment and Surge for frontend deployment.
+
+#### Backend
+
+Login to your Heroku account and create an app on your account through the CLI
+
+```
+cd backend
+heroku login
+heroku create APP_NAME
+```
+
+Make sure you have a file named `Procfile` in this directory with the proper config info for Node.js:
+```
+web: node server.js
+```
+
+Now let's make a Git repo for the backend to push onto the Heroku app:
+
+```
+heroku git:remote -a APP_NAME
+git add .
+git commit -m 'ready to deploy backend'
+git push heroku master
+```
+
+Almost there! Now let's push our databases onto Heroku.
+
+```
+heroku addons:create heroku-postgresql:hobby-dev -a APP_NAME
+heroku pg:push reptifeed DATABASE_URL -a APP_NAME
+heroku config:set PGSSLMODE=no-verify
+```
+
+Now make sure it works! There's nothing in the root directory so a 404 is expected behavior. Try registering an account through your API client to make sure it works.
+
+#### Frontend
+
+Let's go to the frontend directory!
+
+```
+cd ../frontend
+```
+
+If you look at the API on the frontend (`/frontend/src/api.js`), you'll notice the following line at the top:
+
+```
+const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+```
+
+This is how the frontend and the backend talk to each other. To actually link them in production, type the following in your CLI:
+
+```
+REACT_APP_BASE_URL=YOUR_HEROKU_BACKEND_URL npm run build
+```
+
+Make sure the URL doesn't end with a slash. Otherwise, communications won't be made formatted correctly and it won't work.  
+
+Now type:
+
+```
+cp build/index.html build/200.html
+npx surge
+```
+
+You'll be prompted to create a URL.  
+
+Now go check it out!
