@@ -200,17 +200,19 @@ psql -f reptifeed-api.sql
 ```
 You should receive a prompt to create the API for both the 'reptifeed' and 'reptifeed_test' databases. Agree to both.
 
-3. Activate the server on the backend.
+3. Install dependencies associated with the backend and start the server.
 
 ```
+npm install
 node server.js
 ```
 It should be listening on port 3001. Add `--inspect` in the middle of this command for debugging ability.
 
-4. Go into the frontend directory and activate frontend
+4. Go into the frontend directory, install dependencies, and activate frontend
 
 ```
 cd ../frontend
+npm install
 npm start
 ```
 It should run on port 3000 and load the home page.
