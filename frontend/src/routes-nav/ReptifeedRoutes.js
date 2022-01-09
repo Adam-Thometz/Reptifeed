@@ -66,7 +66,7 @@ const ReptifeedRoutes = ({ login, register }) => {
         {/* FOOD/PANTRY ROUTES */}
         {/**********************/}
         
-        {/* PRIVATE ROUTE: View all available foods for reptiles */}
+        {/* View all available foods for reptiles */}
         <Route path="/foods" element={<Foods />} />
         {/* PRIVATE ROUTE: View pantry */}
         <Route path="/users/:id/pantry" element={<RequireAuth><Pantry /></RequireAuth>} />
