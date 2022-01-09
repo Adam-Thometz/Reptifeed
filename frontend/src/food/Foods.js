@@ -1,13 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReptifeedApi from "../api";
-import UserContext from "../utils/UserContext";
 import FoodOptions from "./FoodOptions";
 import FoodTable from "./FoodTable";
-import Unauthorized from "../common/Unauthorized";
 
 const Foods = () => {
-  const { currUser } = useContext(UserContext);
-
   const [foods, setFoods] = useState([]);
   const [species, setSpecies] = useState('blue-tongue-skink');
   const [searchTerm, setSearchTerm] = useState('');
@@ -47,8 +43,6 @@ const Foods = () => {
     };
     getTreats();
   }, [searchTerm, species, treatFilter]);
-
-  if (!currUser) return (<Unauthorized />);
 
   return (
     <div className="Foods">
