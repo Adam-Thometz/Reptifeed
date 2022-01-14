@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import './NotFound.css'
 
 const NotFound = () => {
+  document.title = `Page not found | Reptifeed`;
+
   return (
     <div className="NotFound">
       <h4>The page you're looking for wasn't found</h4>

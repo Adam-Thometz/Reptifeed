@@ -4,6 +4,8 @@ import ReptifeedApi from "../api";
 const AdminUsers = () => {
   const [users, setUsers] = useState([]);
 
+  document.title = `Al, users on Reptifeed`;
+
   useEffect(() => {
     async function getUsers() {
       const res = await ReptifeedApi.getAllUsers();

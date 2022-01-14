@@ -9,6 +9,8 @@ const NewReptileForm = () => {
   const navigate = useNavigate();
   const { setReptiles } = useContext(UserContext);
   const { id } = useParams();
+
+  document.title = `Add a reptile | Reptifeed`;
   const init = {
     name: '',
     species: '',

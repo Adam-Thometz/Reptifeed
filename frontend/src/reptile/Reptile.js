@@ -16,6 +16,9 @@ const Reptile = () => {
   const [hasFood, setHasFood] = useState(false);
   const [hasTreats, setHasTreats] = useState(false);
 
+  const reptile = reptiles.filter(r => r.id === +reptileId)[0];
+  document.title = `${reptile.name} | Reptifeed`;
+
   useEffect(() => {
     function checkPantry() {
       const hasProtein = proteinOftenCheck(pantry);
@@ -30,7 +33,6 @@ const Reptile = () => {
     setHasTreats(checkTreats());
   }, [pantry]);
 
-  const reptile = reptiles.filter(r => r.id === +reptileId)[0];
 
   const [meal, setMeal] = useState([]);
   const [messages, setMessages] = useState([])

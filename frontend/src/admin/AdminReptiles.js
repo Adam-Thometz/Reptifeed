@@ -5,6 +5,8 @@ import ReptileCard from "../reptile/ReptileCard";
 const AdminReptiles = () => {
   const [reptiles, setReptiles] = useState([]);
 
+  document.title = `All reptiles on Reptifeed`;
+
   useEffect(() => {
     async function getReptiles() {
       const res = await ReptifeedApi.getAllReptiles();

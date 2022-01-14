@@ -7,6 +7,8 @@ const Reptiles = () => {
   const { reptiles } = useContext(UserContext);
   const { id } = useParams();
 
+  document.title = `My Reptiles | Reptifeed`
+
   return (
     <div className="Reptiles">
       <h1>My Reptiles</h1>

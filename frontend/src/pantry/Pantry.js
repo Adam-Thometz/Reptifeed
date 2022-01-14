@@ -9,6 +9,8 @@ const Pantry = () => {
   const { pantry, setPantry } = useContext(UserContext);
   const { id } = useParams();
 
+  document.title = `My Pantry | Reptifeed`;
+
   const handleRemove = async name => {
     await ReptifeedApi.removeFromPantry(id, name)
     setPantry(p => p.filter(f => f.name !== name));

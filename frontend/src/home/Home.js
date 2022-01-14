@@ -8,6 +8,7 @@ import blueTongueSkink from './imgs/blue-tongue-skink.png'
 
 const Home = () => {
   const navigate = useNavigate();
+  document.title = "Welcome to Reptifeed!";
   return (
     <div className="Home">
       <div className="Home-background"></div>

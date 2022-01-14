@@ -10,6 +10,8 @@ const Foods = () => {
   const [foodFilter, setFoodFilter] = useState('');
   const [treatFilter, setTreatFilter] = useState(false)
 
+  document.title = `Food Page | Reptifeed account`;
+
   useEffect(() => {
     async function getFoodsForSpecies() {
       const foodRes = await ReptifeedApi.getFoodsBySpecies(species, searchTerm);

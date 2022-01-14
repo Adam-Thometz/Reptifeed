@@ -7,6 +7,8 @@ import './Todos.css';
 const Todos = () => {
   const { currUser, todos } = useContext(UserContext);
 
+  document.title = `${currUser.username}'s To-do List | Reptifeed`
+
   const { essentialTodos, niceToHaveTodos } = todos;
 
   if (!essentialTodos.length && !niceToHaveTodos.length) return <Alert type="success" messages={["You've done everything you need to do. Just keep up the variety!", "Click here to go back to your profile"]} link={`/users/${currUser.id}`} />

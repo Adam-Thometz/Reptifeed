@@ -5,6 +5,8 @@ import './Login.css'
 
 const Login = ({ login }) => {
   const navigate = useNavigate();
+  document.title = "Log in | Reptifeed";
+
   const init = {
     username: '',
     password: ''

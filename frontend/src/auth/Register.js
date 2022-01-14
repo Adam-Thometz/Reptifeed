@@ -5,6 +5,8 @@ import './Register.css'
 
 const Register = ({ register }) => {
   const navigate = useNavigate();
+  document.title = "Register | Reptifeed";
+
   const init = {
     username: '',
     password: '',

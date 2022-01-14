@@ -9,6 +9,8 @@ const EditUserForm = () => {
   const { currUser, setCurrUser } = useContext(UserContext)
   const { id } = useParams();
   const navigate = useNavigate();
+
+  document.title = `Edit ${currUser.username}'s Profile | Reptifeed`;
   const init = {
     username: currUser.username,
     password: '',

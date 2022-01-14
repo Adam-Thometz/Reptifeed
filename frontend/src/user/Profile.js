@@ -12,6 +12,8 @@ const Profile = () => {
   const { currUser, setCurrUser, todos } = useContext(UserContext);
   const { id } = useParams();
 
+  document.title = `${currUser.username}'s Profile | Reptifeed`;
+
   const handleDeleteUser = async id => {
     await ReptifeedApi.deleteUser(id);
     setCurrUser(null)

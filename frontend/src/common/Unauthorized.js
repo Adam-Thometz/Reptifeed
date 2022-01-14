@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import './Unauthorized.css'
 
 const Unauthorized = () => {
+  document.title = `Unauthorized access | Reptifeed`;
+
   return (
     <div className="Unauthorized">
       <h4>You are not authorized to view this page! Here are your options:</h4>

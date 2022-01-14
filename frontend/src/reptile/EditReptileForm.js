@@ -11,6 +11,8 @@ const EditReptileForm = () => {
   const navigate = useNavigate();
   const reptile = reptiles.filter(r => r.id === +reptileId)[0];
 
+  document.title = `Edit ${reptile.name} | Reptifeed account`
+
   const init = {
     name: reptile.name,
     subspecies: reptile.subspecies,
