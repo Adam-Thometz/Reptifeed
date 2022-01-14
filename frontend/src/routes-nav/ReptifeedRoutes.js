@@ -24,66 +24,64 @@ import AdminReptiles from "../admin/AdminReptiles";
 
 const ReptifeedRoutes = ({ login, register }) => {
   return (
-    <div className="Routes">
-      <Routes>
-        {/* Home page */}
-        <Route index element={<Home />} />
+    <Routes>
+      {/* Home page */}
+      <Route index element={<Home />} />
 
-        {/***************/}
-        {/* AUTH ROUTES */}
-        {/***************/}
+      {/***************/}
+      {/* AUTH ROUTES */}
+      {/***************/}
 
-        {/* Login page */}
-        <Route path="/login" element={<Login login={login} />} />
-        {/* Registration page */}
-        <Route path="/register" element={<Register register={register} />} />
+      {/* Login page */}
+      <Route path="login" element={<Login login={login} />} />
+      {/* Registration page */}
+      <Route path="register" element={<Register register={register} />} />
 
-        {/***************/}
-        {/* USER ROUTES */}
-        {/***************/}
+      {/***************/}
+      {/* MAIN ROUTES */}
+      {/***************/}
 
-        {/* PRIVATE ROUTE: Profile page */}
-        <Route path="/users/:id" element={<RequireAuth><Profile /></RequireAuth>} />
-        {/* PRIVATE ROUTE: Edit profile */}
-        <Route path="/users/:id/edit" element={<RequireAuth><EditUserForm /></RequireAuth>} />
-        {/* PRIVATE ROUTE: Todo list */}
-        <Route path="/users/:id/todos" element={<RequireAuth><Todos /></RequireAuth>} />
+      {/* PRIVATE ROUTE: Profile page */}
+      <Route path="users/:id" element={<RequireAuth><Profile /></RequireAuth>} />
+      {/* PRIVATE ROUTE: Edit profile */}
+      <Route path="users/:id/edit" element={<RequireAuth><EditUserForm /></RequireAuth>} />
+      {/* PRIVATE ROUTE: Todo list */}
+      <Route path="users/:id/todos" element={<RequireAuth><Todos /></RequireAuth>} />
 
-        {/******************/}
-        {/* REPTILE ROUTES */}
-        {/******************/}
+      {/******************/}
+      {/* REPTILE ROUTES */}
+      {/******************/}
 
-        {/* PRIVATE ROUTE: View reptiles */}
-        <Route path="/users/:id/reptiles" element={<RequireAuth><Reptiles /></RequireAuth>} />
-        {/* PRIVATE ROUTE: Add a new reptile */}
-        <Route path="/users/:id/reptiles/add" element={<RequireAuth><NewReptileForm /></RequireAuth>} />
-        {/* PRIVATE ROUTE: View a specific reptile */}
-        <Route path="/users/:id/reptiles/:reptileId" element={<RequireAuth><Reptile /></RequireAuth>} />
-        {/* PRIVATE ROUTE: Edit a specific reptile */}
-        <Route path="/users/:id/reptiles/:reptileId/edit" element={<RequireAuth><EditReptileForm /></RequireAuth>} />
+      {/* PRIVATE ROUTE: View reptiles */}
+      <Route path="users/:id/reptiles" element={<RequireAuth><Reptiles /></RequireAuth>} />
+      {/* PRIVATE ROUTE: Add a new reptile */}
+      <Route path="users/:id/reptiles/add" element={<RequireAuth><NewReptileForm /></RequireAuth>} />
+      {/* PRIVATE ROUTE: View a specific reptile */}
+      <Route path="users/:id/reptiles/:reptileId" element={<RequireAuth><Reptile /></RequireAuth>} />
+      {/* PRIVATE ROUTE: Edit a specific reptile */}
+      <Route path="users/:id/reptiles/:reptileId/edit" element={<RequireAuth><EditReptileForm /></RequireAuth>} />
 
-        {/**********************/}
-        {/* FOOD/PANTRY ROUTES */}
-        {/**********************/}
-        
-        {/* View all available foods for reptiles */}
-        <Route path="/foods" element={<Foods />} />
-        {/* PRIVATE ROUTE: View pantry */}
-        <Route path="/users/:id/pantry" element={<RequireAuth><Pantry /></RequireAuth>} />
+      {/**********************/}
+      {/* FOOD/PANTRY ROUTES */}
+      {/**********************/}
+      
+      {/* View all available foods for reptiles */}
+      <Route path="foods" element={<Foods />} />
+      {/* PRIVATE ROUTE: View pantry */}
+      <Route path="users/:id/pantry" element={<RequireAuth><Pantry /></RequireAuth>} />
 
-        {/****************/}
-        {/* ADMIN ROUTES */}
-        {/****************/}
+      {/****************/}
+      {/* ADMIN ROUTES */}
+      {/****************/}
 
-        {/* ADMIN ONLY ROUTE: View all users on website */}
-        <Route path="/admin-users" element={<RequireAuth adminOnly><AdminUsers /></RequireAuth>} />
-        {/* ADMIN ONLY ROUTE: View all reptiles on website */}
-        <Route path="/admin-reptiles" element={<RequireAuth adminOnly><AdminReptiles /></RequireAuth>} />
+      {/* ADMIN ONLY ROUTE: View all users on website */}
+      <Route path="admin-users" element={<RequireAuth adminOnly><AdminUsers /></RequireAuth>} />
+      {/* ADMIN ONLY ROUTE: View all reptiles on website */}
+      <Route path="admin-reptiles" element={<RequireAuth adminOnly><AdminReptiles /></RequireAuth>} />
 
-        {/* GENERAL 404 HANDLER */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+      {/* GENERAL 404 HANDLER */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 
