@@ -5,6 +5,26 @@
   background-color: #459900;
 }
 
+.Navbar-skip {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  padding-top: 0;
+  text-align: center;
+  -webkit-transition: box-shadow .3s, height .3s, padding-top .3s;
+  transition: box-shadow .3s, height .3s, padding-top .3s;
+  width: 100%;
+  z-index: 50;
+}
+
+.Navbar-skip:focus {
+  font-weight: bold;
+  height: 50px;
+  left: 0;
+}
+
 .Navbar-header {
   border: 1px solid #3E3E07;
   border-radius: 5px;

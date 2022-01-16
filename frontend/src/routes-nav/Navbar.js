@@ -9,6 +9,7 @@ const Navbar = ({ logout }) => {
   const { currUser } = useContext(UserContext);
   return (
     <nav className="Navbar">
+      <a className="Navbar-skip" href="#main">Skip to main content</a>
       <NavLink className="Navbar-header" to="/">Reptifeed</NavLink>
       {currUser ? <LoggedIn logout={logout} /> : <LoggedOut />}
     </nav>
