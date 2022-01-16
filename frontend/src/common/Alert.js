@@ -5,7 +5,7 @@ import './Alert.css'
 const Alert = ({ type = 'danger', messages = [], link = '' }) => {
   const navigate = useNavigate();
   return (
-    <div className={`Alert ${type}`} onClick={link ? () => navigate(link) : null} style={ link ? {cursor: 'pointer'} : {}}>
+    <div tabIndex={0} className={`Alert ${type}`} onClick={link ? () => navigate(link) : null} style={ link ? {cursor: 'pointer'} : {}}>
       {messages.map((m, i) => (
         <p key={i}>{m}</p>
       ))}

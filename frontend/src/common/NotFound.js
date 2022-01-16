@@ -6,7 +6,7 @@ const NotFound = () => {
   document.title = `Page not found | Reptifeed`;
 
   return (
-    <div className="NotFound">
+    <div tabIndex={0} className="NotFound">
       <h4>The page you're looking for wasn't found</h4>
       <Link to="/">Go back home</Link>
     </div>

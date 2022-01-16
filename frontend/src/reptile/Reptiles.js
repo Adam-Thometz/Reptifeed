@@ -11,10 +11,9 @@ const Reptiles = () => {
 
   return (
     <div className="Reptiles">
-      <h1>My Reptiles</h1>
-      <p>Click on a reptile to feed them.</p>
+      <h1 tabIndex={0}>My Reptiles</h1>
       {!reptiles.length ? (
-        <h2>You don't have any reptiles. <Link to={`/users/${+id}/reptiles/add`}>Click here to add one</Link></h2>
+        <h2 tabIndex={0}>You don't have any reptiles. <Link to={`/users/${+id}/reptiles/add`}>Click here to add one</Link></h2>
       ) : reptiles.map(r => (
         <ReptileCard
           key={r.id}

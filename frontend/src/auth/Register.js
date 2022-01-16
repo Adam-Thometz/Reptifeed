@@ -32,7 +32,7 @@ const Register = ({ register }) => {
   };
 
   return (
-    <div className="Register">
+    <div tabIndex={0} className="Register">
       <h1>Register for your Reptifeed account</h1>
       <form onSubmit={handleSubmit}>
         <div className="Register-form-group">

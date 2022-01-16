@@ -19,7 +19,7 @@ const Pantry = () => {
   return (
     <div className="Pantry">
       <div>
-        <h1>My Pantry</h1>
+        <h1 tabIndex={0}>My Pantry</h1>
         <Link className="Pantry-link" to="/foods">Add foods to pantry</Link>
       </div>
       {pantry.map((f, i) => (

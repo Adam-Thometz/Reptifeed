@@ -47,7 +47,7 @@ const EditReptileForm = () => {
 
   return (
     <div className="EditReptileForm">
-      <h1>Edit your reptile</h1>
+      <h1 tabIndex={0}>Edit your reptile</h1>
       <form onSubmit={handleSubmit}>
         <div className="EditReptileForm-form-group">
           <label className="EditReptileForm-label" htmlFor="name">Name:</label>

@@ -40,7 +40,7 @@ const NewReptileForm = () => {
 
   return (
     <div className="NewReptileForm">
-      <h1>Add a reptile to your account</h1>
+      <h1 tabIndex={0}>Add a reptile to your account</h1>
       <form onSubmit={handleSubmit}>
         <div className="NewReptileForm-form-group">
           <label className="NewReptileForm-label" htmlFor="name">Name:</label>

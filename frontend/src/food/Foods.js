@@ -48,8 +48,8 @@ const Foods = () => {
 
   return (
     <div className="Foods">
-      <h1>Food for your reptiles!</h1>
-      <p>Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.</p>
+      <h1 tabIndex={0}>Food for your reptiles!</h1>
+      <p tabIndex={0}>Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.</p>
       <FoodOptions
         species={species}
         setSpecies={setSpecies}

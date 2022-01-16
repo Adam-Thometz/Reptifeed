@@ -3,7 +3,7 @@ import './PantryCard.css'
 
 const PantryCard = ({name, type, frequency, image, isTreat, tips, remove}) => {
   return (
-    <div className={`PantryCard ${type}`}>
+    <div tabIndex={0} className={`PantryCard ${type}`}>
       <div className="PantryCard-img-wrapper">
         <img src={image} alt={name} />
       </div>

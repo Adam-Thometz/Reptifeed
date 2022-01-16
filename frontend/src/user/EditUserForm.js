@@ -38,7 +38,7 @@ const EditUserForm = () => {
 
   return (
     <div className="EditUserForm">
-      <h1>Edit your information</h1>
+      <h1 tabIndex={0}>Edit your information</h1>
       <form onSubmit={handleSubmit}>
         <div className="EditUserForm-form-group">
           <label className="EditUserForm-label" htmlFor="username">Username:</label>

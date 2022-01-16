@@ -80,7 +80,7 @@ const Reptile = () => {
 
   return (
     <div className="Reptile">
-      <div className="Reptile-card">
+      <div className="Reptile-card" tabIndex={0}>
         <div className="Reptile-card-img-wrapper">
           <img src={reptile.imgUrl} alt={reptile.name} />
         </div>

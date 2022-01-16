@@ -4,7 +4,7 @@ import './Meal.css'
 
 const Meal = ({ meal, freq }) => {
   return (
-    <div className="Meal">
+    <div tabIndex={0} className="Meal">
       <div className="Meal-wrapper">
         {meal.map(food => (
           <MealCard

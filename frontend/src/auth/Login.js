@@ -31,7 +31,7 @@ const Login = ({ login }) => {
   };
 
   return (
-    <div className="Login">
+    <div tabIndex={0} className="Login">
       <h1>Login to your Reptifeed account</h1>
       <form onSubmit={handleSubmit}>
         <div className="Login-form-group">

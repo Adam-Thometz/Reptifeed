@@ -5,10 +5,12 @@ import './ReptileCard.css'
 const ReptileCard = ({ id, name, image, species, ownerId, link = false }) => {
   const navigate = useNavigate();
   return (
-    <div className="ReptileCard" onClick={link ? () => navigate(`/users/${ownerId}/reptiles/${id}`) : null}>
+    <div tabIndex={0} className="ReptileCard">
+      <h2>{name}</h2>
       <img src={image} alt={name} />
-      <h4>{name}</h4>
-      <h5>{species}</h5>
+      <p>{species}</p>
+      {link ? <button onClick={() => navigate(`/users/${ownerId}/reptiles/${id}`)}>Go to reptile</button> : null}
+
     </div>
   );
 };

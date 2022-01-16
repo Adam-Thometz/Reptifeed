@@ -20,7 +20,7 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
 
   return (
     <div className="FoodOptions">
-      <p>Use these options to filter foods</p>
+      <p tabIndex={0}>Use these options to filter foods</p>
       <div className="FoodOptions-group">
         <label className="FoodOptions-label" htmlFor="species">Species</label>
         <select
@@ -45,7 +45,7 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
         />
       </div>
       <div className="FoodOptions-group">
-        <label className="FoodOptions-label" htmlFor="frequency">Food group</label>
+        <label className="FoodOptions-label" htmlFor="type">Food group</label>
         <select
           className="FoodOptions-input"
           id="type"

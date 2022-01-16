@@ -13,26 +13,26 @@ const Home = () => {
     <div className="Home">
       <div className="Home-background"></div>
       <div className="Home-content">
-        <h1>Welcome to Reptifeed!</h1>
-        <p>Your personal assistant for all things reptile food!</p>
-        <div className="Home-content-description">
+        <h1 tabIndex={0}>Welcome to Reptifeed!</h1>
+        <p tabIndex={0}>Your personal assistant for all things reptile food!</p>
+        <div className="Home-content-description" tabIndex={0}>
           <p>You are here because you want what's best for your pet.</p>
           <img src={looking} alt="A bearded dragon perched on a log and looking into the camera with its mouth slightly open" />
         </div>
-        <div className="Home-content-description">
+        <div className="Home-content-description" tabIndex={0}>
           <img src={tortoise} alt="A tortoise about to eat a dandelion" />
           <p>You know that a diverse selection of food is key to good health.</p>
         </div>
-        <div className="Home-content-description">
+        <div className="Home-content-description" tabIndex={0}>
           <p>Keep an inventory of your food with us and we'll help you decide what to feed your reptile.</p>
           <img src={beardedDragon} alt="A bearded dragon about to eat from a bowl of greens and insects" />
         </div>
-        <div className="Home-content-description">
+        <div className="Home-content-description" tabIndex={0}>
           <img src={blueTongueSkink} alt="A blue tongue skink eating dog food and an egg" />
           <p>We'll help you vary your reptile's diet so they can thrive.</p>
         </div>
         <div className="Home-cta">
-          <h4>Get started with us!</h4>
+          <p tabIndex={0}>Get started with us!</p>
           <button onClick={() => navigate('/register')}>Register</button>
         </div>
       </div>

@@ -22,8 +22,8 @@ const Profile = () => {
   const { essentialTodos, niceToHaveTodos } = todos;
 
   return (
-    <div className="Profile">
-      <h1 className="Profile-header">{currUser.username}</h1>
+    <main className="Profile">
+      <h1 tabIndex={0} className="Profile-header">{currUser.username}</h1>
      {(essentialTodos.length || niceToHaveTodos.length) ? (
        <Link className="Profile-todo-link" to={`/users/${+id}/todos`}>Click here for next steps!</Link>
      ) : null}
@@ -57,7 +57,7 @@ const Profile = () => {
           </div>
         </div>
       : null}
-    </div>
+    </main>
   );
 };
 

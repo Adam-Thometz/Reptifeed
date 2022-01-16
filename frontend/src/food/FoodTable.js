@@ -23,7 +23,7 @@ const FoodTable = ({ foods }) => {
   return (
     <table className="FoodTable">
       <thead className="FoodTable-header">
-        <tr className="FoodTable-header-cells">
+        <tr tabIndex={0} className="FoodTable-header-cells">
           <td>Image</td>
           <td>Name</td>
           <td>Type</td>
@@ -35,7 +35,7 @@ const FoodTable = ({ foods }) => {
       </thead>
       <tbody className="FoodTable-body">
         {foods.map(f => (
-          <tr key={f.name} className="FoodTable-body-cells">
+          <tr tabIndex={0} key={f.name} className="FoodTable-body-cells">
             <td><img src={f.image} alt={f.name} /></td>
             <td>{f.name}</td>
             <td>{f.type}</td>

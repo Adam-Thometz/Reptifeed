@@ -14,7 +14,7 @@ const Todos = () => {
   if (!essentialTodos.length && !niceToHaveTodos.length) return <Alert type="success" messages={["You've done everything you need to do. Just keep up the variety!", "Click here to go back to your profile"]} link={`/users/${currUser.id}`} />
 
   return (
-    <div className="Todos">
+    <div tabIndex={0} className="Todos">
       <h1>Todos</h1>
       <h2>Click on one to get started</h2>
       <div className="Todos-wrapper">
