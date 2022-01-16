@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { foodStack, treatStack } from "../utils/foodStack";
 import UserContext from "../utils/UserContext";
 import { getFoodFromPantry, getTreatFromPantry, getNextSupplement } from "../utils/feedingHelpers";
-import Meal from "./Meal";
+import Meal from "../meal/Meal";
 import useLocalStorage from '../utils/useLocalStorage';
 import Alert from '../common/Alert';
 import { vegetableOftenCheck, proteinOftenCheck, treatModeratelyCheck, supplementCheck } from '../utils/todoHelpers'

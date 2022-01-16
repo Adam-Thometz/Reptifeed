@@ -1,0 +1,13 @@
+.Meal {
+  display: flex;
+  width: 40vw;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Meal-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
