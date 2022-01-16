@@ -14,9 +14,9 @@ exports[`it matches snapshot 1`] = `
       <h1>
         Welcome to Reptifeed!
       </h1>
-      <h4>
+      <p>
         Your personal assistant for all things reptile food!
-      </h4>
+      </p>
       <div
         class="Home-content-description"
       >

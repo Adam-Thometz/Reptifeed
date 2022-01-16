@@ -3,7 +3,7 @@
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Home"
@@ -17,9 +17,9 @@ exports[`it matches snapshot 1`] = `
         <h1>
           Welcome to Reptifeed!
         </h1>
-        <h4>
+        <p>
           Your personal assistant for all things reptile food!
-        </h4>
+        </p>
         <div
           class="Home-content-description"
         >
@@ -83,7 +83,7 @@ exports[`it matches snapshot 1`] = `
 exports[`it matches snapshot of 404 page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="NotFound"
@@ -104,7 +104,7 @@ exports[`it matches snapshot of 404 page 1`] = `
 exports[`it matches snapshot of add new reptile 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="NewReptileForm"
@@ -222,7 +222,7 @@ exports[`it matches snapshot of add new reptile 1`] = `
 exports[`it matches snapshot of edit reptile 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="EditReptileForm"
@@ -319,7 +319,7 @@ exports[`it matches snapshot of edit reptile 1`] = `
 exports[`it matches snapshot of edit user page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="EditUserForm"
@@ -394,7 +394,7 @@ exports[`it matches snapshot of edit user page 1`] = `
 exports[`it matches snapshot of food finder 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Foods"
@@ -402,15 +402,15 @@ exports[`it matches snapshot of food finder 1`] = `
       <h1>
         Food for your reptiles!
       </h1>
-      <h5>
+      <p>
         Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.
-      </h5>
+      </p>
       <div
         class="FoodOptions"
       >
-        <h4>
+        <p>
           Use these options to filter foods
-        </h4>
+        </p>
         <div
           class="FoodOptions-group"
         >
@@ -552,7 +552,7 @@ exports[`it matches snapshot of food finder 1`] = `
 exports[`it matches snapshot of login page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Login"
@@ -610,7 +610,7 @@ exports[`it matches snapshot of login page 1`] = `
 exports[`it matches snapshot of pantry 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Pantry"
@@ -637,9 +637,9 @@ exports[`it matches snapshot of pantry 1`] = `
             src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
           />
         </div>
-        <h4>
+        <h2>
           arugula
-        </h4>
+        </h2>
         <p>
           Feed often
         </p>
@@ -666,7 +666,7 @@ exports[`it matches snapshot of pantry 1`] = `
 exports[`it matches snapshot of profile page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Profile"
@@ -740,7 +740,7 @@ exports[`it matches snapshot of profile page 1`] = `
             Edit your profile
           </a>
           <a
-            href="/foods"
+            href="/"
           >
             Delete account
           </a>
@@ -759,7 +759,7 @@ exports[`it matches snapshot of profile page 1`] = `
 exports[`it matches snapshot of registration page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Register"
@@ -834,7 +834,7 @@ exports[`it matches snapshot of registration page 1`] = `
 exports[`it matches snapshot of reptile page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Reptile"
@@ -896,7 +896,7 @@ exports[`it matches snapshot of reptile page 1`] = `
 exports[`it matches snapshot of reptiles page 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Reptiles"
@@ -904,9 +904,9 @@ exports[`it matches snapshot of reptiles page 1`] = `
       <h1>
         My Reptiles
       </h1>
-      <h4>
+      <p>
         Click on a reptile to feed them.
-      </h4>
+      </p>
       <div
         class="ReptileCard"
       >
@@ -929,14 +929,17 @@ exports[`it matches snapshot of reptiles page 1`] = `
 exports[`it matches snapshot of todos 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Todos"
     >
-      <h3>
+      <h1>
+        Todos
+      </h1>
+      <h2>
         Click on one to get started
-      </h3>
+      </h2>
       <div
         class="Todos-wrapper"
       >

@@ -27,9 +27,9 @@ exports[`it matches snapshot 1`] = `
           src="https://halfyourplate-4kgxi1gvwldjzby.stackpathdns.com/wp-content/uploads/2014/12/arugula_small.gif"
         />
       </div>
-      <h4>
+      <h2>
         arugula
-      </h4>
+      </h2>
       <p>
         Feed often
       </p>

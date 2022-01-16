@@ -8,15 +8,15 @@ exports[`it matches snapshot 1`] = `
     <h1>
       Food for your reptiles!
     </h1>
-    <h5>
+    <p>
       Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.
-    </h5>
+    </p>
     <div
       class="FoodOptions"
     >
-      <h4>
+      <p>
         Use these options to filter foods
-      </h4>
+      </p>
       <div
         class="FoodOptions-group"
       >

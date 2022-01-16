@@ -3,14 +3,17 @@
 exports[`it matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Todos"
     >
-      <h3>
+      <h1>
+        Todos
+      </h1>
+      <h2>
         Click on one to get started
-      </h3>
+      </h2>
       <div
         class="Todos-wrapper"
       >

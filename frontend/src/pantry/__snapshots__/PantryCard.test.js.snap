@@ -13,9 +13,9 @@ exports[`it matches snapshot 1`] = `
         src=""
       />
     </div>
-    <h4>
+    <h2>
       plumbus
-    </h4>
+    </h2>
     <p>
       Feed always
     </p>

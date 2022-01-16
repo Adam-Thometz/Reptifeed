@@ -3,7 +3,7 @@
 exports[`it matches snapshot for logged in user 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Reptiles"
@@ -11,9 +11,9 @@ exports[`it matches snapshot for logged in user 1`] = `
       <h1>
         My Reptiles
       </h1>
-      <h4>
+      <p>
         Click on a reptile to feed them.
-      </h4>
+      </p>
       <div
         class="ReptileCard"
       >
@@ -36,7 +36,7 @@ exports[`it matches snapshot for logged in user 1`] = `
 exports[`it matches snapshot for logged out user 1`] = `
 <DocumentFragment>
   <div
-    class="Routes"
+    id="main"
   >
     <div
       class="Unauthorized"

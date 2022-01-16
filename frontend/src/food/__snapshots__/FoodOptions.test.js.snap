@@ -5,9 +5,9 @@ exports[`it matches snapshot 1`] = `
   <div
     class="FoodOptions"
   >
-    <h4>
+    <p>
       Use these options to filter foods
-    </h4>
+    </p>
     <div
       class="FoodOptions-group"
     >
