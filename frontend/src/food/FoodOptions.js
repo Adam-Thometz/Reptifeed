@@ -20,7 +20,7 @@ const FoodOptions = ({species, setSpecies, searchTerm, setSearchTerm, foodFilter
 
   return (
     <div className="FoodOptions">
-      <h4>Use these options to filter foods</h4>
+      <p>Use these options to filter foods</p>
       <div className="FoodOptions-group">
         <label className="FoodOptions-label" htmlFor="species">Species</label>
         <select

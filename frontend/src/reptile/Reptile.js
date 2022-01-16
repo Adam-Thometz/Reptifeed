@@ -87,9 +87,9 @@ const Reptile = () => {
         <div>
           <div className="Reptile-card-info">
             <h1>{reptile.name}</h1>
-            <h4>Species: {reptile.species}</h4>
-            <h4>Subspecies: {reptile.subspecies}</h4>
-            <h5>Born on {reptile.birthday}</h5>
+            <p>Species: {reptile.species}</p>
+            <p>Subspecies: {reptile.subspecies}</p>
+            <b>Born on {reptile.birthday}</b>
           </div>
           <button className="edit" onClick={() => navigate(`/users/${+id}/reptiles/${+reptileId}/edit`)}>Edit</button>
         </div>

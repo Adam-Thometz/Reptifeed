@@ -15,7 +15,8 @@ const Todos = () => {
 
   return (
     <div className="Todos">
-      <h3>Click on one to get started</h3>
+      <h1>Todos</h1>
+      <h2>Click on one to get started</h2>
       <div className="Todos-wrapper">
         {essentialTodos.length ? (
           <div className="Todos-wrapper essential-wrapper">

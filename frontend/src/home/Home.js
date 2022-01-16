@@ -14,7 +14,7 @@ const Home = () => {
       <div className="Home-background"></div>
       <div className="Home-content">
         <h1>Welcome to Reptifeed!</h1>
-        <h4>Your personal assistant for all things reptile food!</h4>
+        <p>Your personal assistant for all things reptile food!</p>
         <div className="Home-content-description">
           <p>You are here because you want what's best for your pet.</p>
           <img src={looking} alt="A bearded dragon perched on a log and looking into the camera with its mouth slightly open" />

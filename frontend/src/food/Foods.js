@@ -49,7 +49,7 @@ const Foods = () => {
   return (
     <div className="Foods">
       <h1>Food for your reptiles!</h1>
-      <h5>Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.</h5>
+      <p>Pick foods you have or can easily get. We recommend having a large variety of foods to ensure a balanced diet.</p>
       <FoodOptions
         species={species}
         setSpecies={setSpecies}

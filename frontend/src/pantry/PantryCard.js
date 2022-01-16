@@ -7,7 +7,7 @@ const PantryCard = ({name, type, frequency, image, isTreat, tips, remove}) => {
       <div className="PantryCard-img-wrapper">
         <img src={image} alt={name} />
       </div>
-      <h4>{name}</h4>
+      <h2>{name}</h2>
       <p>Feed {frequency}</p>
       <p>Treat?: {isTreat ? <b>Yes</b> : <span>No</span>}</p>
       <p>Tips: {tips ? tips : 'N/A'}</p>
