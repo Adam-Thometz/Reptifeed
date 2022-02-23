@@ -145,7 +145,7 @@ We're on the food page! You can get food by type or species (blue tongue skink o
 
 ![Food page](user-flow-pictures/food-page.png)
 
-After searching through my real pantry, I found that I have arugula, dog food, mangoes, and calcium and multivitamin supplements and checked them off.
+After searching through my real pantry, I found that I have arugula, dog food, mangoes, and calcium and multivitamin supplements, all of which are considered staples of the skink diet, and checked them off.
 
 This is what my pantry looks like now:
 
@@ -159,7 +159,7 @@ And we can feed treats too!
 
 ![Treat time](user-flow-pictures/feed-treat.png)
 
-You might be reminded to add more food to your pantry. That won't stop you from feeding your pet, since you clearly have the staples at this point.
+You might be reminded to add more food to your pantry. That won't stop you from feeding your pet, since you clearly have the staples at this point. Remember, the point of this app is to help you vary your pet's diet!
 
 ![Prompt to get more food!](user-flow-pictures/need-more.png)
 
@@ -235,7 +235,7 @@ npm test
 ### How to add a reptile food database
 
 1. Create a sql file in the backend directory.
-2. In the file, place this code, replacing `REPTILE_NAME` with the name of the reptile in camel case:
+2. In the file, place this code, replacing `REPTILE_NAME` with the name of the reptile in snake case:
 
 ```
 CREATE TABLE (REPTILE_NAME)_diet (
