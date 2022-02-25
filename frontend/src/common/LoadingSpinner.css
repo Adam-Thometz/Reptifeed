@@ -1,8 +1,13 @@
-/* Code for ripple animation is from the Pure CSS Loaders collection
+/* Code for ripple animation (v except .LoadingSpinner) is from the Pure CSS Loaders collection
    Found at loading.io/css
 */
 .LoadingSpinner {
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: space-between;
 }
 
 .lds-ripple {
