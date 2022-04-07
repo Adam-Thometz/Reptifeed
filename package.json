@@ -1,0 +1,25 @@
+{
+  "name": "reptifeed",
+  "version": "1.0.0",
+  "description": "Reptifeed",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "npm install --prefix backend",
+    "install-frontend": "npm install --prefix frontend",
+    "install": "npm run install-backend && npm run install-frontend",
+    "backend": "node server.js --prefix backend",
+    "frontend": "npm start --prefix frontend",
+    "start": "npm run backend & npm run frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Thometz/Reptifeed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adam-Thometz/Reptifeed/issues"
+  },
+  "homepage": "https://github.com/Adam-Thometz/Reptifeed#readme"
+}
