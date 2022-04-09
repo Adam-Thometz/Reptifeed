@@ -8,14 +8,30 @@ const RequireAuth = ({ children, adminOnly = false }) => {
   const { id } = useParams();
 
   if (currUser) {
-    if (adminOnly && !currUser.isAdmin) return <Unauthorized />
-    if (currUser.isAdmin || currUser.id === +id) {
-      return children;
-    } else {
-      return <Unauthorized />
+    if (adminOnly) {
+      if (currUser.isAdmin) {
+        return children;
+      } else {
+        return <Unauthorized />;
+      }
+    }
+    else {
+      if (id) {
+        if (currUser.isAdmin || currUser.id === +id) {
+          return children;
+        } else {
+          return <Unauthorized />;
+        }
+      } else {
+        if (currUser) {
+          return children;
+        } else {
+          return <Unauthorized />;
+        }
+      }
     }
   } else {
-    return <Unauthorized />
+    return <Unauthorized />;
   }
 }
 
