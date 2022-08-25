@@ -26,7 +26,7 @@ const Login = ({ login }) => {
     if (res.success) {
       navigate(`/users/${res.id}`);
     } else {
-      setFormMessages(res.errors)
+      setFormMessages(res.errors);
     };
   };
 
@@ -57,6 +57,9 @@ const Login = ({ login }) => {
           />
         </div>
         <button className="Login-submit" type="submit">Login</button>
+        <p>Want to try this app?</p>
+        <p>Username: abc</p>
+        <p>Password: 123</p>
         {formMessages.length ? <Alert type="danger" messages={formMessages} /> : null }
       </form>
     </div>
