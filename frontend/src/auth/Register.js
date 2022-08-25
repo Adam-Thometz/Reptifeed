@@ -69,7 +69,10 @@ const Register = ({ register }) => {
           />
         </div>
         <button className="Register-submit" type="submit">Register</button>
-        {formMessages.length ? <Alert type="danger" messages={formMessages} /> : null }
+        {formMessages.length ? <Alert type="danger" messages={formMessages} /> : null}
+        <p>Want to try this app? Go to the login page and use these credentials</p>
+        <p>Username: abc</p>
+        <p>Password: 123</p>
       </form>
     </div>
   );
